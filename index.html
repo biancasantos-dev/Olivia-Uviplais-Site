@@ -25,7 +25,7 @@
                 <strong>Olivia Uviplais</strong>
             </a>
 
-            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu de navegação">
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu de navegação">
                 ☰
             </button>
 
@@ -83,7 +83,7 @@
                     <img src="ID/OLIVINHAS/OLIVINHA-APAIXONADA.png" alt="Ilustração da Olivinha" width="300" height="320">
                 </figure>
                 <article class="minibio-texto">
-                    <p class="eyebrow" style="color:var(--ciano)">Quem é ela?</p>
+                    <p class="eyebrow eyebrow-ciano">Quem é ela?</p>
                     <h2>Olá, eu sou a <em>Olivia!</em></h2>
                     <p>Escritora, jornalista e criadora de universos onde o amor sempre encontra um jeito. Best-Seller Amazon e considerada a deusa das comédias românticas pelas minhas leitoras.</p>
                     <ul class="minibio-stats" role="list">
@@ -99,7 +99,7 @@
                 <header class="section-head">
                     <p class="eyebrow">A jornada</p>
                     <h2>Minha trajetória</h2>
-                    <p>Arraste para conhecer a história por trás dos livros</p>
+                    <p>Marcos que transformaram escrita, comunidade e carreira em uma mesma história.</p>
                 </header>
                 <section class="timeline-scroll" id="timeline-track" tabindex="0">
                     <ol class="timeline-row" id="timeline-row" role="list"></ol>
@@ -155,14 +155,14 @@
           ========================================================== -->
         <section id="livros" class="page" aria-label="Biblioteca de livros" aria-hidden="true">
             <header class="livros-header">
-                <p class="eyebrow" style="color: var(--ciano)">Biblioteca</p>
+                <p class="eyebrow eyebrow-ciano">Biblioteca</p>
                 <h1>Os Livros</h1>
-                <p>Clique em um livro para descobrir a história</p>
+                <p>Romances, séries, contos e traduções reunidos em uma estante viva.</p>
             </header>
 
             <section class="trope-bar">
                 <p class="trope-label">Filtrar por Trope:</p>
-                <nav id="trope-filter-nav"></nav>
+                <nav id="trope-filter-nav" aria-label="Filtros por trope"></nav>
             </section>
 
             <section class="bookshelf-wrap" id="organizador-estantes-realistas">
@@ -186,15 +186,31 @@
           ========================================================== -->
         <section id="newsletter" class="page" aria-label="Newsletter Oliviverso" aria-hidden="true">
             <header class="nl-hero">
-                <p class="eyebrow" style="color: var(--ciano)">Exclusivo</p>
+                <p class="eyebrow eyebrow-ciano">Exclusivo</p>
                 <h1>Entre no <em>Oliviverso</em></h1>
                 <p>Receba conteúdo exclusivo, brindes digitais, capítulos extras e as novidades em primeira mão</p>
                 <form class="nl-form-big" id="form-nl-page">
-                    <input type="text" placeholder="Como posso te chamar?" required>
-                    <input type="email" placeholder="seu@email.com" required>
+                    <label class="sr-only" for="nl-nome">Nome</label>
+                    <input type="text" id="nl-nome" placeholder="Como posso te chamar?" autocomplete="name" required>
+                    <label class="sr-only" for="nl-email">Email</label>
+                    <input type="email" id="nl-email" placeholder="seu@email.com" autocomplete="email" required>
                     <button type="submit" class="btn btn-primary">✉️ Quero entrar no Oliviverso!</button>
                 </form>
             </header>
+            <section class="nl-benefits" aria-label="Benefícios da newsletter">
+                <article class="benefit-card">
+                    <strong>Capítulos extras</strong>
+                    <p>Cenas, epílogos e bastidores dos casais favoritos.</p>
+                </article>
+                <article class="benefit-card">
+                    <strong>Novidades primeiro</strong>
+                    <p>Datas, capas e anúncios antes das redes sociais.</p>
+                </article>
+                <article class="benefit-card">
+                    <strong>Brindes digitais</strong>
+                    <p>Materiais especiais para deixar a estante mais Olivia.</p>
+                </article>
+            </section>
         </section>
 
         <!-- ==========================================================
@@ -202,7 +218,7 @@
           ========================================================== -->
         <section id="agenda" class="page" aria-label="Agenda de eventos" aria-hidden="true">
             <header class="agenda-header">
-                <p class="eyebrow" style="color: rgba(255,255,255,0.75)">Próximos eventos</p>
+                <p class="eyebrow eyebrow-claro">Próximos eventos</p>
                 <h1>Agenda</h1>
                 <p>Feiras, lançamentos e encontros com leitoras</p>
             </header>
@@ -216,7 +232,7 @@
           ========================================================== -->
         <section id="contato" class="page" aria-label="Contato e imprensa" aria-hidden="true">
             <header class="contato-header">
-                <p class="eyebrow" style="color: var(--rosa)">Fale comigo</p>
+                <p class="eyebrow">Fale comigo</p>
                 <h1>Contato</h1>
                 <p>Para leitoras, parcerias, imprensa e agenciamentos</p>
             </header>
@@ -290,7 +306,7 @@
         <article class="modal-box" id="modal-box">
             <figure class="modal-cover">
                 <img src="" alt="" width="280" height="420" loading="lazy">
-                <button class="modal-close" id="modal-close">✕</button>
+                <button class="modal-close" id="modal-close" type="button" aria-label="Fechar detalhes do livro">✕</button>
             </figure>
             <section class="modal-body">
                 <p class="modal-serie"></p>
