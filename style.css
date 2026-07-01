@@ -33,6 +33,15 @@
     --shadow-lg: 0 24px 70px rgba(18, 8, 16, 0.28);
     --ease: 220ms ease;
     --ease-slow: 520ms cubic-bezier(0.22, 1, 0.36, 1);
+
+      /* Escala de espaçamento */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  1.5rem;
+  --sp-lg:  2rem;
+  --sp-xl:  3rem;
+  --sp-2xl: 5rem;
+  --sp-3xl: 7rem;
 }
 
 *,
@@ -251,7 +260,7 @@ h4 { font-size: 1.1rem; }
     max-width: 1440px;
     align-items: center;
     gap: 1.5rem;
-    padding-inline: 2rem;
+    padding-inline: 1.5rem;
     margin-inline: auto;
 }
 
@@ -260,15 +269,18 @@ h4 { font-size: 1.1rem; }
     align-items: center;
     gap: 0.5rem;
     flex-shrink: 0;
+    margin-left: 0;
     font-family: var(--ff-display);
     font-size: 1.08rem;
     font-weight: 800;
     transition: color var(--ease);
 }
 
-.logo-heart {
-    color: var(--rosa);
-    font-style: normal;
+.nav-logo img {
+    display: block;
+    width: clamp(110px, 8vw, 130px);
+    height: auto;
+    max-width: 100%;
 }
 
 .hero-mode .nav-logo,
@@ -290,11 +302,17 @@ h4 { font-size: 1.1rem; }
     margin-inline: auto;
 }
 
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     position: relative;
     display: inline-flex;
     min-height: 36px;
     align-items: center;
+    line-height: 1;
     font-size: 0.76rem;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -403,7 +421,7 @@ h4 { font-size: 1.1rem; }
 .autora-bg {
     position: absolute;
     inset: 0 0 0 auto;
-    width: 66%;
+    width: 55%;
 }
 
 .autora-bg img {
@@ -463,10 +481,10 @@ h4 { font-size: 1.1rem; }
 
 .autora-seal-wrap {
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    right: 1rem;
+    bottom: 1rem;
     z-index: 2;
-    width: 112px;
+    width: 200px;
     opacity: 0.92;
 }
 
@@ -749,8 +767,78 @@ h4 { font-size: 1.1rem; }
     animation: bookFloat 6s ease-in-out infinite;
 }
 
-/* 5. Sobre
+
+/* ================================================================
+   8. HOME — NEWSLETTER CTA
    ================================================================ */
+.home-nl { 
+  padding:10px;
+  background: var(--vermelho);
+  padding: var(--sp-2xl) var(--sp-xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.home-nl::before {
+  content: '♥';
+  position: absolute;
+  inset-block-end: -4rem;
+  inset-inline-end: -3rem;
+  font-size: 22rem;
+  color: rgba(255,255,255,0.05);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.home-nl h2 { color: var(--branco); margin-block-end: 0.6rem; }
+.home-nl h2 em { color: var(--ciano); font-style: italic; }
+.home-nl > p {
+  color: rgba(255,255,255,0.78);
+  font-size: 1.05rem;
+  max-width: 460px;
+  margin-inline: auto;
+  margin-block-end: var(--sp-xl);
+}
+
+.home-nl {
+        padding: var(--sp-xl) 1rem;
+    }
+
+    .form-pill {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        width: min(100%, 360px);
+        margin-inline: auto;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        gap: 0.75rem;
+    }
+    .form-pill input[type="email"] {
+        flex: 0 1 auto;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: var(--branco);
+        font-size: 0.95rem;
+        color: var(--escuro);
+        min-width: 0;
+        padding: 0.9rem 1.2rem;
+        border-radius: 5px;
+        box-shadow: var(--shadow-lg);
+    }
+    .form-pill input::placeholder { color: rgba(0,0,0,0.35); }
+    .form-pill .btn {
+        width: 100%;
+        min-width: 0;
+        border-radius: var(--pill);
+        background: var(--azul);
+        color: var(--branco);
+        border: none;
+        box-shadow: 0 12px 24px rgba(12, 122, 147, 0.28);
+   }
 .sobre-hero,
 .nl-hero,
 .agenda-header,
@@ -821,7 +909,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .bio-text {
-    max-width: 820px;
+    max-width: 1000px;
     color: var(--texto-suave);
     font-size: 1.08rem;
 }
@@ -849,6 +937,331 @@ h4 { font-size: 1.1rem; }
 
 .bio-toggle {
     margin-top: 1.5rem;
+}
+#container-editorial-sobre{
+display:flex;
+flex-direction:column;
+gap:120px;
+}
+
+/*====================================*/
+
+#bloco-hero-sobre{
+
+display:grid;
+grid-template-columns:460px 1fr;
+gap:90px;
+align-items:center;
+min-height:75vh;
+}
+
+#colagem-topo-autor{
+position:relative;
+padding:18px;
+background:#FFF;
+border-radius:34px;
+box-shadow:var(--shadow-md);
+overflow:hidden;
+margin:0;
+height:100%;
+}
+
+#colagem-topo-autor::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(135deg,#FDECEF 0%,transparent 60%);
+pointer-events:none;
+
+}
+
+#colagem-topo-autor img{
+border-radius:22px;
+transition:var(--transition);
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+#colagem-topo-autor:hover img{
+transform:scale(1.03);
+
+}
+
+#texto-introducao-sobre{
+display:grid;
+grid-template-columns:minmax(0, 1fr) minmax(280px, 380px);
+gap:0 48px;
+align-items:stretch;
+width:min(100%, 1120px);
+margin-inline:auto;
+padding-inline:0;
+}
+
+#texto-introducao-sobre h2,
+#texto-introducao-sobre p{
+grid-column:1;
+}
+
+#texto-introducao-sobre #colagem-topo-autor{
+grid-column:2;
+grid-row:1 / span 10;
+align-self:start;
+max-width:360px;
+justify-self:end;
+margin-top:0.2rem;
+}
+
+#texto-introducao-sobre h2{
+font-size:clamp(3.6rem,5.8vw,5.4rem);
+margin-bottom:24px;
+line-height:.95;
+}
+
+#texto-introducao-sobre p{
+font-size:1.08rem;
+max-width:680px;
+}
+
+#sub-tagline-editorial{
+display:inline-block;
+margin-top:30px;
+padding:14px 22px;
+border-radius:999px;
+background:#FCECEF;
+color:var(--wine);
+font-weight:600;
+font-style:normal;
+}
+
+
+/*====================================*/
+
+#grade-assimetrica-fanfics{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
+}
+
+#coluna-texto-fanfics h3{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+#coluna-texto-fanfics p{
+font-size:1.08rem;
+}
+
+#bloco-links-imagens-colagem{
+display:flex;
+flex-direction:column;
+gap:28px;
+}
+
+#bloco-links-imagens-colagem figure{
+background:#FFF;
+padding:14px;
+border-radius:26px;
+box-shadow:var(--shadow-sm);
+overflow:hidden;
+}
+
+#bloco-links-imagens-colagem img{
+border-radius:16px;
+transition:var(--transition);
+}
+
+#bloco-links-imagens-colagem figure:hover img{
+transform:scale(1.05);
+}
+
+/*====================================*/
+
+#menu-links-setas-editorial ul{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+#menu-links-setas-editorial a{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:22px 26px;
+background:#FFF;
+border-radius:18px;
+box-shadow:var(--shadow-sm);
+font-weight:600;
+transition:var(--transition);
+}
+
+#menu-links-setas-editorial a::after{
+content:"→";
+font-size:1.2rem;
+transition:var(--transition);
+}
+
+#menu-links-setas-editorial a:hover{
+transform:translateX(8px);
+background:var(--wine);
+color:#FFF;
+
+}
+
+#menu-links-setas-editorial a:hover::after{
+transform:translateX(5px);
+}
+
+/*====================================*/
+
+#fita-texto-marquee{
+overflow:hidden;
+background:#AE1E3C;
+border-radius:22px;
+padding:18px 0;
+}
+
+#fita-texto-marquee p{
+display:inline-block;
+white-space:nowrap;
+color:#FFF;
+font-weight:700;
+letter-spacing:2px;
+animation:marquee 22s linear infinite;
+margin:0;
+}
+
+@keyframes marquee{
+
+from{
+transform:translateX(100%);
+}
+
+to{
+transform:translateX(-100%);
+}
+
+}
+
+/*====================================*/
+
+#perfil-editorial-wattpad,
+#perfil-editorial-amazon{
+display:grid;
+grid-template-columns:340px 1fr;
+gap:70px;
+align-items:center;
+padding:60px;
+background:#FFF;
+border-radius:36px;
+box-shadow:var(--shadow-sm);
+}
+
+#perfil-editorial-amazon{
+grid-template-columns:1fr 340px;
+margin-top:60px;
+}
+
+#perfil-editorial-wattpad figure,
+#perfil-editorial-amazon figure{
+overflow:hidden;
+border-radius:22px;
+}
+
+#perfil-editorial-wattpad img,
+#perfil-editorial-amazon img{
+transition:var(--transition);
+}
+
+#perfil-editorial-wattpad:hover img,
+#perfil-editorial-amazon:hover img{
+transform:scale(1.05);
+}
+
+#perfil-editorial-wattpad h4,
+#perfil-editorial-amazon h4{
+font-size:2.8rem;
+margin-bottom:24px;
+}
+
+.tags-rodape-perfil{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+margin-top:35px;
+}
+
+.tags-rodape-perfil span{
+padding:10px 18px;
+border-radius:999px;
+background:#F7EFF1;
+color:var(--wine);
+font-size:.9rem;
+font-weight:600;
+}
+
+/*====================================*/
+
+.frase-final-sobre{
+max-width:900px;
+margin:auto;
+text-align:center;
+
+}
+
+.frase-final-sobre h3{
+
+font-size:3.4rem;
+margin-bottom:30px;
+
+}
+
+.frase-final-sobre p{
+
+font-size:1.2rem;
+margin:auto;
+max-width:700px;
+
+}
+
+/*====================================*/
+
+.foto-polaroid{
+
+background:#FFF;
+padding:14px 14px 34px;
+border-radius:18px;
+box-shadow:var(--shadow-md);
+transform:rotate(-2deg);
+transition:var(--transition);
+
+}
+
+.foto-polaroid:hover{
+
+transform:rotate(0deg) scale(1.02);
+
+}
+
+.foto-polaroid img{
+
+border-radius:10px;
+
+}
+#container-editorial-sobre{
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+}
+
+#bloco-hero-sobre{
+    display:grid;
+    grid-template-columns:460px 1fr;
+    gap:90px;
+    align-items:center;
+    min-height:75vh;
 }
 
 /* 6. Livros
@@ -1164,11 +1577,13 @@ h4 { font-size: 1.1rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(250, 245, 240, 0.92);
+    background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.88), rgba(250, 245, 240, 0.74) 46%, rgba(18, 8, 16, 0.16));
+    backdrop-filter: blur(10px);
     opacity: 0;
     pointer-events: none;
     perspective: 1800px;
-    transition: opacity var(--ease);
+    transition: opacity 240ms ease;
 }
 
 #transicao-cenica-estante.executando-voo {
@@ -1178,25 +1593,28 @@ h4 { font-size: 1.1rem; }
 
 #transicao-cenica-estante figure {
     position: relative;
-    width: 250px;
-    height: 375px;
-    border-radius: 4px 12px 12px 4px;
-    background: var(--branco);
-    box-shadow: 0 24px 62px rgba(18, 8, 16, 0.28);
+    width: 220px;
+    height: 330px;
+    border-radius: 8px 16px 16px 8px;
+    background: linear-gradient(180deg, #ffffff, #f5ede8);
+    box-shadow:
+        0 18px 50px rgba(18, 8, 16, 0.26),
+        0 0 0 1px rgba(18, 8, 16, 0.04);
     opacity: 0;
-    transform: translateY(120px) scale(0.55) rotate(6deg);
+    transform: translateY(180px) scale(0.28) rotate(-24deg);
     transform-style: preserve-3d;
+    will-change: transform;
 }
 
 #transicao-cenica-estante.executando-voo figure {
-    animation: flyBook 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: flyBook 860ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 #transicao-cenica-estante img,
 #transicao-cenica-estante var {
     position: absolute;
     inset: 0;
-    border-radius: 4px 12px 12px 4px;
+    border-radius: 8px 16px 16px 8px;
     transform-origin: left center;
 }
 
@@ -1210,15 +1628,16 @@ h4 { font-size: 1.1rem; }
 #transicao-cenica-estante var {
     z-index: 1;
     display: block;
-    background: var(--branco);
+    background:
+        linear-gradient(135deg, #fff, #f8f1ec 50%, #e9d9d4);
 }
 
 #transicao-cenica-estante.executando-voo img {
-    animation: openCover 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: openCover 640ms cubic-bezier(0.22, 1, 0.36, 1) 160ms forwards;
 }
 
 #transicao-cenica-estante.executando-voo var {
-    animation: turnPage 520ms cubic-bezier(0.22, 1, 0.36, 1) 130ms forwards;
+    animation: turnPage 560ms cubic-bezier(0.22, 1, 0.36, 1) 120ms forwards;
 }
 
 /* 8. Newsletter, agenda e contato
@@ -1603,16 +2022,32 @@ h4 { font-size: 1.1rem; }
 }
 
 @keyframes flyBook {
-    0% { opacity: 0; transform: translateY(120px) scale(0.55) rotate(6deg); }
-    100% { opacity: 1; transform: translateX(-120px) scale(1) rotate(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(180px) scale(0.28) rotate(-24deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(48px) scale(0.7) rotate(-10deg);
+    }
+    58% {
+        transform: translateY(-10px) scale(1.05) rotate(6deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0);
+    }
 }
 
 @keyframes openCover {
-    to { transform: rotateY(-156deg); }
+    0% { transform: rotateY(0); }
+    45% { transform: rotateY(-82deg); }
+    100% { transform: rotateY(-156deg); }
 }
 
 @keyframes turnPage {
-    to { opacity: 0; transform: rotateY(-138deg); }
+    0% { opacity: 1; transform: rotateY(0); }
+    100% { opacity: 0; transform: rotateY(-132deg) translateX(18px); }
 }
 
 @keyframes toastIn {
@@ -1634,6 +2069,28 @@ h4 { font-size: 1.1rem; }
     .contato-body,
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    #texto-introducao-sobre {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+        gap: 0 28px;
+        width: min(100%, 980px);
+    }
+
+    #grade-assimetrica-fanfics {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    #perfil-editorial-wattpad,
+    #perfil-editorial-amazon {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+
+    #perfil-editorial-amazon figure {
+        order: -1;
     }
 }
 
@@ -1710,7 +2167,28 @@ h4 { font-size: 1.1rem; }
     }
 
     .autora-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         padding: 6rem 1.25rem 3rem;
+    }
+
+    .autora-logo-wrap {
+        width: min(280px, 72vw);
+        margin-inline: auto;
+        margin-bottom: 1.2rem;
+    }
+
+    .autora-tagline {
+        max-width: 320px;
+        padding-left: 0;
+        margin-inline: auto;
+        border-left: none;
+    }
+
+    .autora-ctas {
+        justify-content: center;
     }
 
     .autora-seal-wrap {
@@ -1724,6 +2202,48 @@ h4 { font-size: 1.1rem; }
     .footer-grid,
     .nl-benefits {
         grid-template-columns: 1fr;
+    }
+
+    .sobre-hero {
+        min-height: auto;
+        gap: 2.5rem;
+    }
+
+    .bio-wrap {
+        padding: 3rem 0;
+    }
+
+    .bio-text {
+        max-width: none;
+    }
+
+    #texto-introducao-sobre {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: min(100% - 2rem, 1120px);
+    }
+
+    #texto-introducao-sobre h2,
+    #texto-introducao-sobre p {
+        grid-column: 1;
+    }
+
+    #texto-introducao-sobre #colagem-topo-autor {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        margin-top: 0;
+    }
+
+    #texto-introducao-sobre h2 {
+        font-size: clamp(2.8rem, 8vw, 4rem);
+    }
+
+    #texto-introducao-sobre p {
+        max-width: none;
+        font-size: 1rem;
     }
 
     .minibio {
@@ -1767,6 +2287,44 @@ h4 { font-size: 1.1rem; }
         height: 380px;
     }
 
+    #grade-assimetrica-fanfics {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .foto-polaroid {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    #coluna-texto-fanfics h3 {
+        font-size: 2.4rem;
+    }
+
+    #coluna-texto-fanfics p {
+        font-size: 1rem;
+    }
+
+    #perfil-editorial-wattpad,
+    #perfil-editorial-amazon {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2rem 1rem;
+        border-radius: 24px;
+    }
+
+    #perfil-editorial-wattpad figure,
+    #perfil-editorial-amazon figure {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    #perfil-editorial-wattpad h4,
+    #perfil-editorial-amazon h4 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
     .trope-bar {
         position: static;
         grid-template-columns: 1fr;
@@ -1790,11 +2348,42 @@ h4 { font-size: 1.1rem; }
     h1 { font-size: 2.45rem; }
     h2 { font-size: 2rem; }
 
+    .nav-logo img {
+        width: 110px;
+    }
+
     .nav-logo strong {
         max-width: 150px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+    .bio-wrap {
+        padding: 2.5rem 0;
+    }
+
+    #colagem-topo-autor {
+        padding: 10px;
+        border-radius: 22px;
+    }
+
+    #colagem-topo-autor img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    #texto-introducao-sobre {
+        gap: 1.25rem;
+    }
+
+    #texto-introducao-sobre h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #texto-introducao-sobre p {
+        font-size: 0.98rem;
     }
 
     .btn {
