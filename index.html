@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olivia Uviplais — Escritora de comédias românticas. Best-Seller Amazon. Autora de Jogos de Poder, Os Padrinhos e muito mais.">
+    <meta name="theme-color" content="#ae1e3c">
+
+    <title>Olivia Uviplais — Escritora de Romances</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&family=Afacad:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================================
+      HEADER & NAVEGAÇÃO PRINCIPAL
+      ============================================================ -->
+    <header class="site-header hero-mode" id="site-header">
+        <nav class="nav-main" aria-label="Navegação principal">
+            <a href="#home" class="nav-logo" data-page="home" aria-label="Olivia Uviplais — Página inicial">
+                <i class="logo-heart" aria-hidden="true">♥</i>
+                <strong>Olivia Uviplais</strong>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu de navegação">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#home"       data-page="home">Home</a></li>
+                <li><a href="#sobre"      data-page="sobre">Sobre</a></li>
+                <li><a href="#livros"     data-page="livros">Livros</a></li>
+                <li><a href="#newsletter" data-page="newsletter">Newsletter</a></li>
+                <li><a href="#agenda"     data-page="agenda">Agenda</a></li>
+                <li><a href="#contato"    data-page="contato">Contato</a></li>
+            </ul>
+
+            <nav class="nav-social" aria-label="Redes sociais da autora">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Inst</a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">Tik</a>
+                <a href="https://amazon.com.br" target="_blank" rel="noopener noreferrer" aria-label="Amazon">Amz</a>
+            </nav>
+        </nav>
+    </header>
+
+    <!-- ============================================================
+      CONTEÚDO PRINCIPAL (SPA)
+      ============================================================ -->
+    <main id="main-content">
+
+        <!-- ==========================================================
+          1. HOME
+          ========================================================== -->
+        <section id="home" class="page active" aria-label="Página inicial">
+            <section class="autora-banner" aria-label="Banner da autora">
+                <figure class="autora-bg" aria-hidden="true">
+                    <img src="OLIVIA-FOTOS/OLIVIA_UVIPLAIS_1.jpg" alt="" width="1200" height="1500">
+                </figure>
+                <article class="autora-content">
+                    <figure class="autora-icon-wrap" aria-hidden="true">
+                        <img src="ID/ICONE.png" alt="" width="64" height="64">
+                    </figure>
+                    <p class="autora-pretitle">Escritora de Comédias Românticas</p>
+                    <figure class="autora-logo-wrap">
+                        <img src="ID/PRINCIPAL-CLARA.png" alt="Olivia Uviplais" width="340" height="90">
+                    </figure>
+                    <p class="autora-tagline">Best-Seller Amazon · Criadora de mundos onde o amor sempre encontra um jeito</p>
+                    <nav class="autora-ctas" aria-label="Links principais">
+                        <a href="#livros" data-page="livros" class="btn btn-primary">Ver Livros</a>
+                        <a href="#newsletter" data-page="newsletter" class="btn btn-outline">Oliviverso</a>
+                    </nav>
+                </article>
+                <figure class="autora-seal-wrap" aria-hidden="true">
+                    <img src="ID/SELO - ID - VEMELHA.png" alt="">
+                </figure>
+            </section>
+
+            <section class="minibio" aria-label="Mini biografia da autora">
+                <figure class="minibio-ilu">
+                    <img src="ID/OLIVINHAS/OLIVINHA-APAIXONADA.png" alt="Ilustração da Olivinha" width="300" height="320">
+                </figure>
+                <article class="minibio-texto">
+                    <p class="eyebrow" style="color:var(--ciano)">Quem é ela?</p>
+                    <h2>Olá, eu sou a <em>Olivia!</em></h2>
+                    <p>Escritora, jornalista e criadora de universos onde o amor sempre encontra um jeito. Best-Seller Amazon e considerada a deusa das comédias românticas pelas minhas leitoras.</p>
+                    <ul class="minibio-stats" role="list">
+                        <li><strong>26</strong><small>livros publicados</small></li>
+                        <li><strong>+1M</strong><small>leitores no Wattpad</small></li>
+                        <li><strong>Top 10</strong><small>Best-Seller Amazon</small></li>
+                    </ul>
+                    <a href="#sobre" data-page="sobre" class="btn btn-outline">Conhecer minha história →</a>
+                </article>
+            </section>
+
+            <section class="section-timeline" aria-label="Trajetória da autora">
+                <header class="section-head">
+                    <p class="eyebrow">A jornada</p>
+                    <h2>Minha trajetória</h2>
+                    <p>Arraste para conhecer a história por trás dos livros</p>
+                </header>
+                <section class="timeline-scroll" id="timeline-track" tabindex="0">
+                    <ol class="timeline-row" id="timeline-row" role="list"></ol>
+                </section>
+            </section>
+
+            <section class="destaque-banner" aria-label="Lançamento em destaque">
+                <article class="destaque-texto">
+                    <p class="destaque-label">✦ Lançamento em Destaque ✦</p>
+                    <h2 class="destaque-titulo">Jogos<br><em>de Poder</em></h2>
+                    <p class="destaque-serie">Série Jogos da Máfia · Livro 1</p>
+                    <p class="destaque-sinopse">Serena Greco tentou ao máximo fugir do fato de ser filha da família que comanda a máfia em Chicago. Edward Bellini, o Corvo, quer Las Vegas — e ela é o seu primeiro passo.</p>
+                    <nav class="destaque-ctas">
+                        <a href="https://a.co/d/0dEQYiMH" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comprar agora</a>
+                    </nav>
+                </article>
+                <figure class="destaque-capa">
+                    <img src="CAPAS/1. Jogos de Poder - Livro 1 da Série Jogos da Máfia.jpg" alt="Jogos de Poder" width="340" height="510">
+                </figure>
+            </section>
+        </section>
+
+        <!-- ==========================================================
+          2. SOBRE
+          ========================================================== -->
+        <section id="sobre" class="page" aria-label="Sobre a autora" aria-hidden="true">
+            <header class="sobre-hero">
+                <article class="sobre-text">
+                    <p class="eyebrow">Escritora de Comédias Românticas</p>
+                    <h1>Olivia <em>Uviplais</em></h1>
+                    <p>Escritora, jornalista e Best-Seller Amazon. Considerada a deusa das comédias românticas, cria universos recheados de romances quentes, drama e os finais felizes que o mundo tanto precisa.</p>
+                </article>
+                <figure class="sobre-img">
+                    <figure><img src="OLIVIA-FOTOS/OLIVIA_UVIPLAIS_2.jpg" alt="Olivia Uviplais"></figure>
+                </figure>
+            </header>
+            <article class="bio-wrap">
+                <h2>A história por trás dos livros</h2>
+                <section class="bio-text">
+                    <p>Eu nasci no interior de Minas Gerais, em 1999. O ato de contar histórias é quase intrínseco a quem vem de Minas Gerais e, por isso, sempre fui cercada por histórias, orais e escritas, que me encantavam.</p>
+                    <section class="bio-expandable" id="bio-expandable">
+                        <p>Já adolescente, fui arrebatada pela história de uma garota de dezessete anos que se apaixonava por um vampiro. Desenvolvi uma obsessão por Crepúsculo. Criei então Adorável Babá, alcançando mais de um milhão de leitores no Wattpad. A pandemia trouxe Os Padrinhos: 30 semanas no Top 100 da Amazon, das quais 9 no Top 10. Um divisor de águas.</p>
+                    </section>
+                    <nav class="bio-toggle">
+                        <button class="btn btn-outline-dark" id="bio-toggle">Ler história completa ↓</button>
+                    </nav>
+                </section>
+            </article>
+        </section>
+
+        <!-- ==========================================================
+          3. LIVROS (A ESTANTE EM PRATELEIRAS CATEGORIZADAS)
+          ========================================================== -->
+        <section id="livros" class="page" aria-label="Biblioteca de livros" aria-hidden="true">
+            <header class="livros-header">
+                <p class="eyebrow" style="color: var(--ciano)">Biblioteca</p>
+                <h1>Os Livros</h1>
+                <p>Clique em um livro para descobrir a história</p>
+            </header>
+
+            <section class="trope-bar">
+                <p class="trope-label">Filtrar por Trope:</p>
+                <nav id="trope-filter-nav"></nav>
+            </section>
+
+            <section class="bookshelf-wrap" id="organizador-estantes-realistas">
+                <section class="estante-categoria" id="categoria-pt">
+                    <h3>Livros em Português</h3>
+                    <ul class="suporte-fisico-prateleira bookshelf" id="bookshelf-pt" role="list"></ul>
+                </section>
+                <section class="estante-categoria" id="categoria-idiomas">
+                    <h3>Livros em Outros Idiomas</h3>
+                    <ul class="suporte-fisico-prateleira bookshelf" id="bookshelf-idiomas" role="list"></ul>
+                </section>
+                <section class="estante-categoria" id="categoria-tradicionais">
+                    <h3>Lançamentos Tradicionais</h3>
+                    <ul class="suporte-fisico-prateleira bookshelf" id="bookshelf-tradicionais" role="list"></ul>
+                </section>
+            </section>
+        </section>
+
+        <!-- ==========================================================
+          4. NEWSLETTER
+          ========================================================== -->
+        <section id="newsletter" class="page" aria-label="Newsletter Oliviverso" aria-hidden="true">
+            <header class="nl-hero">
+                <p class="eyebrow" style="color: var(--ciano)">Exclusivo</p>
+                <h1>Entre no <em>Oliviverso</em></h1>
+                <p>Receba conteúdo exclusivo, brindes digitais, capítulos extras e as novidades em primeira mão</p>
+                <form class="nl-form-big" id="form-nl-page">
+                    <input type="text" placeholder="Como posso te chamar?" required>
+                    <input type="email" placeholder="seu@email.com" required>
+                    <button type="submit" class="btn btn-primary">✉️ Quero entrar no Oliviverso!</button>
+                </form>
+            </header>
+        </section>
+
+        <!-- ==========================================================
+          5. AGENDA
+          ========================================================== -->
+        <section id="agenda" class="page" aria-label="Agenda de eventos" aria-hidden="true">
+            <header class="agenda-header">
+                <p class="eyebrow" style="color: rgba(255,255,255,0.75)">Próximos eventos</p>
+                <h1>Agenda</h1>
+                <p>Feiras, lançamentos e encontros com leitoras</p>
+            </header>
+            <section class="agenda-body">
+                <ul class="agenda-list" id="agenda-list"></ul>
+            </section>
+        </section>
+
+        <!-- ==========================================================
+          6. CONTATO
+          ========================================================== -->
+        <section id="contato" class="page" aria-label="Contato e imprensa" aria-hidden="true">
+            <header class="contato-header">
+                <p class="eyebrow" style="color: var(--rosa)">Fale comigo</p>
+                <h1>Contato</h1>
+                <p>Para leitoras, parcerias, imprensa e agenciamentos</p>
+            </header>
+
+            <section class="contato-body">
+                <section class="form-wrap" aria-label="Formulário de contato">
+                    <h2>Enviar mensagem</h2>
+                    <form class="contato-form" id="form-contato" novalidate>
+                        <p class="field">
+                            <label for="c-nome">Nome</label>
+                            <input type="text" id="c-nome" placeholder="Seu nome completo" required>
+                        </p>
+                        <p class="field">
+                            <label for="c-email">Email</label>
+                            <input type="email" id="c-email" placeholder="seu@email.com" required>
+                        </p>
+                        <p class="field">
+                            <label for="c-assunto">Assunto</label>
+                            <select id="c-assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="leitora">Mensagem de leitora</option>
+                                <option value="parceria">Proposta de parceria</option>
+                                <option value="imprensa">Imprensa</option>
+                                <option value="agencia">Agenciamento</option>
+                            </select>
+                        </p>
+                        <p class="field">
+                            <label for="c-mensagem">Mensagem</label>
+                            <textarea id="c-mensagem" placeholder="Sua mensagem..." required rows="5"></textarea>
+                        </p>
+                        <button type="submit" class="btn btn-primary">Enviar mensagem 💌</button>
+                    </form>
+                </section>
+
+                <aside class="info-wrap" aria-label="Canais de contato">
+                    <h2>Canais de contato</h2>
+                    <section class="info-cards">
+                        <article class="info-card">
+                            <h3>Autora</h3>
+                            <address>
+                                <a href="mailto:olivia@oliviauviplais.com">olivia@oliviauviplais.com</a>
+                                <p>Para leitoras, parcerias e conteúdo em geral.</p>
+                            </address>
+                        </article>
+                        <article class="info-card">
+                            <h3>Agenciamento & Imprensa</h3>
+                            <address>
+                                <a href="mailto:assessoria@oliviauviplais.com">assessoria@oliviauviplais.com</a>
+                                <p>Para contratos, entrevistas e cobertura de imprensa.</p>
+                            </address>
+                        </article>
+                    </section>
+
+                    <aside class="kit-press" aria-label="Kit de imprensa">
+                        <h3>Kit de Imprensa</h3>
+                        <p>Fotos em alta resolução, bio oficial e materiais de divulgação disponíveis mediante solicitação.</p>
+                        <a href="mailto:assessoria@oliviauviplais.com" class="btn btn-outline-dark">Solicitar kit de imprensa</a>
+                    </aside>
+                </aside>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+      MODAIS E AMBIENTES 3D
+      ============================================================ -->
+    
+    <!-- POP-UP MODAL CINEMATOGRÁFICO DE LUXO -->
+    <aside class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <article class="modal-box" id="modal-box">
+            <figure class="modal-cover">
+                <img src="" alt="" width="280" height="420" loading="lazy">
+                <button class="modal-close" id="modal-close">✕</button>
+            </figure>
+            <section class="modal-body">
+                <p class="modal-serie"></p>
+                <h2 class="modal-title"></h2>
+                <section class="modal-meta"></section>
+                <p class="modal-sinopse"></p>
+                <ul class="modal-tropes" role="list"></ul>
+                <nav class="modal-actions"></nav>
+            </section>
+        </article>
+    </aside>
+
+    <!-- PALCO INVISÍVEL DA TRANSIÇÃO 3D (Onde o livro voa) -->
+    <aside id="transicao-cenica-estante"></aside>
+
+    <!-- ============================================================
+      RODAPÉ ESTENDIDO CORPORATIVO
+      ============================================================ -->
+    <footer class="site-footer" aria-label="Rodapé">
+        <section class="footer-grid">
+            <article class="footer-brand">
+                <strong>♥ Olivia Uviplais</strong>
+                <p>Escritora de comédias românticas. Criadora de mundos onde o amor sempre encontra um jeito.</p>
+                <nav class="footer-social" aria-label="Redes sociais">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Inst</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">Tik</a>
+                    <a href="https://amazon.com.br" target="_blank" rel="noopener noreferrer">Amz</a>
+                </nav>
+            </article>
+
+            <nav class="footer-col" aria-label="Páginas do site">
+                <h4>Páginas</h4>
+                <ul role="list">
+                    <li><a href="#home"       data-page="home">Home</a></li>
+                    <li><a href="#sobre"      data-page="sobre">Sobre a Autora</a></li>
+                    <li><a href="#livros"     data-page="livros">Livros</a></li>
+                    <li><a href="#contato"    data-page="contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer-col" aria-label="Livros da autora">
+                <h4>Destaques</h4>
+                <ul role="list">
+                    <li><a href="#livros" data-page="livros">Os Padrinhos</a></li>
+                    <li><a href="#livros" data-page="livros">Jogos de Poder</a></li>
+                    <li><a href="#livros" data-page="livros">Aliança Perfeita</a></li>
+                </ul>
+            </nav>
+
+            <address class="footer-col">
+                <h4>Contato</h4>
+                <ul role="list">
+                    <li><a href="mailto:olivia@oliviauviplais.com">olivia@oliviauviplais.com</a></li>
+                    <li><a href="mailto:assessoria@oliviauviplais.com">assessoria@oliviauviplais.com</a></li>
+                </ul>
+            </address>
+        </section>
+
+        <p class="footer-bottom">
+            <small>© 2026 Olivia Uviplais. Todos os direitos reservados.</small>
+            <small>Feito com ♥ e muito café</small>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
