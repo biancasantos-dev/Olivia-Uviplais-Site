@@ -5,18 +5,17 @@
 'use strict';
 
 const BOOKS = [
-  
   { id: 'jogos-de-poder', 
     titulo: 'Jogos de Poder', 
     serie: 'Série Jogos da Máfia · Livro 1', 
     capa: 'CAPAS/1. Jogos de Poder - Livro 1 da Série Jogos da Máfia.jpg', 
     lancamento: '07/07/2020', 
     idioma: 'Português',
-     paginas: 243, 
-     ebook: 'https://a.co/d/0dEQYiMH', 
-     sinopse: '“A máfia não pode ser parada”\n\nSerena Greco tentou ao máximo fugir do fato de que era filha da família que comandava a máfia em Chicago, a Outfit. Mas agora era hora de voltar e, numa armadilha de seu próprio pai, ela será o elo de ligação entre a Outfit e a Cosa Nostra.\n\nEdward Bellini, o Corvo, é o Capo da Cosa Nostra e quer comandar Las Vegas do jeito que ele e seus irmãos sempre sonharam. O primeiro passo: destruir a Outifit de dentro para fora. E quando os Greco mandam Serena para casar-se com ele, Edward vê ali uma nova oportunidade.\n\nUma das duas famílias cairá, mas um sentimento nascerá disso. Edward e Serena poderão deixar que esse sentimento viva?', 
-     tropes: ['MÁFIA ROMANCE', 'FAMÍLIAS RIVAIS', 'CASAMENTO POR CONVENIÊNCIA'], 
-     categoria: 'pt' },
+    paginas: 243, 
+    ebook: 'https://a.co/d/0dEQYiMH', 
+    sinopse: '“A máfia não pode ser parada”\n\nSerena Greco tentou ao máximo fugir do fato de que era filha da família que comandava a máfia em Chicago, a Outfit. Mas agora era hora de voltar e, numa armadilha de seu próprio pai, ela será o elo de ligação entre a Outfit e a Cosa Nostra.\n\nEdward Bellini, o Corvo, é o Capo da Cosa Nostra e quer comandar Las Vegas do jeito que ele e seus irmãos sempre sonharam. O primeiro passo: destruir a Outifit de dentro para fora. E quando os Greco mandam Serena para casar-se com ele, Edward vê ali uma nova oportunidade.\n\nUma das duas famílias cairá, mas um sentimento nascerá disso. Edward e Serena poderão deixar que esse sentimento viva?', 
+    tropes: ['MÁFIA ROMANCE', 'FAMÍLIAS RIVAIS', 'CASAMENTO POR CONVENIÊNCIA'], 
+    categoria: 'pt' },
   { id: 'jogos-de-ruina', 
     titulo: 'Jogos de Ruína', 
     serie: 'Série Jogos da Máfia · Livro 2', 
@@ -46,7 +45,7 @@ const BOOKS = [
     ebook: 'https://a.co/d/0bBaRj3e', 
     sinopse: 'Uma viagem no tempo é capaz de mudar tudo?\n\nNada podia ser pior do que os aniversários da solitária Maeve Carter. A moça não tinha com quem comemorar a data especial porque sem família e amigos, uma vida vazia era tudo que lhe restava.\n\nEm um momento triste a jovem acende uma velinha para si mesma e faz o mais puro dos pedidos: queria ser amada.\n\nE na manhã seguinte tudo estava diferente. Maeve acorda numa casa estranha com duas menininhas espertas a chamando de mamãe e uma aliança no dedo que pertence a Theo Jones, um deus grego amoroso, compreensivo e gostoso.\n\nO que parecia uma loucura, na verdade se torna um aprendizado: O amor nem sempre vem em pacotes convenientes.', 
     tropes: ['VIAGEM NO TEMPO', 'GRUMPY X SUNSHINE', 'SEGUNDA CHANCE', 'CRIANÇAS FOFAS'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/FAÇA UM PEDIDO/1.png', 'ILUSTRAÇÕES/FAÇA UM PEDIDO/2.png', 'ILUSTRAÇÕES/FAÇA UM PEDIDO/3.png'] },
   { id: 'eu-pediria-por-voce', 
     titulo: 'Eu Pediria Por Você', 
     serie: 'Spin-Off de Faça Um Pedido', 
@@ -87,7 +86,7 @@ const BOOKS = [
     lancamento: '05/07/2021', 
     idioma: 'Português', 
     paginas: 262, ebook: 'https://a.co/d/06epa6a3', 
-    sinopse: 'Amy St. Clair e Harry Ryder não se suportam desde a primeira vez que se viram. Eles eram o velho clichê: Amy não o tolera e Harry adora provocá-la. Ainda assim, por debaixo de toda aquela aversão, faíscas voam quando se encontram.\n\nAgora seus melhores amigos estão se casando e, como padrinhos dessa união, os dois terão que se aturar durante um mês para ajudar nos preparativos da cerimônia. Presos um ao outro como cão e gato, eles sentirão o ódio se transformar em algo mais.\n\nAfinal de contas, o amor nem sempre vem em pacotes convenientes.\n\nUma comédia romântica enemies to lovers +18 de arrancar risadas e te deixar de coração quentinho.', 
+    sinopse: 'Amy St. Clair e Harry Ryder não se suportam desde a primeira vez que se viram. Eles eram o velho clichê: Amy não o tolera e Harry adora provocá-la. Still, por debaixo de toda aquela aversão, faíscas voam quando se encontram.\n\nAgora seus melhores amigos estão se casando e, como padrinhos dessa união, os dois terão que se aturar durante um mês para ajudar nos preparativos da cerimônia. Presos um ao outro como cão e gato, eles sentirão o ódio se transformar em algo mais.\n\nAfinal de contas, o amor nem sempre vem em pacotes convenientes.\n\nUma comédia romântica enemies to lovers +18 de arrancar risadas e te deixar de coração quentinho.', 
     tropes: ['ENEMIES TO LOVERS', 'GRUMPY X SUNSHINE', 'CONVIVÊNCIA FORÇADA'], 
     categoria: 'pt' },
   { id: 'o-pedido', 
@@ -121,7 +120,7 @@ const BOOKS = [
     ebook: 'https://a.co/d/09wczkWK', 
     sinopse: 'Cindy Tredici, a patricinha excêntrica e obstinada, quer mudar de ares depois do término com Kevin. E agora, com seus pais prestes a se aposentarem, ela decide que quer ser uma mulher de negócios e pede um mês para coordenar a rede de hotéis da família.\n\nKevin Charles está tentando superar o furacão rosa que sacudiu sua vida e quando o sogro do seu irmão pede ajuda com a troca de gestão, ele sabe que aquela é sua chance. O homem bem-sucedido e sedutor está mais do que satisfeito com a oportunidade, que pode ser um passo decisivo de reencontro em sua carreira.\n\nTudo estaria perfeito para os dois, se não fosse um pequeno detalhe: ambos trabalharão na mesma empresa e se tornarão rivais por ela.\n\nOs sentimentos do passado voltarão ou sucumbirão à convivência forçada?\n\nUma patricinha e seu ex em uma disputa profissional na comédia romântica spin-off de Os Padrinhos.', 
     tropes: ['RIVALS TO LOVERS', 'SEGUNDA CHANCE', 'ROMANCE DE ESCRITÓRIO'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/OS SÓCIOS/1.png', 'ILUSTRAÇÕES/OS SÓCIOS/2.png'] },
   { id: 'alianca-perfeita', 
     titulo: 'Aliança Perfeita', 
     serie: null, 
@@ -129,9 +128,9 @@ const BOOKS = [
     lancamento: '10/05/2023', idioma: 'Português', 
     paginas: 411, 
     ebook: 'https://a.co/d/0axA1E4e', 
-    sinopse: 'Lize Wilson pensava que se vestir de princesa cinco dias da semana seria bem mais divertido do que realmente é, mas a aspirante a atriz consegue encontrar alguma diversão sendo a animadora de festas infantis no meio de bolos, balões e crianças birrentas, principalmente se Aiden, seu melhor amigo e príncipe nas festas, estiver junto.\n\nAiden Smith é um misterio. Dirigindo um carro legal demais para o salário de animador de festas, tendo um passaporte canadense e a inabilidade de sorrir, ele é tudo que ninguém espera numa festa infantil.\n\nAinda mais considerando que, secretamente, ele é o herdeiro de uma das maiores fortunas do seu país.\n\nNo entanto, quando Aiden recebe uma carta misteriosa de deportação da imigração, Lize sabe que precisa ajudá-lo.\n\nA única forma de fazer isso é casando com o melhor amigo.\n\nEm busca de um Green Card, Lize e Aidan vão criar lembranças, fraudar processos e, quem sabe, revelar sentimentos que sempre estiveram ali.\n\nEm Aliança Perfeita, uma trama digna de um conto de fadas e produções Disney, Olivia Uviplais continua a encantar com seus personagens reais e provar o porquê é a deusa das comédias românticas hot.', 
+    sinopse: 'Lize Wilson pensava que se vestir de princesa cinco dias da semana seria bem mais divertido do que realmente é, mas a aspirante a atriz consegue encontrar alguma diversão sendo a animadora de festas infantis no meio de bolos, balões and crianças birrentas, principalmente se Aiden, seu melhor amigo e príncipe nas festas, estiver junto.\n\nAiden Smith é um misterio. Dirigindo um carro legal demais para o salário de animador de festas, tendo um passaporte canadense e a inabilidade de sorrir, ele é tudo que ninguém espera numa festa infantil.\n\nAinda mais considerando que, secretamente, ele é o herdeiro de uma das maiores fortunas do seu país.\n\nNo entanto, quando Aiden recebe uma carta misteriosa de deportação da imigração, Lize sabe que precisa ajudá-lo.\n\nA única forma de fazer isso é casando com o melhor amigo.\n\nEm busca de um Green Card, Lize e Aidan vão criar lembranças, fraudar processos e, quem sabe, revelar sentimentos que sempre estiveram ali.\n\nEm Aliança Perfeita, uma trama digna de um conto de fadas e produções Disney, Olivia Uviplais continua a encantar com seus personagens reais e provar o porquê é a deusa das comédias românticas hot.', 
     tropes: ['FAKE DATING', 'FRIENDS TO LOVERS', 'SÓ TEM UMA CAMA', 'ELE ODEIA TODO MUNDO MENOS ELA'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/ALIANÇA PERFEITA/1.png', 'ILUSTRAÇÕES/ALIANÇA PERFEITA/2.png'] },
   { id: 'meu-detestavel-chefe', 
     titulo: 'Meu Detestável Chefe', 
     serie: null, 
@@ -150,7 +149,7 @@ const BOOKS = [
     ebook: 'https://a.co/d/09nLYUpN', 
     sinopse: 'Luna Blackwood é a cantora pop do momento. Queridinha da América por seu jeito inocente, indomável e brilhante, a jovem artista arrasta uma legião de fãs pelo mundo, mas, aparentemente, também fez inimigos. Quando a popstar sofre um atentado misterioso, sua equipe sabe que ela precisa de proteção.\n\nDante Reyes está fora do mundo dos guarda-costas há muito tempo. O homem frio, duro e dezoito anos mais velho não quer se envolver nos problemas de ser o protetor de uma cantora pirralha, no entanto, quando um antigo amigo pede ajuda, ele não pode negar.\n\nDante é intenso, rude e possessivo.\nLuna é uma boa menina, obstinada e proibida para ele.\nA antipatia é imediata. E a atração também.\n\nDois universos que jamais se tocariam estão em rota de colisão, e o contato vai ser explosivo.', 
     tropes: ['AGE GAP', 'SLOWBURN', 'ROMANCE PROIBIDO', 'CONVIVÊNCIA FORÇADA'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/PROTEGIDA PELO GUARDA COSTAS/1.png', 'ILUSTRAÇÕES/PROTEGIDA PELO GUARDA COSTAS/2.png', 'ILUSTRAÇÕES/PROTEGIDA PELO GUARDA COSTAS/3.png'] },
   { id: 'manual-conquista', 
     titulo: 'Manual da Conquista Imperfeita', 
     serie: null, 
@@ -161,7 +160,7 @@ const BOOKS = [
     ebook: 'https://a.co/d/08EM88dU', 
     sinopse: 'Augustus Miller tem um segredo. Bem, não é exatamente um segredo. Uma fofoca inventada levou a outra e, de repente, o goleiro nerd golden boy do Michigan Lynx é considerado o maior pegador do campus. O que não seria um problema se não fosse por um pequeno detalhe: Gus é virgem.\n\nKira Mori está indo mal na faculdade. Muito mal mesmo. Prestes a reprovar em Ética 101, parando de ir a festas para estudar, desinstalando o Tinder para se concentrar e prestando mais atenção nas aulas do que nas fofocas de atleta na cafeteria, ela precisa de um professor particular.\n\nE Gus, the melhor de todos, não está disponível.\n\nOs mundos da caloura popular e do geek astro do hóquei jamais se encontrariam se não fosse pela vodca, pela vontade de Kira em ajudar os embriagados e pela tendência de Gus de contar certos segredos quando está bêbado.\n\nDe repente, um acordo é feito.\n\nGus ensina teorias da Ética.\n\nKira ensina a arte da conquista.\n\nAprender nunca foi tão divertido. E delicioso.', 
     tropes: ['CLICHÊ INVERTIDO', 'FAKE DATING', 'SÓ TEM UMA CAMA', 'GAROTA POPULAR X NERD'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/MANUAL DA CONQUISTA IMPERFEITA/1.png', 'ILUSTRAÇÕES/MANUAL DA CONQUISTA IMPERFEITA/2.png'] },
   { id: 'um-comeco-imperfeito', 
     titulo: 'Um Começo Imperfeito: a bebê secreta do magnata', 
     serie: null, capa: 'CAPAS/16. Um Começo Imperfeito a bebê secreta do magnata.jpg', 
@@ -169,9 +168,9 @@ const BOOKS = [
     idioma: 'Português', 
     paginas: 305, 
     ebook: 'https://a.co/d/00su91QD', 
-    sinopse: 'Eles não se conhecem, mas vão cuidar de uma bebê juntos.\n\nIzzy Miller nunca se imaginou como a responsável por uma criança. A jovem fotógrafa se julgava inocente e inexperiente demais para o papel de mãe, e isso sempre esteve longe de seus planos.\n\nMas quando sua melhor amiga morre deixando para trás a pequena Stella, uma linda garotinha de nove meses, Izzy percebe que precisa assumir aquele dever.\n\nMattia Fabri é um homem de casos de uma noite. Um dos empresários mais influentes da Itália. Frio, enigmático e arrogante, ele nunca quis relacionamentos. Apesar de ter como meta formar uma família, sua carreira sempre foi sua única prioridade. E ele estava feliz com o arranjo.\n\nAté receber a notícia de que uma mulher de um dos seus casos de uma noite faleceu e deixou para trás uma herdeira sua. Uma bebê que Mattia nunca teve conhecimento sobre. Porém, sua filha não vem sozinha.\n\nIzzy está tentando o seu melhor pela pequena Stella quando o milionário sedutor aparece em sua porta com uma demanda: quer reivindicar a bebê que nunca teve oportunidade de conhecer.', 
+    sinopse: 'Eles não se conhecem, mas vão cuidar de uma bebê juntos.\n\nIzzy Miller nunca se imaginou como a responsible por uma criança. A jovem fotógrafa se julgava inocente e inexperiente demais para o papel de mãe, e isso sempre esteve longe de seus planos.\n\nMas quando sua melhor amiga morre deixando para trás a pequena Stella, uma linda garotinha de nove meses, Izzy percebe que precisa assumir aquele dever.\n\nMattia Fabri é um homem de casos de uma noite. Um dos empresários mais influentes da Itália. Frio, enigmático e arrogante, ele nunca quis relacionamentos. Apesar de ter como meta formar uma família, sua carreira sempre foi sua única prioridade. E ele estava feliz com o arranjo.\n\nAté receber a notícia de que uma mulher de um dos seus casos de uma noite faleceu e deixou para trás uma herdeira sua. Uma bebê que Mattia nunca teve conhecimento sobre. Porém, sua filha não vem sozinha.\n\nIzzy está tentando o seu melhor pela pequena Stella quando o milionário sedutor aparece em sua porta com uma demanda: quer reivindicar a bebê que nunca teve oportunidade de conhecer.', 
     tropes: ['AGE GAP', 'GRAVIDEZ INESPERADA', 'CONVIVÊNCIA FORÇADA', 'ITALIANO POSSESSIVO E PROTETOR'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/UM COMEÇO IMPERFEITO/1.png', 'ILUSTRAÇÕES/UM COMEÇO IMPERFEITO/2.png'] },
   { id: 'o-principio-do-amor', 
     titulo: 'O Princípio do Amor', 
     serie: null, 
@@ -182,7 +181,19 @@ const BOOKS = [
     ebook: 'https://a.co/d/0dmxxJgJ', 
     sinopse: 'Todo mundo sabe que cientistas e jornalistas não se misturam, mas Henry e Jenna vão mostrar que algumas regras podem ser quebradas.\n\nJenna Barnes está no emprego dos seus sonhos e finalmente se considera uma divulgadora científica. Porém, o homem que ela deve documentar e divulgar sua pesquisa é terrível: chato, arrogante e irritante, além de ser bonito demais para o seu próprio bem. Uma grande pedra em seu caminho.\n\nDoutor Henry Adams nasceu para a neurobiologia, mas é uma incógnita para todos na Universidade de Seattle. Calado, genial e intimidador, o cientista é o martírio dos divulgadores da faculdade, ainda mais aqueles de língua afiada.\n\nMas depois de começarem a relação com o pé esquerdo, os neurônios desses dois inimigos se conectam quando o cientista não sabe o que está dando errado com sua pesquisa e a jornalista é a única que pode acobertá-lo até que ele descubra: por que os ratinhos da sua experiência estão se curando tão rápido?', 
     tropes: ['CIENTISTA X JORNALISTA', 'AGE GAP', 'GRUMPY X SUNSHINE', 'ENEMIES TO LOVERS'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/1.png', 'ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/2.png', 'ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/3.png'] },
+  { id: 'o-principio-do-amor-audiobook', 
+    titulo: 'O Princípio do Amor', 
+    serie: 'Audiolivro', 
+    capa: 'CAPAS/17. O Principio do Amor.jpg', 
+    lancamento: '16/09/2024', 
+    idioma: 'Português', 
+    formatoLabel: 'Audiolivro · Audible', 
+    ebook: 'https://www.audible.com.br/pd/O-Principio-do-Amor-Audiolivro/B0H46R3TQZ', 
+    ctaLabel: 'Ouça na Audible', 
+    sinopse: 'Todo mundo sabe que cientistas e jornalistas não se misturam, mas Henry e Jenna vão mostrar que algumas regras podem ser quebradas.\n\nJenna Barnes está no emprego dos seus sonhos e finalmente se considera uma divulgadora científica. Porém, o homem que ela deve documentar e divulgar sua pesquisa é terrível: chato, arrogante e irritante, além de ser bonito demais para o seu próprio bem. Uma grande pedra em seu caminho.\n\nDoutor Henry Adams nasceu para a neurobiologia, mas é uma incógnita para todos na Universidade de Seattle. Calado, genial e intimidador, o cientista é o martírio dos divulgadores da faculdade, ainda mais aqueles de língua afiada.\n\nMas depois de começarem a relação com o pé esquerdo, os neurônios desses dois inimigos se conectam quando o cientista não sabe o que está dando errado com sua pesquisa e a jornalista é a única que pode acobertá-lo até que ele descubra: por que os ratinhos da sua experiência estão se curando tão rápido?', 
+    tropes: ['CIENTISTA X JORNALISTA', 'AGE GAP', 'GRUMPY X SUNSHINE', 'ENEMIES TO LOVERS'], 
+    categoria: 'audiobooks', ilustracoes: ['ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/1.png', 'ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/2.png', 'ILUSTRAÇÕES/O PRINCÍPIO DO AMOR/3.png']},
   { id: 'temporada-de-farsa', 
     titulo: 'Temporada de Farsa e Gelo', 
     serie: null, 
@@ -193,18 +204,30 @@ const BOOKS = [
     ebook: 'https://a.co/d/016kh07K', 
     sinopse: 'Todo mundo conhece os quadrigêmeos do hóquei. O perfeitinho, o carismático, o super inteligente e... o outro. Tomas McKinley é esse o outro. Criado à sombra dos irmãos, ele precisa se destacar porque as chances de que um time de hóquei o procure depois da formatura são baixas. Tom precisa ser mais do que o quarto irmão geek, virgem e que talvez um dia seja um profissional.\n\nE uma garota pode ajudá-lo com isso.\n\nEllie Davis é a sensação do campus. Todo mundo a conhece. Pelo menos todo mundo pensa que a conhece porque, na verdade, a garota vive uma farsa. Nada de pai embaixador que viaja muito, nada de estágio em uma empresa privada. Ellie é filha de um bêbado inveterado, trabalha como garçonete fora do campus e tem o peso do mundo — e da mentira — sobre suas costas.\n\nMas agora o jogador de hóquei tímido sabe seu segredo.\n\nE um acordo nasce desse encontro.\n\nEllie vai ajudar Tom a se transformar no golden boy do momento, se ele a ajudar a manter sua mentira.\n\nE como eles farão isso? Com um namoro falso.', 
     tropes: ['CLICHÊ INVERTIDO', 'FAKE DATING', 'GAROTA POPULAR X NERD', 'FOUND FAMILY'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/1.png', 'ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/2.png', 'ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/3.png'] },
+  { id: 'temporada-de-farsa-audiobook', 
+    titulo: 'Temporada de Farsa e Gelo', 
+    serie: 'Audiolivro', 
+    capa: 'CAPAS/18. Temporada de Farsa & Gelo.jpg', 
+    lancamento: '08/12/2024', 
+    idioma: 'Português', 
+    formatoLabel: 'Audiolivro · Audible', 
+    ebook: 'https://www.audible.com.br/pd/Temporada-de-Farsa-Gelo-Audiolivro/B0H7F9QS1Q?source_code=ASSGB149080119000H&share_location=pdp', 
+    ctaLabel: 'Ouça na Audible', 
+    sinopse: 'Todo mundo conhece os quadrigêmeos do hóquei. O perfeitinho, o carismático, o super inteligente e... o outro. Tomas McKinley é esse o outro. Criado à sombra dos irmãos, ele precisa se destacar porque as chances de que um time de hóquei o procure depois da formatura são baixas. Tom precisa ser mais do que o quarto irmão geek, virgem e que talvez um dia seja um profissional.\n\nE uma garota pode ajudá-lo com isso.\n\nEllie Davis é a sensação do campus. Todo mundo a conhece. Pelo menos todo mundo pensa que a conhece porque, na verdade, a garota vive uma farsa. Nada de pai embaixador que viaja muito, nada de estágio em uma empresa privada. Ellie é filha de um bêbado inveterado, trabalha como garçonete fora do campus e tem o peso do mundo — e da mentira — sobre suas costas.\n\nMas agora o jogador de hóquei tímido sabe seu segredo.\n\nE um acordo nasce desse encontro.\n\nEllie vai ajudar Tom a se transformar no golden boy do momento, se ele a ajudar a manter sua mentira.\n\nE como eles farão isso? Com um namoro falso.', 
+    tropes: ['CLICHÊ INVERTIDO', 'FAKE DATING', 'GAROTA POPULAR X NERD', 'FOUND FAMILY'], 
+    categoria: 'audiobooks', ilustracoes: ['ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/1.png', 'ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/2.png', 'ILUSTRAÇÕES/TEMPORADA DE FARSA E GELO/3.png'], topAmazon: true },
   { id: 'amor-por-acidente', 
     titulo: 'Amor Por Acidente - Livro 1 da Série Irmãos Callahan', 
     serie: 'Irmãos Callahan · Livro 1', 
     capa: 'CAPAS/19. Amor Por Acidente (Irmãos Callahan Livro 1).jpg', 
     lancamento: '24/03/2025', 
     idioma: 'Português',
-   paginas: 709, 
-   ebook: 'https://a.co/d/01F0vaPu', 
-   sinopse: 'Todo mundo sabe que engenheiras e arquitetos não se dão bem, mas Florence e Garrett vão mostrar que algumas regras podem ser quebradas.\n\nFlorence Beaumont coloca o trabalho em primeiro, segundo e terceiro lugar em sua vida. Na quarta posição, está o ódio que ela sente pelo herdeiro da Callahan Structures, um arquiteto playboy e mulherengo, que está sempre competindo com ela pelos melhores projetos. Uma disputa que termina com uma aposta inocente: quem tiver mais projetos aprovados em um ano ganhará a chance de fazer o que quiser com o outro. E Florence está pronta para fazer o badboy se ferrar.\n\nGarrett Callahan sabe que a vida é curta demais para se preocupar tanto. Herdeiro de um império no ramo das construções, sua vida é tão fácil quanto pode ser. Exceto por uma engenheira nervosa em seu caminho. E ele gosta disso. A mulher sistemática e competitiva reprova totalmente seus hábitos de conquista, e ele já sabe o que fazer quando ganhar aquela aposta estúpida: Garrett levará Florence para uma noite ao seu lado. Um encontro que provará à engenheira que existe uma razão pela qual as mulheres sempre voltam pedindo mais.\n\nNo entanto, as coisas fogem do controle quando todo o ódio reprimido do casal cão e gato se transforma em uma atração avassaladora.\n\nAgora, os dois inimigos terão que lidar com a consequência daquela noite que, em nove meses, estará nos braços deles.\n\nInimigos podem se tornar… algo mais?', 
-   tropes: ['HATERS TO LOVERS', 'GRAVIDEZ INESPERADA', 'CONVIVÊNCIA FORÇADA', 'GRUMPY X SUNSHINE'], 
-   categoria: 'pt' },
+    paginas: 709, 
+    ebook: 'https://a.co/d/01F0vaPu', 
+    sinopse: 'Todo mundo sabe que engenheiras e arquitetos não se dão bem, mas Florence e Garrett vão mostrar que algumas regras podem ser quebradas.\n\nFlorence Beaumont coloca o trabalho em primeiro, second e terceiro lugar em sua vida. Na quarta posição, está o ódio que ela sente pelo herdeiro da Callahan Structures, um arquiteto playboy e mulherengo, que está sempre competindo com ela pelos melhores projetos. Uma disputa que termina com uma aposta inocente: quem tiver mais projetos aprovados em um ano ganhará a chance de fazer o que quiser com o outro. E Florence está pronta para fazer o badboy se ferrar.\n\nGarrett Callahan sabe que a vida é curta demais para se preocupar tanto. Herdeiro de um império no ramo das construções, sua vida é tão fácil quanto pode ser. Exceto por uma engenheira nervosa em seu caminho. E ele gosta disso. A mulher sistemática e competitiva reprova totalmente seus hábitos de conquista, e ele já sabe o que fazer quando ganhar aquela aposta estúpida: Garrett levará Florence para uma noite ao seu lado. Um encontro que provará à engenheira que existe uma razão pela qual as mulheres sempre voltam pedindo mais.\n\nNo entanto, as coisas fogem do controle quando todo o ódio reprimido do casal cão e gato se transforma em uma atração avassaladora.\n\nNow, os dois inimigos terão que lidar com a consequência daquela noite que, em nove meses, estará nos braços deles.\n\nInimigos podem se tornar… algo mais?', 
+    tropes: ['HATERS TO LOVERS', 'GRAVIDEZ INESPERADA', 'CONVIVÊNCIA FORÇADA', 'GRUMPY X SUNSHINE'], 
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/AMOR POR ACIDENTE/1.png', 'ILUSTRAÇÕES/AMOR POR ACIDENTE/2.png', 'ILUSTRAÇÕES/AMOR POR ACIDENTE/3.png'], topAmazon: true },
   { id: 'chefe-quase-perfeito', 
     titulo: 'Um chefe (Quase) Perfeito - Livro 2 da Série Irmãos Callahan', 
     serie: 'Irmãos Callahan · Livro 2', 
@@ -213,7 +236,18 @@ const BOOKS = [
     paginas: 597, ebook: 'https://a.co/d/04Y02MC0', 
     sinopse: 'Uma noite. Um nome falso. Nenhuma regra.\nEles só não esperavam se reencontrar no escritório… como chefe e funcionária.\n\nCamille Beaumont não queria o estágio na Callahan Structures, mas agora é a única chance que tem de concluir a graduação. E, para comemorar sua desgraça, a garota resolve afogar as mágoas em uma decisão impulsiva: passar a noite com um estranho doze anos mais velho, que ela nunca mais veria na vida.\n\nSem nomes reais. Sem promessas. Sem chances de vê-lo de novo. Ou assim ela pensava.\n\nNa manhã seguinte, Camille descobre que seu novo chefe é ninguém menos que o homem que conheceu no bar. CEO. Herdeiro da construtora. E, agora, o maior problema da sua vida.\n\nRaiden Callahan carrega o peso do world nos ombros e, naquela noite, tudo o que queria era uma pausa do papel de executivo impiedoso. O que ele não imaginava era que sua fuga teria cabelos cor-de-rosa, um nome inventado… e um crachá de estagiária na segunda-feira.\n\nAgora, os dois precisam trabalhar lado a lado fingindo que nada aconteceu, mas a tensão entre eles diz o contrário. Chefe e funcionária podem se tornar… algo mais?', 
     tropes: ['AGE GAP', 'CONVIVÊNCIA FORÇADA', 'CHEFE X FUNCIONÁRIA', 'GRUMPY X SUNSHINE'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/UM CHEFE QUASE PERFEITO/1.png', 'ILUSTRAÇÕES/UM CHEFE QUASE PERFEITO/2.png', 'ILUSTRAÇÕES/UM CHEFE QUASE PERFEITO/3.png'], topAmazon: true },
+  { id: 'chefe-quase-perfeito-audiobook', 
+    titulo: 'Um chefe (Quase) Perfeito - Livro 2 da Série Irmãos Callahan', 
+    serie: 'Audiolivro', 
+    capa: 'CAPAS/20. Um Chefe (Quase) Perfeito (Irmãos Callahan Livro 2).jpg', 
+    lancamento: '11/08/2025', idioma: 'Português', 
+    formatoLabel: 'Audiolivro · Audible', 
+    ebook: 'https://www.audible.com.br/pd/Um-Chefe-Quase-Perfeito-Audiolivro/B0H9BTKGYY?source_code=ASSGB149080119000H&share_location=pdp', 
+    ctaLabel: 'Ouça na Audible', 
+    sinopse: 'Uma noite. Um nome falso. Nenhuma regra.\nEles só não esperavam se reencontrar no escritório… como chefe e funcionária.\n\nCamille Beaumont não queria o estágio na Callahan Structures, mas agora é a única chance que tem de concluir a graduação. E, para comemorar sua desgraça, a garota resolve afogar as mágoas em uma decisão impulsiva: passar a noite com um estranho doze anos mais velho, que ela nunca mais veria na vida.\n\nSem nomes reais. Sem promessas. Sem chances de vê-lo de novo. Ou assim ela pensava.\n\nNa manhã seguinte, Camille descobre que seu novo chefe é ninguém menos que o homem que conheceu no bar. CEO. Herdeiro da construtora. E, agora, o maior problema da sua vida.\n\nRaiden Callahan carrega o peso do world nos ombros e, naquela noite, tudo o que queria era uma pausa do papel de executivo impiedoso. O que ele não imaginava era que sua fuga teria cabelos cor-de-rosa, um nome inventado… e um crachá de estagiária na segunda-feira.\n\nAgora, os dois precisam trabalhar lado a lado fingindo que nada aconteceu, mas a tensão entre eles diz o contrário. Chefe e funcionária podem se tornar… algo mais?', 
+    tropes: ['AGE GAP', 'CONVIVÊNCIA FORÇADA', 'CHEFE X FUNCIONÁRIA', 'GRUMPY X SUNSHINE'], 
+    categoria: 'audiobooks', ilustracoes: ['ILUSTRAÇÕES/AMOR POR ACIDENTE/1.png', 'ILUSTRAÇÕES/AMOR POR ACIDENTE/2.png', 'ILUSTRAÇÕES/AMOR POR ACIDENTE/3.png'], topAmazon: true },
   { id: 'como-salvar-mafioso', 
     titulo: 'Como Salvar Um Mafioso', 
     serie: null, 
@@ -222,17 +256,17 @@ const BOOKS = [
     idioma: 'Português', 
     paginas: 412, 
     ebook: 'https://a.co/d/09mpKRyN', 
-    sinopse: 'Lila Harris levava uma vida normal como motorista de aplicativos, até um homem armado e todo ensanguentado entrar no carro dela com uma única palavra: dirige. Ele não precisava dizer duas vezes.\n\nRocco Bazzini é um príncipe da máfia. Prestes a subir para o cargo mais alto da La Mano Scarlatta, sofreu uma emboscada em Nova Iorque. A cúpula da organização mafiosa e seus inimigos não sabem que ele está vivo, e quer vingança.\n\nCheio de ódio e muito ferido, tudo que ele tem é uma garota inocente de olhos curiosos que salvou sua vida e… um bulldog velho. Para se recuperar, Rocco precisa de abrigo e dos cuidados dela, mas Lila é atraente demais para o próprio bem.\n\nA chama proibida entre eles ganha contornos ainda mais irresistíveis quando o mafioso faz uma proposta: por 100 mil dólares a motorista o levará para o esconderijo da máfia fora de Nova Iorque. E Lila sabe que recusar não é uma opção. Ela precisa do dinheiro e… Rocco é um mafioso mimado demais para ouvir um não.\n\nAgora, o caminho do futuro Don da máfia e da jovem tagarela se cruzaram, tornando ambos os mundos muito mais próximos do que eles poderiam imaginar.', 
+    sinopse: 'Lila Harris levava uma vida normal como motorista de aplicativos, até um homem armado e todo ensanguentado entrar no carro dela com uma única palavra: dirige. Ele não precisava dizer duas vezes.\n\nRocco Bazzini é um príncipe da máfia. Prestes a subir para o cargo mais alto da La Mano Scarlatta, sofreu uma emboscada em Nova Iorque. A cúpula da organização mafiosa e seus inimigos não sabem que ele está vivo, e quer vingança.\n\nCheio de ódio e muito ferido, tudo que ele tem é uma garota inocente de olhos curiosos que salvou sua vida e… um bulldog velho. Para se recuperar, Rocco precisa de abrigo e dos cuidados dela, mas Lila é atraente demais para o próprio bem.\n\nA chama proibida entre eles ganha contornos ainda mais irresistíveis quando o mafioso faz uma proposta: por 100 mil dólares a motorista o levará para o esconderijo da máfia fora de Nova Iorque. E Lila sabe que recusar não é uma opção. Ela precisa do dinheiro e… Rocco é um mafioso mimado demais para ouvir um não.\n\nAgora, o caminho do futuro Don da máfia e da jovem tagarela se cruzaram, tornando ambos os mundos muito mais próximos do que eles ponderiam imaginar.', 
     tropes: ['COMÉDIA ROMÂNTICA COM MAFIOSO', 'GRUMPY X SUNSHINE', 'CONVIVÊNCIA FORÇADA'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/COMO SALVAR UM MAFIOSO/1.png', 'ILUSTRAÇÕES/COMO SALVAR UM MAFIOSO/2.png', 'ILUSTRAÇÕES/COMO SALVAR UM MAFIOSO/3.png'], topAmazon: true },
   { id: 'improvisado', 
-    titulo: 'Improvisado O Clube dos Pais Solteiros do Hóquei', 
+    titulo: 'Improvisado', 
     serie: 'O Clube dos Pais Solteiros do Hóquei', 
     capa: 'CAPAS/22. Improvisado O Clube dos Pais Solteiros do Hóquei.jpg', 
     lancamento: '06/04/2026', idioma: 'Português', paginas: 551, ebook: 'https://a.co/d/0g4GXayq', 
     sinopse: '“Casa comigo?” A brasileira e assistente pessoal Anna Tereza Barcelos não imaginava que ouviria aquelas palavras saindo da boca de seu chefe, ainda mais quando a relação deles era estritamente profissional.\n\nEle precisava de alguém para lembrá-lo dos compromissos? Feito.\nEle precisava resolver problemas antes que virassem manchetes? Conte com ela.\nEle queria alguém em quem confiar sem precisar explicar nada? Tudo sob controle.\n\nMas, quando o serviço de imigração liga informando que Anna não foi aprovada para mais um visto de trabalho, o jogador de hóquei sério e frio faz a proposta: um casamento falso para mantê-la no país.\n\nWeston Burke é o homem das cavernas do New York Warriors. O maior ala esquerda da história do time coleciona vitórias, mas sua vida privada é um segredo para os torcedores. Tudo o que se sabe sobre o dia a dia do astro do hóquei é que ele é pai de um garotinho, solteiro e jamais é visto sorrindo em público.\n\nE agora ele vai se casar em uma cerimônia midiática — um relacionamento falso que precisa convencer o mundo inteiro de que Wes e Tessa estão apaixonados.\n\nMas, no meio de todo esse noivado improvisado, um sentimento real pode nascer?', 
     tropes: ['CASAMENTO POR CONVENIÊNCIA', 'AGE GAP', 'GRUMPY X SUNSHINE', 'CHEFE X FUNCIONÁRIA'], 
-    categoria: 'pt' },
+    categoria: 'pt', ilustracoes: ['ILUSTRAÇÕES/IMPROVISADO/1.png', 'ILUSTRAÇÕES/IMPROVISADO/2.png', 'ILUSTRAÇÕES/IMPROVISADO/3.png'], topAmazon: true },
   { id: 'maid-for-each-other', 
     titulo: 'Maid For Each Other', 
     serie: null, 
@@ -267,27 +301,116 @@ const BOOKS = [
   { id: 'doces-rivais', 
     titulo: 'Doces Rivais', 
     serie: null, capa: 'CAPAS/26. Doces Rivais.jpg', 
-    lancamento: 'N/A', idioma: 'Português', 
+    lancamento: '24/07/2025', idioma: 'Português', 
     paginas: 310, ebook: 'https://a.co/d/04k3otwX', 
+    compras: [
+      { url: 'https://a.co/d/04k3otwX', label: 'Comprar eBook' },
+      { url: 'https://a.co/d/09Xq3cCw', label: 'Comprar Livro' }
+    ], 
     sinopse: 'Marina Dantas é uma advogada recém-formada, determinada a mostrar que tem tudo para se tornar implacável na profissão. Quando recebe a missão de convencer um padeiro a vender sua loja, enxerga na tarefa a oportunidade perfeita para provar seu valor em um dos maiores escritórios do país.\n\nO que ela não esperava era enfrentar Estevão Avelar, um chef de cozinha que jamais quis herdar a padaria da família. Sonhador e apaixonado pela culinária internacional, ele se vê preso ao legado dos Avelar, agora ameaçado pela construção de um shopping no local.\n\nEla quer fechar o negócio. Ele quer salvar a padaria. Ambos têm boas razões para não ceder. O que nenhum dos dois contava era com a atração imediata que transforma a convivência forçada em uma batalha de provocações, sarcasmo e sentimentos inesperados.\n\nEm meio a negociações tensas e faíscas emocionais, Marina e Estevão descobrem que, quando o jogo é entre rivais, o coração pode ser o maior dos imprevistos. E no fim das contas, um só ganha se o outro perder.', 
     tropes: ['ENEMIES TO LOVERS', 'GRUMPY X SUNSHINE', 'APROXIMAÇÃO FORÇADA'], 
-    categoria: 'tradicionais' }
+    categoria: 'tradicionais', ilustracoes: ['ILUSTRAÇÕES/DOCES RIVAIS/1.png', 'ILUSTRAÇÕES/DOCES RIVAIS/2.png', 'ILUSTRAÇÕES/DOCES RIVAIS/3.png'] }
 ];
 
 const TIMELINE = [
-  { ano: '1999', titulo: 'Origens em Minas', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' },
-  { ano: 'xxxx', titulo: 'O primeiro fanfic', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' },
-  { ano: 'xxxx', titulo: 'Wattpad', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' },
-  { ano: 'xxxx', titulo: 'Top 17 Kindle', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' },
-  { ano: 'xxxx', titulo: 'Os Padrinhos', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' },
-  { ano: 'xxxx', titulo: 'Best-Seller Amazon', desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' }
+  { ano: '1999', titulo: 'O início de tudo', desc: '05 de julho de 1999 é o início da minha história: eu nasci!' },
+  { ano: '2016', titulo: 'Wattpad e a estreia', desc: 'Publiquei Adorável Babá, minha primeira história no Wattpad. Posteriormente, lancei o e-book na Amazon.' },
+  { ano: '2020', titulo: 'Estreia na Amazon', desc: 'Estreei na Amazon com Jogos de Poder (série Jogos de Máfia).' },
+  { ano: '2021', titulo: 'Três lançamentos em um ano', desc: 'Lancei Jogos de Ruína, Os Padrinhos e Faça um Pedido.' },
+  { ano: '2022', titulo: 'Novos títulos e o primeiro conto', desc: 'Publiquei Jogos de Vitória, o conto O Pedido, Contrato em Las Vegas, Contos de Contrato em Las Vegas e o livro em parceria Lance Proibido.' },
+  { ano: '2023', titulo: 'Ano de expansão', desc: 'Lancei Os Sócios, Aliança Perfeita, Meu Detestável Chefe, Protegida pelo Guarda-Costas, Manual da Conquista Imperfeita e minha primeira versão em inglês: Maid For Each Other.' },
+  { ano: '2024', titulo: 'Mais lançamentos internacionais', desc: 'Publiquei Eu Pediria por Você, Um Começo Imperfeito, O Princípio do Amor e Temporada de Farsa e Gelo. Também saíram as edições internacionais The Seduction Effect (inglês) e Les Témoins de Mariage (francês).' },
+  { ano: '2025', titulo: 'Mercado tradicional e três TOP 1', desc: 'Cheguei ao mercado tradicional com o anúncio e pré-venda física de Doces Rivais pela Qualis Editora. Na Amazon, lancei Amor por Acidente, Um Chefe (Quase) Perfeito e Como Salvar um Mafioso. Os três títulos chegaram ao TOP 1 do ranking geral da plataforma.' },
+  { ano: '2026', titulo: 'Selo Neon e Selo Amore', desc: 'Relancei Doces Rivais em digital, ingressei para o Selo Neon da Editora Buzz, publiquei Improvisado em formato independente (mais um TOP 1 para a lista!) e fui anunciada como a primeira autora nacional do Selo Amore da Editora VR, com nota exclusiva no PublishNews.' }
 ];
 
 const AGENDA = [
-  { dia: '15', mes: 'Ago', ano: '2026', tipo: 'Feira', titulo: 'Bienal do Livro SP', local: 'São Paulo, SP', desc: 'Mesa de debates sobre comédias românticas brasileiras contemporâneas.' },
-  { dia: '20', mes: 'Set', ano: '2026', tipo: 'Lançamento', titulo: 'Live de Lançamento', local: 'Online · Instagram', desc: 'Live com a autora, revelação de novo livro e Q&A ao vivo com leitoras.' },
-  { dia: '12', mes: 'Out', ano: '2026', tipo: 'Evento', titulo: 'Encontro com Leitoras', local: 'Belo Horizonte, MG', desc: 'Sessão de autógrafos e bate-papo exclusivo no maior evento literário de MG.' }
+  { dia: '03', mes: 'Ago', ano: '2026', tipo: 'Lançamento', titulo: 'Live de Lançamento do Site', local: 'Online · Instagram Oficial (@autoraoliviauviplais)', desc: 'Live de lançamento do site oficial, direto do Instagram da autora.', horaInicio: '19:30', horaFim: '20:00' },
+  { dia: '7', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Grupo Editorial Portal', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo - Rua F18.', horaInicio: '14:00', horaFim: '16:00' },
+  { dia: '11', mes: 'Set', ano: '2026', tipo: 'Evento', titulo: 'Encontro de Leitores NEON Editora ', local: 'Distrito Anhembi', desc: 'Encontro de fãs promovido pela Buzz Editora, com acesso exclusivo a spoilers do lançamento de 2027. | Bienal Internacional do Livro de São Paulo - Rua J30', horaInicio: '16:00', horaFim: '17:00' },
+  { dia: '12', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Unicorn Books', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo, no estande da Unicorn Books - Rua H70.', horaInicio: '14:30', horaFim: '16:00' }
 ];
+
+const AGENDA_MES_INDEX = { Jan: 0, Fev: 1, Mar: 2, Abr: 3, Mai: 4, Jun: 5, Jul: 6, Ago: 7, Set: 8, Out: 9, Nov: 10, Dez: 11 };
+
+const AGENDA_TIPO_INFO = {
+  'Feira':      { cor: 'azul',     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-7h6v7"/></svg>' },
+  'Lançamento': { cor: 'vermelho', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>' },
+  'Evento':     { cor: 'rosa',     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>' }
+};
+
+const AGENDA_ICON_PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+const AGENDA_ICON_CALENDAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>';
+const AGENDA_ICON_INSTA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>';
+const AGENDA_ICON_CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>';
+
+function getAgendaEventDate(eventItem) {
+  const mesIndex = AGENDA_MES_INDEX[eventItem.mes] ?? 0;
+  return new Date(Number(eventItem.ano), mesIndex, Number(eventItem.dia));
+}
+
+function getAgendaStatus(eventDate) {
+  const hoje = new Date();
+  hoje.setHours(0, 0, 0, 0);
+  const diffDias = Math.round((eventDate - hoje) / 86400000);
+
+  if (diffDias < 0) return { label: 'Realizado', classe: 'passado' };
+  if (diffDias === 0) return { label: 'É hoje!', classe: 'hoje' };
+  if (diffDias === 1) return { label: 'Amanhã', classe: 'em-breve' };
+  if (diffDias <= 30) return { label: `Em ${diffDias} dias`, classe: 'em-breve' };
+  return { label: null, classe: '' };
+}
+
+function buildAgendaCalendarLink(eventItem, eventDate) {
+  const pad = (n) => String(n).padStart(2, '0');
+  let datesParam;
+
+  if (eventItem.horaInicio && eventItem.horaFim) {
+    const [hI, mI] = eventItem.horaInicio.split(':');
+    const [hF, mF] = eventItem.horaFim.split(':');
+    const dataBase = `${eventItem.ano}${pad(AGENDA_MES_INDEX[eventItem.mes] + 1)}${pad(eventItem.dia)}`;
+    datesParam = `${dataBase}T${pad(hI)}${pad(mI)}00/${dataBase}T${pad(hF)}${pad(mF)}00`;
+  } else {
+    const inicio = new Date(eventDate);
+    const fim = new Date(eventDate);
+    fim.setDate(fim.getDate() + 1);
+    const formatar = (d) => d.toISOString().slice(0, 10).replace(/-/g, '');
+    datesParam = `${formatar(inicio)}/${formatar(fim)}`;
+  }
+
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: `${eventItem.tipo}: ${eventItem.titulo}`,
+    dates: datesParam,
+    details: eventItem.desc,
+    location: eventItem.local,
+    ...(eventItem.horaInicio && eventItem.horaFim ? { ctz: 'America/Sao_Paulo' } : {})
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+function buildAgendaMapsLink(local) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(local)}`;
+}
+
+/* ================================================================
+   BLOG — CONTENTFUL INTEGRATION (UPDATED)
+   ================================================================ */
+const CONTENTFUL_CONFIG = {
+  spaceId: 'bikxsvvhd2dh',
+  accessToken: '3kCZ2e_GBDPxbpLqpXRmGaKgk_0AZCHSt7awwJrzGes',
+  environment: 'master',
+  contentType: 'blogPost'
+};
+
+let BLOG_POSTS = [];
+
+const BLOG_CATEGORIA_COR = {
+  'Lançamento': 'vermelho',
+  'Bastidores': 'azul',
+  'Agenda': 'ciano',
+  'Comunidade': 'rosa'
+};
 
 const selectors = {
   header: '#site-header',
@@ -296,26 +419,71 @@ const selectors = {
   page: '.page',
   pageLink: '[data-page]',
   modalOverlay: '#modal-overlay',
-  modalBox: '#modal-box'
+  modalBox: '#modal-box',
+  blogGrid: '#blog-grid'
 };
 
 document.addEventListener('DOMContentLoaded', initSite);
+
+function parseDateBR(value) {
+  if (!value || value === 'N/A') return new Date(0);
+  const [day, month, year] = value.split('/').map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function getBooksByRecency() {
+  return [...BOOKS].sort((a, b) => parseDateBR(b.lancamento) - parseDateBR(a.lancamento));
+}
+
+function buildDestaque() {
+  const latest = getBooksByRecency()[0];
+  if (!latest) return;
+
+  const titulo = document.getElementById('destaque-titulo');
+  const serie = document.getElementById('destaque-serie');
+  const sinopse = document.getElementById('destaque-sinopse');
+  const ctas = document.getElementById('destaque-ctas');
+  const capaImg = document.getElementById('destaque-capa-img');
+  if (!titulo || !serie || !sinopse || !ctas || !capaImg) return;
+
+  titulo.textContent = latest.titulo;
+  serie.textContent = latest.serie || `${latest.paginas} páginas · ${latest.idioma}`;
+  sinopse.textContent = latest.sinopse.split(/\n\n/)[0].replace(/^[“"]|[”"]$/g, '');
+  ctas.innerHTML = latest.ebook
+    ? `<a href="${latest.ebook}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comprar agora</a>`
+    : '';
+  capaImg.src = latest.capa;
+  capaImg.alt = latest.titulo;
+}
+
+function buildFooterDestaques() {
+  const list = document.getElementById('footer-destaques');
+  if (!list) return;
+
+  const top3 = getBooksByRecency().slice(0, 3);
+  list.replaceChildren(...top3.map((book) => {
+    const item = document.createElement('li');
+    item.innerHTML = `<a href="#livros" data-page="livros">${escapeHTML(book.titulo)}</a>`;
+    return item;
+  }));
+}
 
 function initSite() {
   initRouter();
   initMenu();
   buildTimeline();
   buildBookshelf();
+  initTropeReveal();
+  buildDestaque();
+  buildFooterDestaques();
   buildAgenda();
-  initForms();
+  buildBlog();
+  initBlogPaginacao();
   initBioToggle();
   initModal();
 }
 
 function initRouter() {
-  const links = document.querySelectorAll(selectors.pageLink);
-  const initialPage = getPageFromHash();
-
   document.addEventListener('click', (event) => {
     const link = event.target.closest(selectors.pageLink);
     if (!link) return;
@@ -324,13 +492,29 @@ function initRouter() {
     showPage(link.dataset.page || 'home');
   });
 
-  window.addEventListener('hashchange', () => showPage(getPageFromHash(), false));
+  window.addEventListener('hashchange', handleRouteChange);
   window.addEventListener('scroll', updateHeaderMode, { passive: true });
 
-  links.forEach((link) => {
-    link.classList.toggle('active', link.dataset.page === initialPage);
-  });
-  showPage(initialPage, false);
+  handleRouteChange();
+}
+
+function handleRouteChange() {
+  const hash = window.location.hash.replace('#', '');
+  const postMatch = hash.match(/^post-(.+)$/);
+
+  if (postMatch) {
+    const post = BLOG_POSTS.find((item) => item.slug === postMatch[1]);
+    if (post) {
+      renderPost(post);
+      showPage('post', false);
+      document.querySelectorAll(selectors.pageLink).forEach((link) => {
+        link.classList.toggle('active', link.dataset.page === 'blog');
+      });
+      return;
+    }
+  }
+
+  showPage(getPageFromHash(), false);
 }
 
 function getPageFromHash() {
@@ -368,8 +552,8 @@ function updateHeaderMode() {
   const header = document.querySelector(selectors.header);
   if (!header) return;
 
-  const pageId = getPageFromHash();
-  const isHero = pageId === 'home' && window.scrollY <= 80;
+  const activePageId = document.querySelector('.page.active')?.id;
+  const isHero = activePageId === 'home' && window.scrollY <= 80;
   const navLogoImg = document.querySelector('#nav-logo-img');
 
   header.classList.toggle('hero-mode', isHero);
@@ -411,27 +595,27 @@ function buildBookshelf() {
   const shelves = {
     pt: document.getElementById('bookshelf-pt'),
     idiomas: document.getElementById('bookshelf-idiomas'),
-    tradicionais: document.getElementById('bookshelf-tradicionais')
+    tradicionais: document.getElementById('bookshelf-tradicionais'),
+    audiobooks: document.getElementById('bookshelf-audiobooks')
   };
 
-  if (!filterNav || !shelves.pt || !shelves.idiomas || !shelves.tradicionais) return;
+  if (!filterNav || !shelves.pt || !shelves.idiomas || !shelves.tradicionais || !shelves.audiobooks) return;
 
-  filterNav.replaceChildren(createTropeButton('Todos', 'all', true));
+  filterNav.replaceChildren(createTropeButton('TODAS', 'all', true));
 
   getAllTropes().forEach((trope) => {
-    filterNav.appendChild(createTropeButton(trope, trope));
+    const button = createTropeButton(trope, trope);
+    button.hidden = true;
+    filterNav.appendChild(button);
   });
 
-  BOOKS.forEach((book) => {
+  filterNav.appendChild(createTropeMoreToggle(filterNav));
+
+  getBooksByRecency().forEach((book) => {
     shelves[book.categoria].appendChild(createBookElement(book));
   });
 
-  // Aguarda o navegador terminar de desenhar a página
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      initTropeFilterOverflow(filterNav);
-    });
-  });
+  initShelfDragScroll();
 
   filterNav.addEventListener('click', (event) => {
     const button = event.target.closest('.trope-btn');
@@ -445,81 +629,70 @@ function buildBookshelf() {
     filterBooks(button.dataset.trope);
   });
 }
-function initTropeFilterOverflow(filterNav) {
-  const buttons = Array.from(filterNav.querySelectorAll('.trope-btn'));
 
-  let moreButton = filterNav.querySelector('.trope-more-toggle');
+function createTropeMoreToggle(filterNav) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'trope-more-toggle';
+  button.textContent = 'Ver mais';
+  button.setAttribute('aria-expanded', 'false');
 
-  if (!moreButton) {
-    moreButton = document.createElement('button');
-    moreButton.type = 'button';
-    moreButton.className = 'trope-more-toggle';
-    moreButton.textContent = 'Ver mais';
-    moreButton.hidden = true;
-    moreButton.setAttribute('aria-expanded', 'false');
-    filterNav.appendChild(moreButton);
-  }
+  button.addEventListener('click', () => {
+    const expand = button.getAttribute('aria-expanded') === 'false';
 
-  let firstLineLimit = buttons.length;
+    filterNav.querySelectorAll('.trope-btn').forEach((item) => {
+      if (item.dataset.trope !== 'all') item.hidden = !expand;
+    });
 
-  const updateOverflowState = () => {
-    buttons.forEach(button => button.hidden = false);
+    button.textContent = expand ? 'Ver menos' : 'Ver mais';
+    button.setAttribute('aria-expanded', String(expand));
+  });
 
-    const gap = parseFloat(
-      getComputedStyle(filterNav).columnGap ||
-      getComputedStyle(filterNav).gap ||
-      '0'
-    );
+  return button;
+}
 
-    const availableWidth = filterNav.clientWidth;
+function initShelfDragScroll() {
+  document.querySelectorAll('.suporte-fisico-prateleira').forEach((shelf) => {
+    let isDown = false;
+    let didDrag = false;
+    let startX = 0;
+    let startScroll = 0;
 
-    let usedWidth = 0;
-    firstLineLimit = 0;
+    shelf.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'mouse' || event.button !== 0) return;
+      isDown = true;
+      didDrag = false;
+      startX = event.clientX;
+      startScroll = shelf.scrollLeft;
+    });
 
-    buttons.forEach((button, index) => {
-      const width = Math.ceil(button.getBoundingClientRect().width);
-
-      if (
-        index === 0 ||
-        usedWidth + gap + width <= availableWidth
-      ) {
-        usedWidth = index === 0 ? width : usedWidth + gap + width;
-        firstLineLimit = index + 1;
+    shelf.addEventListener('pointermove', (event) => {
+      if (!isDown || event.pointerType !== 'mouse') return;
+      const delta = event.clientX - startX;
+      if (Math.abs(delta) > 8) {
+        didDrag = true;
+        shelf.classList.add('is-dragging');
+      }
+      if (didDrag) {
+        shelf.scrollLeft = startScroll - delta;
       }
     });
 
-    buttons.slice(firstLineLimit).forEach(button => {
-      button.hidden = true;
-    });
+    const endDrag = () => {
+      isDown = false;
+      shelf.classList.remove('is-dragging');
+    };
 
-    const hasOverflow = firstLineLimit < buttons.length;
+    shelf.addEventListener('pointerup', endDrag);
+    shelf.addEventListener('pointerleave', endDrag);
+    shelf.addEventListener('pointercancel', endDrag);
 
-    moreButton.hidden = !hasOverflow;
-    moreButton.textContent = 'Ver mais';
-    moreButton.setAttribute('aria-expanded', 'false');
-  };
-
-  moreButton.onclick = () => {
-    const expand = moreButton.getAttribute('aria-expanded') === 'false';
-
-    buttons.slice(firstLineLimit).forEach(button => {
-      button.hidden = !expand;
-    });
-
-    moreButton.textContent = expand ? 'Ver menos' : 'Ver mais';
-    moreButton.setAttribute('aria-expanded', String(expand));
-  };
-
-  requestAnimationFrame(updateOverflowState);
-
-  window.addEventListener('load', updateOverflowState);
-
-  if (document.fonts) {
-    document.fonts.ready.then(updateOverflowState);
-  }
-
-  window.addEventListener('resize', updateOverflowState, {
-    passive: true
+    shelf.addEventListener('click', (event) => {
+      if (didDrag) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+    }, true);
   });
 }
 
@@ -548,20 +721,31 @@ function createBookElement(book) {
   button.innerHTML = `
     <figure class="book-cover">
       <img src="${book.capa}" alt="Capa do livro ${escapeHTML(book.titulo)}" width="300" height="450" loading="lazy">
-      <figcaption class="book-overlay"><span>Detalhes</span></figcaption>
+      <figcaption class="book-overlay">
+        <span class="book-overlay-titulo">${escapeHTML(book.titulo)}</span>
+        <span class="book-overlay-serie">${escapeHTML(book.serie || 'Ver detalhes')}</span>
+      </figcaption>
     </figure>
-    <section class="book-meta">
-      <h3>${escapeHTML(book.titulo)}</h3>
-      <p>${escapeHTML(book.serie || book.idioma)}</p>
-      <ul class="book-tropes" role="list">
-        ${book.tropes.map((trope, index) => `<li><b class="badge ${getBadgeColor(index)}">${escapeHTML(trope)}</b></li>`).join('')}
-      </ul>
-    </section>
+    <ul class="book-tropes" role="list">
+      ${book.tropes.map((trope, index) => `<li><b class="badge ${getBadgeColor(index)}">${escapeHTML(trope)}</b></li>`).join('')}
+    </ul>
   `;
 
   button.addEventListener('click', () => playBookTransition(book));
   item.appendChild(button);
   return item;
+}
+
+function initTropeReveal() {
+  const button = document.getElementById('trope-reveal-btn');
+  const wrap = document.getElementById('organizador-estantes-realistas');
+  if (!button || !wrap) return;
+
+  button.addEventListener('click', () => {
+    const revealed = wrap.classList.toggle('tropes-visiveis');
+    button.setAttribute('aria-pressed', String(revealed));
+    button.textContent = revealed ? 'Ocultar as tropes' : 'Revelar as tropes';
+  });
 }
 
 function getBadgeColor(index) {
@@ -608,7 +792,61 @@ function initModal() {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeModal();
+    if (event.key === 'Escape') {
+      closeLightbox();
+      closeModal();
+    }
+  });
+
+  document.querySelectorAll('.modal-tab-btn').forEach((tabButton) => {
+    tabButton.addEventListener('click', () => switchModalTab(tabButton.dataset.tab));
+  });
+
+  document.querySelector('.modal-galeria-ilustracoes')?.addEventListener('click', (event) => {
+    const img = event.target.closest('img');
+    if (img) openLightbox(img.src, img.alt);
+  });
+
+  initLightbox();
+}
+
+function initLightbox() {
+  const overlay = document.getElementById('lightbox-overlay');
+  const closeButton = document.getElementById('lightbox-close');
+
+  closeButton?.addEventListener('click', closeLightbox);
+  overlay?.addEventListener('click', (event) => {
+    if (event.target === overlay) closeLightbox();
+  });
+}
+
+function openLightbox(src, alt) {
+  const overlay = document.getElementById('lightbox-overlay');
+  const img = document.getElementById('lightbox-img');
+  if (!overlay || !img) return;
+
+  img.src = src;
+  img.alt = alt || '';
+  overlay.classList.add('open');
+  overlay.setAttribute('aria-hidden', 'false');
+}
+
+function closeLightbox() {
+  const overlay = document.getElementById('lightbox-overlay');
+  if (!overlay?.classList.contains('open')) return;
+
+  overlay.classList.remove('open');
+  overlay.setAttribute('aria-hidden', 'true');
+}
+
+function switchModalTab(tab) {
+  document.querySelectorAll('.modal-tab-btn').forEach((tabButton) => {
+    const active = tabButton.dataset.tab === tab;
+    tabButton.classList.toggle('is-active', active);
+    tabButton.setAttribute('aria-selected', String(active));
+  });
+  document.querySelectorAll('.modal-tab-panel').forEach((panel) => {
+    panel.hidden = panel.dataset.panel !== tab;
   });
 }
 
@@ -628,14 +866,34 @@ function openModal(book) {
   modal.querySelector('.modal-sinopse').textContent = book.sinopse;
   modal.querySelector('.modal-meta').innerHTML = `
     <article class="info-livro"><small>Lançamento</small><strong>${escapeHTML(book.lancamento)}</strong></article>
-    <article class="info-livro"><small>Formato</small><strong>${book.paginas} páginas · ${escapeHTML(book.idioma)}</strong></article>
+    <article class="info-livro"><small>Formato</small><strong>${book.formatoLabel ? escapeHTML(book.formatoLabel) : `${book.paginas} páginas · ${escapeHTML(book.idioma)}`}</strong></article>
   `;
   modal.querySelector('.modal-tropes').innerHTML = book.tropes
     .map((trope) => `<li><b class="trope-clicavel">${escapeHTML(trope)}</b></li>`)
     .join('');
-  modal.querySelector('.modal-actions').innerHTML = `
-    <a href="${book.ebook}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comprar eBook</a>
-  `;
+  modal.querySelector('.modal-actions').innerHTML = Array.isArray(book.compras) && book.compras.length
+    ? book.compras
+        .map((compra, index) => `<a href="${compra.url}" target="_blank" rel="noopener noreferrer" class="btn ${index === 0 ? 'btn-primary' : 'btn-outline-dark'}">${escapeHTML(compra.label)}</a>`)
+        .join('')
+    : `<a href="${book.ebook}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">${book.ctaLabel ? escapeHTML(book.ctaLabel) : 'Comprar eBook'}</a>`;
+
+  const selo = modal.querySelector('.modal-selo-top1');
+  if (selo) selo.hidden = !book.topAmazon;
+
+  const hasIlustracoes = Array.isArray(book.ilustracoes) && book.ilustracoes.length > 0;
+  const tabIlustracoes = modal.querySelector('.modal-tab-btn[data-tab="ilustracoes"]');
+  if (tabIlustracoes) tabIlustracoes.hidden = !hasIlustracoes;
+
+  const galeria = modal.querySelector('.modal-galeria-ilustracoes');
+  if (galeria) {
+    galeria.innerHTML = hasIlustracoes
+      ? book.ilustracoes
+          .map((src, index) => `<figure><img src="${src}" alt="Ilustração ${index + 1} de ${escapeHTML(book.titulo)}" loading="lazy"></figure>`)
+          .join('')
+      : '';
+  }
+
+  switchModalTab('sinopse');
 
   overlay.classList.add('open');
   overlay.setAttribute('aria-hidden', 'false');
@@ -654,25 +912,195 @@ function closeModal() {
 
 window.closeModal = closeModal;
 
+const BLOG_PAGE_SIZE = 9;
+let blogPaginaAtual = 1;
+
+async function buildBlog() {
+  const grid = document.querySelector(selectors.blogGrid);
+  const paginacao = document.getElementById('blog-paginacao');
+  if (!grid) return;
+
+  const url = `https://cdn.contentful.com/spaces/${CONTENTFUL_CONFIG.spaceId}/environments/${CONTENTFUL_CONFIG.environment}/entries?content_type=${CONTENTFUL_CONFIG.contentType}&access_token=${CONTENTFUL_CONFIG.accessToken}`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Erro ao buscar posts do Contentful');
+    
+    const data = await response.json();
+    
+    const assetsMap = new Map(
+      data.includes?.Asset?.map(asset => [asset.sys.id, 'https:' + asset.fields.file.url]) || []
+    );
+
+    BLOG_POSTS = data.items.map(item => {
+      const c = item.fields;
+      const capaAssetId = c.capa?.sys?.id;
+      
+      let dataFormatada = 'Sem data';
+      if (c.data) {
+        const [ano, mes, dia] = c.data.split('-');
+        if (dia && mes && ano) {
+          dataFormatada = `${dia.slice(0,2)}/${mes}/${ano}`;
+        } else {
+          dataFormatada = new Date(c.data).toLocaleDateString('pt-BR');
+        }
+      }
+      
+      return {
+        id: item.sys.id,
+        slug: c.slug || item.sys.id,
+        titulo: c.titulo || 'Sem título',
+        categoria: c.categoria || 'Geral',
+        data: dataFormatada,
+        resumo: c.resumo || '',
+        corpo: c.corpo || '',
+        capa: assetsMap.get(capaAssetId) || 'OLIVIA-FOTOS/OLIVIA_UVIPLAIS_4.jpg'
+      };
+    });
+
+    if (BLOG_POSTS.length === 0) {
+      grid.innerHTML = '<p>Nenhum post encontrado.</p>';
+      return;
+    }
+
+    BLOG_POSTS.sort((a, b) => parseDateBR(b.data) - parseDateBR(a.data));
+
+    renderBlogPage(1);
+
+    // Recheck hash router in case a direct link to post was hit before fetch finished
+    const hash = window.location.hash.replace('#', '');
+    const postMatch = hash.match(/^post-(.+)$/);
+    if (postMatch) {
+      const post = BLOG_POSTS.find((item) => item.slug === postMatch[1]);
+      if (post) {
+        renderPost(post);
+        showPage('post', false);
+      }
+    }
+
+  } catch (error) {
+    console.error('Erro na integração com Contentful:', error);
+    grid.innerHTML = '<p>Erro ao carregar os posts do blog. Tente novamente mais tarde.</p>';
+  }
+}
+
+function renderBlogPage(pagina) {
+  const grid = document.querySelector(selectors.blogGrid);
+  const paginacao = document.getElementById('blog-paginacao');
+  if (!grid) return;
+
+  const totalPaginas = Math.max(1, Math.ceil(BLOG_POSTS.length / BLOG_PAGE_SIZE));
+  blogPaginaAtual = Math.min(Math.max(1, pagina), totalPaginas);
+
+  const inicio = (blogPaginaAtual - 1) * BLOG_PAGE_SIZE;
+  const postsDaPagina = BLOG_POSTS.slice(inicio, inicio + BLOG_PAGE_SIZE);
+
+  grid.replaceChildren(...postsDaPagina.map((post) => createBlogCard(post)));
+
+  if (paginacao) {
+    if (totalPaginas <= 1) {
+      paginacao.replaceChildren();
+    } else {
+      const botoes = [];
+      botoes.push(`<button type="button" class="blog-pag-btn blog-pag-nav" data-pagina="${blogPaginaAtual - 1}" ${blogPaginaAtual === 1 ? 'disabled' : ''} aria-label="Página anterior">←</button>`);
+      for (let i = 1; i <= totalPaginas; i += 1) {
+        botoes.push(`<button type="button" class="blog-pag-btn${i === blogPaginaAtual ? ' is-active' : ''}" data-pagina="${i}" aria-current="${i === blogPaginaAtual ? 'page' : 'false'}">${i}</button>`);
+      }
+      botoes.push(`<button type="button" class="blog-pag-btn blog-pag-nav" data-pagina="${blogPaginaAtual + 1}" ${blogPaginaAtual === totalPaginas ? 'disabled' : ''} aria-label="Próxima página">→</button>`);
+      paginacao.innerHTML = botoes.join('');
+    }
+  }
+}
+
+function initBlogPaginacao() {
+  const paginacao = document.getElementById('blog-paginacao');
+  paginacao?.addEventListener('click', (event) => {
+    const button = event.target.closest('.blog-pag-btn');
+    if (!button || button.disabled) return;
+    renderBlogPage(Number(button.dataset.pagina));
+    document.getElementById('blog')?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  });
+}
+
+function createBlogCategoriaBadge(categoria) {
+  const cor = BLOG_CATEGORIA_COR[categoria] || 'vermelho';
+  return `<span class="blog-badge blog-badge-${cor}">${escapeHTML(categoria)}</span>`;
+}
+
+function createBlogCard(post) {
+  const card = document.createElement('a');
+  card.href = `#post-${post.slug}`;
+  card.className = 'blog-card';
+  card.setAttribute('role', 'listitem');
+  card.setAttribute('aria-label', `Ler o post: ${post.titulo}`);
+  card.innerHTML = `
+    <figure class="blog-card-capa">
+      <img src="${post.capa}" alt="" loading="lazy">
+    </figure>
+    <section class="blog-card-corpo">
+      <p class="blog-card-meta">${createBlogCategoriaBadge(post.categoria)} <span>${escapeHTML(post.data)}</span></p>
+      <h3>${escapeHTML(post.titulo)}</h3>
+      <p class="blog-card-resumo">${escapeHTML(post.resumo)}</p>
+      <span class="blog-card-link">Ler post completo →</span>
+    </section>
+  `;
+  return card;
+}
+
+function renderPost(post) {
+  const metaEl = document.getElementById('post-meta');
+  const tituloEl = document.getElementById('post-titulo');
+  const capaEl = document.getElementById('post-capa-img');
+  const corpoEl = document.getElementById('post-corpo');
+  const relacionadosEl = document.getElementById('post-relacionados-grid');
+  if (!metaEl || !tituloEl || !capaEl || !corpoEl || !relacionadosEl) return;
+
+  metaEl.innerHTML = `${createBlogCategoriaBadge(post.categoria)} <span>${escapeHTML(post.data)}</span>`;
+  tituloEl.textContent = post.titulo;
+  capaEl.src = post.capa;
+  capaEl.alt = post.titulo;
+  corpoEl.replaceChildren(...post.corpo.split(/\n\n/).map((paragrafo) => {
+    const p = document.createElement('p');
+    p.textContent = paragrafo;
+    return p;
+  }));
+
+  const relacionados = BLOG_POSTS
+    .filter((item) => item.slug !== post.slug)
+    .sort((a, b) => parseDateBR(b.data) - parseDateBR(a.data))
+    .slice(0, 3);
+
+  relacionadosEl.replaceChildren(...relacionados.map((item) => createBlogCard(item)));
+}
+
 function buildTimeline() {
   const row = document.getElementById('timeline-row');
   const track = document.getElementById('timeline-track');
   if (!row || !track) return;
 
-  row.replaceChildren(...TIMELINE.map((item) => {
+  const linha = document.createElement('div');
+  linha.className = 'tl-line';
+  linha.setAttribute('aria-hidden', 'true');
+  linha.style.gridColumn = `1 / span ${TIMELINE.length}`;
+
+  const itens = TIMELINE.map((item, index) => {
+    const coluna = index + 1;
+    const posicao = index % 2 === 0 ? 'top' : 'bottom';
+
     const element = document.createElement('li');
     element.className = 'tl-item';
     element.innerHTML = `
-      <i class="tl-connector" aria-hidden="true"></i>
-      <article class="tl-card">
+      <article class="tl-card tl-card--${posicao}" style="grid-column:${coluna}; grid-row:${posicao === 'top' ? 1 : 3};">
         <time>${escapeHTML(item.ano)}</time>
         <h3>${escapeHTML(item.titulo)}</h3>
         <p>${escapeHTML(item.desc)}</p>
       </article>
+      <i class="tl-dot" style="grid-column:${coluna};" aria-hidden="true"></i>
     `;
     return element;
-  }));
+  });
 
+  row.replaceChildren(linha, ...itens);
   initHorizontalDrag(track);
 }
 
@@ -705,45 +1133,67 @@ function initHorizontalDrag(track) {
 
 function buildAgenda() {
   const list = document.getElementById('agenda-list');
+  const empty = document.getElementById('agenda-empty');
   if (!list) return;
 
-  list.replaceChildren(...AGENDA.map((eventItem) => {
+  if (!AGENDA.length) {
+    list.hidden = true;
+    if (empty) empty.hidden = false;
+    return;
+  }
+
+  list.hidden = false;
+  if (empty) empty.hidden = true;
+
+  const eventosComData = AGENDA
+    .map((eventItem) => ({ eventItem, eventDate: getAgendaEventDate(eventItem) }))
+    .sort((a, b) => a.eventDate - b.eventDate);
+
+  const proximoIndex = eventosComData.findIndex(({ eventDate }) => getAgendaStatus(eventDate).classe !== 'passado');
+
+  list.replaceChildren(...eventosComData.map(({ eventItem, eventDate }, index) => {
+    const info = AGENDA_TIPO_INFO[eventItem.tipo] || { cor: 'azul', icon: '' };
+    const status = getAgendaStatus(eventDate);
+    const isOnline = /online/i.test(eventItem.local);
+    const isProximo = index === proximoIndex;
+
     const item = document.createElement('li');
-    item.className = 'agenda-item';
+    item.className = `agenda-item agenda-tipo-${info.cor}${status.classe ? ` is-${status.classe}` : ''}`;
+
+    const acaoLocal = isOnline
+      ? `<a class="agenda-acao agenda-acao-outline" href="https://www.instagram.com/autoraoliviauviplais/" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_INSTA} Ver no Instagram</a>`
+      : `<a class="agenda-acao agenda-acao-outline" href="${buildAgendaMapsLink(eventItem.local)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_PIN} Ver no mapa</a>`;
+
+    const horario = eventItem.horaInicio && eventItem.horaFim
+      ? `<p class="agenda-horario">${AGENDA_ICON_CLOCK}das ${escapeHTML(eventItem.horaInicio)} às ${escapeHTML(eventItem.horaFim)}</p>`
+      : '';
+
     item.innerHTML = `
-      <time class="agenda-date" datetime="${eventItem.ano}">
+      ${isProximo ? '<p class="agenda-destaque-tag">Próximo evento</p>' : ''}
+      <time class="agenda-date" datetime="${eventItem.ano}-${String(AGENDA_MES_INDEX[eventItem.mes] + 1).padStart(2, '0')}-${escapeHTML(eventItem.dia)}">
         <strong>${escapeHTML(eventItem.dia)}</strong>
-        <small>${escapeHTML(eventItem.mes)} ${escapeHTML(eventItem.ano)}</small>
+        <small>${escapeHTML(eventItem.mes)} · ${escapeHTML(eventItem.ano)}</small>
       </time>
       <article class="agenda-info">
-        <p class="agenda-tipo">${escapeHTML(eventItem.tipo)}</p>
+        <div class="agenda-info-topo">
+          <p class="agenda-tipo">${info.icon}${escapeHTML(eventItem.tipo)}</p>
+          ${status.label ? `<p class="agenda-status">${escapeHTML(status.label)}</p>` : ''}
+        </div>
         <h3>${escapeHTML(eventItem.titulo)}</h3>
-        <p>${escapeHTML(eventItem.desc)}</p>
-        <address>${escapeHTML(eventItem.local)}</address>
+        <p class="agenda-desc">${escapeHTML(eventItem.desc)}</p>
+        <div class="agenda-info-meta">
+          ${horario}
+          <address>${AGENDA_ICON_PIN}${escapeHTML(eventItem.local)}</address>
+        </div>
+        ${status.classe !== 'passado' ? `
+        <div class="agenda-acoes">
+          <a class="agenda-acao agenda-acao-primaria" href="${buildAgendaCalendarLink(eventItem, eventDate)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_CALENDAR} Adicionar à agenda</a>
+          ${acaoLocal}
+        </div>` : ''}
       </article>
     `;
     return item;
   }));
-}
-
-function initForms() {
-  const forms = [
-    { id: 'form-nl-page', message: 'Inscrição registrada. Bem-vinda ao Oliviverso!' },
-    { id: 'form-contato', message: 'Mensagem enviada para a assessoria!' }
-  ];
-
-  forms.forEach(({ id, message }) => {
-    const form = document.getElementById(id);
-    form?.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      toast(message);
-      form.reset();
-    });
-  });
 }
 
 function initBioToggle() {
