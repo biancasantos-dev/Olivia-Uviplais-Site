@@ -286,7 +286,7 @@ const BOOKS = [
     ebook: 'https://a.co/d/06NyVjFi', 
     sinopse: 'Augustus Miller has a secret. Well, it’s not exactly a secret. One made-up gossip led to another, and suddenly the Michigan Lynx’s golden boy goalie is considered the biggest womanizer on campus. Which wouldn’t be a problem if it weren’t for one small detail: Gus is a virgin.\n\nKira Mori is doing poorly in college. Very bad indeed. About to fail Ethics 101, she needs to stop going to parties to study, uninstall Tinder to focus, and pay more attention to class than cafeteria gossip, she needs a private tutor.\n\nAnd Gus, the best of them all, is unavailable.\n\nThe worlds of the outgoing freshman and the geeky hockey star would never meet if it weren’t for vodka, Kira’s willingness to help drunks, and Gus’ tendency to tell secrets when he’s drunk.\n\nSuddenly, a deal is made.\nGus teaches Ethics theories.\nKira teaches the art of seduction.\n\nLearning has never been so fun. And delicious.', 
     tropes: ['CLICHÊ INVERTIDO', 'FAKE DATING', 'SÓ TEM UMA CAMA', 'GAROTA POPULAR X NERD'], 
-    categoria: 'idiomas' },
+    categoria: 'idiomas',topAmazon: true },
   { id: 'les-temoins', 
     titulo: 'Les Témoins de Mariage', 
     serie: null, 
