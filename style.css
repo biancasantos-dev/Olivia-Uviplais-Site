@@ -375,6 +375,15 @@ h4 { font-size: 1.1rem; }
     transform: translateY(-2px);
 }
 
+.footer-bottom a {
+
+    transition: color var(--ease);
+}
+
+.footer-bottom a:hover {
+    color: var(--rosa);
+    text-decoration: underline;
+}
 .nav-toggle {
     display: none;
     width: 44px;
