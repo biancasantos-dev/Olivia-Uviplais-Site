@@ -1059,8 +1059,34 @@ function renderPost(post) {
   tituloEl.textContent = post.titulo;
   capaEl.src = post.capa;
   capaEl.alt = post.titulo;
+
+  // PROCESSA PARÁGRAFOS E IMAGENS DO MARKDOWN
   corpoEl.replaceChildren(...post.corpo.split(/\n\n/).map((paragrafo) => {
     const p = document.createElement('p');
+    
+    // Expressão regular para identificar ![texto](url)
+    const markdownImageRegex = /!\[(.*?)\]\((.*?)\)/;
+    const match = paragrafo.match(markdownImageRegex);
+
+    if (match) {
+      const altText = match[1];
+      let imgUrl = match[2].trim();
+      
+      // Garante o protocolo https: se a URL do Contentful vier com //
+      if (imgUrl.startsWith('//')) {
+        imgUrl = 'https:' + imgUrl;
+      }
+
+      const img = document.createElement('img');
+      img.src = imgUrl;
+      img.alt = altText || post.titulo;
+      img.style.maxWidth = '100%';
+      img.style.borderRadius = 'var(--radius)';
+      img.style.margin = '1.5rem 0';
+
+      return img; // Retorna a imagem renderizada como elemento HTML real
+    }
+
     p.textContent = paragrafo;
     return p;
   }));
