@@ -522,6 +522,47 @@ function getPageFromHash() {
   return document.getElementById(page) ? page : 'home';
 }
 
+const PAGE_META = {
+  home: {
+    title: 'Olivia Uviplais — Escritora de Comédias Românticas',
+    description: 'Olivia Uviplais — Escritora de comédias românticas. Best-Seller Amazon. Autora de Jogos de Poder, Os Padrinhos e muito mais.'
+  },
+  sobre: {
+    title: 'Sobre Olivia Uviplais — Escritora de Romances',
+    description: 'Conheça a trajetória de Olivia Uviplais, escritora best-seller Amazon de comédias românticas.'
+  },
+  livros: {
+    title: 'Livros — Olivia Uviplais',
+    description: 'Explore todos os livros de Olivia Uviplais: eBooks, publicações por editoras, audiobooks e edições internacionais.'
+  },
+  blog: {
+    title: 'Blog da Uvinha — Olivia Uviplais',
+    description: 'Bastidores da escrita, novidades e conteúdos exclusivos no blog de Olivia Uviplais.'
+  },
+  agenda: {
+    title: 'Agenda — Olivia Uviplais',
+    description: 'Confira a agenda de eventos, lives e encontros com Olivia Uviplais.'
+  },
+  contato: {
+    title: 'Contato — Olivia Uviplais',
+    description: 'Contato para imprensa, agenciamento e mídia kit de Olivia Uviplais.'
+  }
+};
+
+function updatePageMeta(pageId) {
+  const meta = PAGE_META[pageId] || PAGE_META.home;
+  document.title = meta.title;
+
+  let descTag = document.querySelector('meta[name="description"]');
+  if (descTag) descTag.setAttribute('content', meta.description);
+
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', meta.title);
+
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', meta.description);
+}
+
 function showPage(pageId = 'home', updateHash = true) {
   const pages = document.querySelectorAll(selectors.page);
   const links = document.querySelectorAll(selectors.pageLink);
@@ -537,6 +578,7 @@ function showPage(pageId = 'home', updateHash = true) {
     link.classList.toggle('active', link.dataset.page === target.id);
   });
 
+  updatePageMeta(target.id);
   closeMenu();
   updateHeaderMode();
   window.scrollTo({ top: 0, behavior: 'auto' });
@@ -1173,7 +1215,12 @@ function buildAgenda() {
 
   const eventosComData = AGENDA
     .map((eventItem) => ({ eventItem, eventDate: getAgendaEventDate(eventItem) }))
-    .sort((a, b) => a.eventDate - b.eventDate);
+    .sort((a, b) => {
+      const aPassado = getAgendaStatus(a.eventDate).classe === 'passado';
+      const bPassado = getAgendaStatus(b.eventDate).classe === 'passado';
+      if (aPassado !== bPassado) return aPassado ? 1 : -1;
+      return a.eventDate - b.eventDate;
+    });
 
   const proximoIndex = eventosComData.findIndex(({ eventDate }) => getAgendaStatus(eventDate).classe !== 'passado');
 
