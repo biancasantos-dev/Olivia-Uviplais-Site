@@ -327,8 +327,8 @@ const TIMELINE = [
 const AGENDA = [
   { dia: '03', mes: 'Ago', ano: '2026', tipo: 'Lançamento', titulo: 'Live de Lançamento do Site', local: 'Online · Instagram Oficial (@autoraoliviauviplais)', desc: 'Live de lançamento do site oficial, direto do Instagram da autora.', horaInicio: '19:30', horaFim: '20:00' },
   { dia: '7', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Grupo Editorial Portal', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo - Rua F18.', horaInicio: '14:00', horaFim: '16:00' },
-  { dia: '11', mes: 'Set', ano: '2026', tipo: 'Evento', titulo: 'Encontro de Leitores NEON Editora ', local: 'Distrito Anhembi', desc: 'Encontro de fãs promovido pela Buzz Editora, com acesso exclusivo a spoilers do lançamento de 2027. | Bienal Internacional do Livro de São Paulo - Rua J30', horaInicio: '16:30', horaFim: '17:30' },
-  { dia: '12', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Unicorn Books', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo, no estande da Unicorn Books - Rua H70.', horaInicio: '14:30', horaFim: '16:00' }
+  { dia: '11', mes: 'Set', ano: '2026', tipo: 'Evento', titulo: 'Encontro de Leitores NEON Editora ', local: 'Distrito Anhembi', desc: 'Encontro de fãs promovido pela Buzz Editora, com acesso exclusivo a spoilers do lançamento de 2027. | Bienal Internacional do Livro de São Paulo - Rua H70', horaInicio: '16:30', horaFim: '17:30' },
+  { dia: '12', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Unicorn Books', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo, no estande da Unicorn Books - Rua J30.', horaInicio: '14:30', horaFim: '16:00' }
 ];
 
 const AGENDA_MES_INDEX = { Jan: 0, Fev: 1, Mar: 2, Abr: 3, Mai: 4, Jun: 5, Jul: 6, Ago: 7, Set: 8, Out: 9, Nov: 10, Dez: 11 };
