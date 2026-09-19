@@ -344,6 +344,8 @@ const TIMELINE = [
   { ano: '2026', titulo: 'Selo Neon e Selo Amore', desc: 'Relancei Doces Rivais em digital, ingressei para o Selo Neon da Editora Buzz, publiquei Improvisado em formato independente (mais um TOP 1 para a lista!) e fui anunciada como a primeira autora nacional do Selo Amore da Editora VR, com nota exclusiva no PublishNews.' }
 ];
 
+window.BOOKS = BOOKS;
+
 const AGENDA = [
   { dia: '03', mes: 'Ago', ano: '2026', tipo: 'Lançamento', titulo: 'Live de Lançamento do Site', local: 'Online · Instagram Oficial (@autoraoliviauviplais)', desc: 'Live de lançamento do site oficial, direto do Instagram da autora.', horaInicio: '19:30', horaFim: '20:00' },
   { dia: '7', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Grupo Editorial Portal', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo - Rua F18.', horaInicio: '14:00', horaFim: '16:00' },
@@ -550,6 +552,8 @@ const NOTICIAS_MIDIA = [
   }
 ];
 
+window.BOOKS = BOOKS;
+
 const selectors = {
   header: '#site-header',
   navToggle: '#nav-toggle',
@@ -561,7 +565,11 @@ const selectors = {
   blogGrid: '#blog-grid'
 };
 
-document.addEventListener('DOMContentLoaded', initSite);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSite);
+} else {
+  initSite();
+}
 
 function parseDateBR(value) {
   if (!value || value === 'N/A') return new Date(0);
@@ -607,19 +615,29 @@ function buildFooterDestaques() {
 }
 
 function initSite() {
-  initRouter();
-  initMenu();
-  buildTimeline();
-  buildBookshelf();
-  initTropeReveal();
-  buildDestaque();
-  buildFooterDestaques();
-  buildNaMidia();
-  buildAgenda();
-  buildBlog();
-  initBlogPaginacao();
-  initBioToggle();
-  initModal();
+  const steps = [
+    ['initRouter', initRouter],
+    ['initMenu', initMenu],
+    ['buildTimeline', buildTimeline],
+    ['buildBookshelf', buildBookshelf],
+    ['initTropeReveal', initTropeReveal],
+    ['buildDestaque', buildDestaque],
+    ['buildFooterDestaques', buildFooterDestaques],
+    ['buildNaMidia', buildNaMidia],
+    ['buildAgenda', buildAgenda],
+    ['buildBlog', buildBlog],
+    ['initBlogPaginacao', initBlogPaginacao],
+    ['initModal', initModal],
+    ['initScrollReveal', initScrollReveal]
+  ];
+
+  for (const [name, fn] of steps) {
+    try {
+      if (typeof fn === 'function') fn();
+    } catch (err) {
+      console.error(`Erro ao inicializar ${name}:`, err);
+    }
+  }
 }
 
 function initRouter() {
@@ -725,6 +743,7 @@ function showPage(pageId = 'home', updateHash = true) {
   closeMenu();
   updateHeaderMode();
   window.scrollTo({ top: 0, behavior: 'auto' });
+  triggerVisibleReveals(target);
 
   if (updateHash && window.location.hash !== `#${target.id}`) {
     history.pushState(null, '', `#${target.id}`);
@@ -800,7 +819,9 @@ function buildBookshelf() {
     shelves[book.categoria].appendChild(createBookElement(book));
   });
 
-  initShelfDragScroll();
+  if (typeof window.initShelfDragScroll === 'function') {
+    window.initShelfDragScroll();
+  }
 
   filterNav.addEventListener('click', (event) => {
     const button = event.target.closest('.trope-btn');
@@ -836,51 +857,6 @@ function createTropeMoreToggle(filterNav) {
   return button;
 }
 
-function initShelfDragScroll() {
-  document.querySelectorAll('.suporte-fisico-prateleira').forEach((shelf) => {
-    let isDown = false;
-    let didDrag = false;
-    let startX = 0;
-    let startScroll = 0;
-
-    shelf.addEventListener('pointerdown', (event) => {
-      if (event.pointerType !== 'mouse' || event.button !== 0) return;
-      isDown = true;
-      didDrag = false;
-      startX = event.clientX;
-      startScroll = shelf.scrollLeft;
-    });
-
-    shelf.addEventListener('pointermove', (event) => {
-      if (!isDown || event.pointerType !== 'mouse') return;
-      const delta = event.clientX - startX;
-      if (Math.abs(delta) > 8) {
-        didDrag = true;
-        shelf.classList.add('is-dragging');
-      }
-      if (didDrag) {
-        shelf.scrollLeft = startScroll - delta;
-      }
-    });
-
-    const endDrag = () => {
-      isDown = false;
-      shelf.classList.remove('is-dragging');
-    };
-
-    shelf.addEventListener('pointerup', endDrag);
-    shelf.addEventListener('pointerleave', endDrag);
-    shelf.addEventListener('pointercancel', endDrag);
-
-    shelf.addEventListener('click', (event) => {
-      if (didDrag) {
-        event.stopPropagation();
-        event.preventDefault();
-      }
-    }, true);
-  });
-}
-
 function getAllTropes() {
   return [...new Set(BOOKS.flatMap((book) => book.tropes))].sort((a, b) => a.localeCompare(b));
 }
@@ -901,6 +877,7 @@ function createBookElement(book) {
 
   button.type = 'button';
   button.className = 'book-item';
+  button.dataset.bookId = book.id;
   button.dataset.tropes = JSON.stringify(book.tropes);
   button.setAttribute('aria-label', `Abrir detalhes de ${book.titulo}`);
   button.innerHTML = `
@@ -916,7 +893,15 @@ function createBookElement(book) {
     </ul>
   `;
 
-  button.addEventListener('click', () => playBookTransition(book));
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof window.playBookTransition === 'function') {
+      window.playBookTransition(book);
+    } else {
+      openModal(book);
+    }
+  });
   item.appendChild(button);
   return item;
 }
@@ -950,30 +935,34 @@ function filterBooks(trope) {
   });
 }
 
-function playBookTransition(book) {
-  const stage = document.getElementById('transicao-cenica-estante');
-  if (!stage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    openModal(book);
-    return;
-  }
-
-  stage.innerHTML = `<figure><img src="${book.capa}" alt=""><var></var></figure>`;
-  stage.classList.add('executando-voo');
-
-  window.setTimeout(() => openModal(book), 700);
-  window.setTimeout(() => {
-    stage.classList.remove('executando-voo');
-    stage.replaceChildren();
-  }, 1200);
-}
-
 function initModal() {
   const overlay = document.querySelector(selectors.modalOverlay);
   const closeButton = document.getElementById('modal-close');
 
-  closeButton?.addEventListener('click', closeModal);
+  closeButton?.addEventListener('click', (event) => {
+    event.preventDefault();
+    closeModal();
+  });
+
   overlay?.addEventListener('click', (event) => {
-    if (event.target === overlay) closeModal();
+    if (event.target === overlay) {
+      event.preventDefault();
+      closeModal();
+    }
+  });
+
+  // Failsafe global para garantir fechamento ao clicar no X ou fora
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('#modal-close') || event.target.closest('.modal-close')) {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+    const currentOverlay = document.querySelector(selectors.modalOverlay);
+    if (currentOverlay?.classList.contains('open') && event.target === currentOverlay) {
+      event.preventDefault();
+      closeModal();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -1086,12 +1075,18 @@ function openModal(book) {
   document.getElementById('modal-close')?.focus();
 }
 
-function closeModal() {
-  const overlay = document.querySelector(selectors.modalOverlay);
-  if (!overlay?.classList.contains('open')) return;
+window.openModal = openModal;
 
-  overlay.classList.remove('open');
-  overlay.setAttribute('aria-hidden', 'true');
+function closeModal() {
+  if (typeof window.closeBookTransition === 'function') {
+    window.closeBookTransition();
+  }
+
+  const overlay = document.querySelector(selectors.modalOverlay);
+  if (overlay) {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
   document.body.classList.remove('modal-open');
 }
 
@@ -1531,32 +1526,41 @@ function createMidiaCard(item) {
   return card;
 }
 
-function initBioToggle() {
-  const button = document.getElementById('bio-toggle');
-  const expandable = document.getElementById('bio-expandable');
-  if (!button || !expandable) return;
 
-  button.type = 'button';
-  button.setAttribute('aria-expanded', 'false');
-  button.setAttribute('aria-controls', 'bio-expandable');
+function initScrollReveal() {
+  if (!('IntersectionObserver' in window)) return;
 
-  button.addEventListener('click', () => {
-    const open = expandable.classList.toggle('open');
-    button.setAttribute('aria-expanded', String(open));
-    button.textContent = open ? 'Recolher história ↑' : 'Ler história completa ↓';
+  const targets = document.querySelectorAll(
+    '.minibio, .section-timeline, .destaque-banner'
+  );
+
+  targets.forEach((el) => el.classList.add('reveal-on-scroll'));
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
   });
+
+  targets.forEach((el) => observer.observe(el));
 }
 
-function toast(message) {
-  document.querySelectorAll('.toast').forEach((item) => item.remove());
-
-  const element = document.createElement('output');
-  element.className = 'toast';
-  element.textContent = message;
-  element.setAttribute('role', 'status');
-
-  document.body.appendChild(element);
-  window.setTimeout(() => element.remove(), 3800);
+function triggerVisibleReveals(container) {
+  if (!container) return;
+  window.requestAnimationFrame(() => {
+    container.querySelectorAll('.reveal-on-scroll:not(.is-revealed)').forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 50) {
+        el.classList.add('is-revealed');
+      }
+    });
+  });
 }
 
 function escapeHTML(value) {

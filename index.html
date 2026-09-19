@@ -457,13 +457,16 @@
       MODAIS E AMBIENTES 3D
       ============================================================ -->
     
+    <!-- PALCO INVISÍVEL DA TRANSIÇÃO 3D (Onde o livro voa) -->
+    <aside id="transicao-cenica-estante" aria-hidden="true"></aside>
+
     <!-- POP-UP MODAL CINEMATOGRÁFICO DE LUXO -->
     <aside class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
         <article class="modal-box" id="modal-box">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Fechar detalhes do livro">✕</button>
             <figure class="modal-cover">
                 <img src="" alt="" width="280" height="420" loading="lazy">
                 <span class="modal-selo-top1" hidden>🏆 TOP 1 Amazon</span>
-                <button class="modal-close" id="modal-close" type="button" aria-label="Fechar detalhes do livro">✕</button>
             </figure>
             <section class="modal-body">
                 <p class="modal-serie"></p>
@@ -484,9 +487,6 @@
             </section>
         </article>
     </aside>
-
-    <!-- PALCO INVISÍVEL DA TRANSIÇÃO 3D (Onde o livro voa) -->
-    <aside id="transicao-cenica-estante"></aside>
 
     <!-- LIGHTBOX DE ILUSTRAÇÕES -->
     <aside class="lightbox-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-hidden="true">
@@ -560,7 +560,7 @@
                         </svg>
                     </a>
                 </div>
-                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5KX2Wsv60JViwBSvLebdWA?utm_source=generator&theme=0&si=957e28078bd64fa6" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe class="footer-playlist-embed" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5KX2Wsv60JViwBSvLebdWA?utm_source=generator&theme=0&si=957e28078bd64fa6" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -579,6 +579,7 @@
         </p>
     </footer>
 
+    <script src="animations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
