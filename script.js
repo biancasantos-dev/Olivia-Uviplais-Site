@@ -432,6 +432,124 @@ const BLOG_CATEGORIA_COR = {
   'Comunidade': 'rosa'
 };
 
+/* ================================================================
+   NOTÍCIAS NA MÍDIA & CLIPPING (NA-MIDIA)
+   Para adicionar novas notícias no futuro, basta incluir um novo objeto
+   na lista abaixo seguindo a estrutura padrão.
+   ================================================================ */
+const NOTICIAS_MIDIA = [
+  {
+    id: 'tribuna-do-agreste-bienal-2026',
+    titulo: 'VR Editora registra aumento de vendas na 28ª Bienal do Livro de São Paulo',
+    veiculo: 'Tribuna do Agreste',
+    veiculoBadge: 'azul',
+    data: '14/09/2026',
+    dataFormatada: '14 de setembro de 2026',
+    autor: 'Gabriela Cuerba',
+    resumo: 'Balanço oficial da 28ª Bienal Internacional do Livro de São Paulo destaca crescimento expressivo da editora e encontros de Olivia Uviplais com influenciadores e leitores, antecipando o lançamento em livro físico de Como Salvar um Mafioso.',
+    citacaoDestaque: '“A editora ainda promoveu encontro com os leitores e influenciadores literários para compartilhar as novidades dos selos Plataforma21 e AMORE, e contou com a participação da autora best-seller de romances nacionais Olivia Uviplais, que lançará em 2027 Como salvar um mafioso pela AMORE e contará com capítulo inédito.”',
+    linkOriginal: 'https://www.tribunadoagreste.com.br/variedades/2026/09/14/978507-vr-editora-registra-aumento-de-vendas-na-28a-bienal-do-livro-de-sao-paulo',
+    imagens: [
+      {
+        src: 'NA-MIDIA/trinuna14-09-26/tribuna-14-09.webp',
+        alt: 'Matéria na Tribuna do Agreste sobre a VR Editora na Bienal de São Paulo',
+        legenda: 'Capa da matéria no portal Tribuna do Agreste'
+      },
+      {
+        src: 'NA-MIDIA/trinuna14-09-26/tribuna-14-09(2).webp',
+        alt: 'Recorte destacando citação sobre a autora Olivia Uviplais e lançamento de Como Salvar um Mafioso',
+        legenda: 'Recorte destacando a participação de Olivia Uviplais e lançamento pelo selo AMORE'
+      }
+    ]
+  },
+  {
+    id: 'publishnews-bienal-buzz-2026',
+    titulo: 'Literare Books e Buzz Editora dividem estande pela primeira vez na Bienal de São Paulo',
+    veiculo: 'PublishNews',
+    veiculoBadge: 'vermelho',
+    data: '02/09/2026',
+    dataFormatada: '02 de setembro de 2026',
+    autor: 'Redação PublishNews',
+    resumo: 'PublishNews divulga a programação de peso da Buzz Editora na 28ª Bienal de São Paulo, que incluiu ativação e encontro oficial de Olivia Uviplais com seu público no estande da casa editorial.',
+    citacaoDestaque: '“Dia 11 de setembro, às 16h30 — Olivia Uviplais | Estande Buzz Editora | Ativação”',
+    linkOriginal: 'https://www.publishnews.com.br/materias/2026/09/02/literare-books-e-buzz-editora-dividem-estande-pela-primeira-vez-na-bienal-de-sao-paulo',
+    imagens: [
+      {
+        src: 'NA-MIDIA/publishnews-02-09-26/publishnews02-09.webp',
+        alt: 'PublishNews: Literare Books e Buzz Editora dividem estande na Bienal de São Paulo',
+        legenda: 'Capa da reportagem sobre o estande na Bienal de São Paulo'
+      },
+      {
+        src: 'NA-MIDIA/publishnews-02-09-26/publishnews02-09(2).webp',
+        alt: 'Programação oficial com destaque para o encontro e ativação de Olivia Uviplais',
+        legenda: 'Programação oficial da Bienal com presença de Olivia Uviplais'
+      }
+    ]
+  },
+  {
+    id: 'radar-digital-brasilia-bienal-2026',
+    titulo: 'Buzz Editora reúne autores em debates sobre IA, saúde mental e comportamento na Bienal de São Paulo',
+    veiculo: 'Radar Digital Brasília',
+    veiculoBadge: 'ciano',
+    data: '02/09/2026',
+    dataFormatada: '02 de setembro de 2026',
+    autor: 'Gabriel',
+    resumo: 'Radar Digital Brasília noticia a expressiva programação da Buzz Editora na Bienal Internacional do Livro de SP e ressalta a ativação e interação com leitores de Olivia Uviplais no estande.',
+    citacaoDestaque: '“O estande será outro ponto de encontro entre a editora e seu público. Em 11 de setembro, às 16h30, Olivia Uviplais participa de uma ativação no espaço.”',
+    linkOriginal: 'https://radardigitalbrasilia.com.br/brasil/buzz-editora-reune-autores-em-debates-sobre-ia-saude-mental-e-comportamento-na-bienal-de-sao-paulo/',
+    imagens: [
+      {
+        src: 'NA-MIDIA/radar-02-09-23/radar 02-09.webp',
+        alt: 'Radar Digital Brasília: Cobertura da Buzz Editora na 28ª Bienal de São Paulo',
+        legenda: 'Capa da cobertura no portal Radar Digital Brasília'
+      },
+      {
+        src: 'NA-MIDIA/radar-02-09-23/radar 02-09(2).webp',
+        alt: 'Trecho do texto confirmando a participação e ativação de Olivia Uviplais',
+        legenda: 'Trecho do artigo destacando a presença de Olivia Uviplais no estande'
+      }
+    ]
+  },
+  {
+    id: 'gazeta-do-estado-como-salvar-um-mafioso',
+    titulo: 'Do digital para as livrarias: "Como Salvar um Mafioso" ganhará edição física em 2027',
+    veiculo: 'Gazeta do Estado',
+    veiculoBadge: 'rosa',
+    data: '23/08/2026',
+    dataFormatada: '23 de agosto de 2026',
+    autor: 'Emi Martins (Coluna Literanews)',
+    resumo: 'Em sua edição impressa de circulação em Goiás, Tocantins e DF, o jornal Gazeta do Estado noticiou que o fenômeno digital de Olivia Uviplais chegará às livrarias de todo o país em formato físico pelo selo Amore (VR Editora).',
+    citacaoDestaque: '“Como Salvar um Mafioso, de Olivia Uviplais, ganhará edição física em 2027 pelo selo Amore, da Plataforma 21. A comédia romântica apresenta Lila Harris, uma motorista de aplicativo cuja rotina muda completamente quando um homem armado e ferido entra em seu carro.”',
+    linkOriginal: null,
+    imagens: [
+      {
+        src: 'NA-MIDIA/gazeta 23-08-26/gazeta-23-08.webp',
+        alt: 'Página completa do jornal Gazeta do Estado com a coluna Literanews sobre Como Salvar um Mafioso',
+        legenda: 'Página impressa da Gazeta do Estado (Coluna Literanews de 23/08/2026)'
+      }
+    ]
+  },
+  {
+    id: 'publishnews-selo-amore-primeira-autora',
+    titulo: 'Olivia Uviplais é a primeira autora nacional do selo Amore',
+    veiculo: 'PublishNews',
+    veiculoBadge: 'vermelho',
+    data: '29/06/2026',
+    dataFormatada: '29 de junho de 2026',
+    autor: 'Redação PublishNews',
+    resumo: 'O mais relevante portal do mercado editorial brasileiro anunciou Olivia Uviplais como o primeiro nome nacional contratado pelo selo AMORE da VR Editora, ressaltando seus mais de 300 milhões de páginas lidas na Amazon e 4 títulos em TOP 1.',
+    citacaoDestaque: '“A VR Editora terá sua primeira autora nacional publicada pelo selo AMORE, braço editorial dedicado às histórias românticas da casa. O nome escolhido para inaugurar essa nova fase é Olivia Uviplais. Com números expressivos no digital, a escritora soma mais de 300 milhões de páginas lidas na Amazon...”',
+    linkOriginal: 'https://www.publishnews.com.br/materias/2026/06/29/olivia-uviplais-e-a-primeira-autora-nacional-do-selo-amore',
+    imagens: [
+      {
+        src: 'NA-MIDIA/publisnews-29-06-26/publishnews-29-06.webp',
+        alt: 'Matéria do PublishNews anunciando Olivia Uviplais no selo AMORE',
+        legenda: 'Matéria na íntegra no portal PublishNews (29/06/2026)'
+      }
+    ]
+  }
+];
+
 const selectors = {
   header: '#site-header',
   navToggle: '#nav-toggle',
@@ -496,6 +614,7 @@ function initSite() {
   initTropeReveal();
   buildDestaque();
   buildFooterDestaques();
+  buildNaMidia();
   buildAgenda();
   buildBlog();
   initBlogPaginacao();
@@ -554,6 +673,10 @@ const PAGE_META = {
   livros: {
     title: 'Livros — Olivia Uviplais',
     description: 'Explore todos os livros de Olivia Uviplais: eBooks, publicações por editoras, audiobooks e edições internacionais.'
+  },
+  'na-midia': {
+    title: 'Na Mídia — Olivia Uviplais',
+    description: 'Confira matérias, reportagens, entrevistas e recortes de jornais e portais sobre Olivia Uviplais e suas obras literárias.'
   },
   blog: {
     title: 'Blog da Uvinha — Olivia Uviplais',
@@ -1287,6 +1410,125 @@ function buildAgenda() {
     `;
     return item;
   }));
+}
+
+/* ================================================================
+   NA MÍDIA — RENDERIZAÇÃO, FILTROS & LIGHTBOX
+   ================================================================ */
+function buildNaMidia() {
+  const grid = document.getElementById('midia-grid');
+  if (!grid) return;
+
+  grid.replaceChildren(...NOTICIAS_MIDIA.map((item) => createMidiaCard(item)));
+}
+
+function createMidiaCard(item) {
+  const card = document.createElement('article');
+  card.className = 'midia-card';
+  card.setAttribute('role', 'listitem');
+  card.dataset.id = item.id;
+  card.dataset.tipo = item.tipo;
+  card.dataset.categoria = item.categoria;
+
+  const primeiraImg = item.imagens[0];
+  const citacaoImg = item.imagens.length > 1 ? item.imagens[1] : null;
+
+  const citacaoHtml = citacaoImg
+    ? `
+    <div class="midia-citacao-secao">
+      <div class="midia-citacao-barra">
+        <span class="midia-citacao-tag">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Recorte / Citação na matéria
+        </span>
+      </div>
+      <figure class="midia-frame midia-frame-citacao" tabindex="0" role="button" aria-label="Ampliar recorte com citação: ${escapeHTML(item.titulo)}">
+        <img class="midia-preview-img midia-citacao-img" src="${citacaoImg.src}" alt="${escapeHTML(citacaoImg.alt)}" loading="lazy">
+        <div class="midia-frame-overlay">
+          <span class="midia-zoom-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            Clique para ampliar citação
+          </span>
+        </div>
+      </figure>
+    </div>`
+    : '';
+
+  const ctaLinkHtml = item.linkOriginal
+    ? `<footer class="midia-card-acoes">
+         <a href="${item.linkOriginal}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark midia-btn-link" title="Acessar publicação no veículo original">
+           Ler matéria original ↗
+         </a>
+       </footer>`
+    : '';
+
+  card.innerHTML = `
+    <header class="midia-card-topo">
+      <div class="midia-card-meta">
+        <span class="midia-badge midia-badge-${item.veiculoBadge}">${escapeHTML(item.veiculo)}</span>
+      </div>
+      <time class="midia-card-data" datetime="${item.data.split('/').reverse().join('-')}">${escapeHTML(item.dataFormatada)}</time>
+    </header>
+
+    <div class="midia-preview-wrap">
+      <figure class="midia-frame midia-frame-capa" tabindex="0" role="button" aria-label="Ampliar print da matéria: ${escapeHTML(item.titulo)}">
+        <img class="midia-preview-img" src="${primeiraImg.src}" alt="${escapeHTML(primeiraImg.alt)}" loading="lazy">
+        <div class="midia-frame-overlay">
+          <span class="midia-zoom-hint">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            Clique para ampliar
+          </span>
+        </div>
+      </figure>
+      ${citacaoHtml}
+    </div>
+
+    <div class="midia-card-corpo">
+      <div class="midia-card-info">
+        <h3 class="midia-card-titulo">${escapeHTML(item.titulo)}</h3>
+        ${item.autor ? `<p class="midia-card-autor">Por <strong>${escapeHTML(item.autor)}</strong></p>` : ''}
+      </div>
+      ${ctaLinkHtml}
+    </div>
+  `;
+
+  const frameCapa = card.querySelector('.midia-frame-capa');
+  if (frameCapa) {
+    const openCapa = () => openLightbox(primeiraImg.src, `${item.veiculo} — ${item.titulo}`);
+    frameCapa.addEventListener('click', openCapa);
+    frameCapa.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCapa();
+      }
+    });
+  }
+
+  const frameCitacao = card.querySelector('.midia-frame-citacao');
+  if (frameCitacao && citacaoImg) {
+    const openCitacao = () => openLightbox(citacaoImg.src, `${item.veiculo} (Citação) — ${item.titulo}`);
+    frameCitacao.addEventListener('click', openCitacao);
+    frameCitacao.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openCitacao();
+      }
+    });
+  }
+
+  return card;
 }
 
 function initBioToggle() {
