@@ -418,7 +418,7 @@ function buildAgendaMapsLink(local) {
 /* ================================================================
    BLOG — CONTENTFUL INTEGRATION (UPDATED)
    ================================================================ */
-const CONTENTFUL_CONFIG = {
+const CONTENTFUL_CONFIG = window.CONTENTFUL_CONFIG || {
   spaceId: 'bikxsvvhd2dh',
   accessToken: '3kCZ2e_GBDPxbpLqpXRmGaKgk_0AZCHSt7awwJrzGes',
   environment: 'master',

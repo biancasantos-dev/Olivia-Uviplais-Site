@@ -564,13 +564,15 @@ transparent 82%
     animation: floatSoft 5s ease-in-out infinite;
 }
 
-.minibio-texto h1 {
+.minibio-texto h1,
+.minibio-texto h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--branco);
 }
 
-.minibio-texto h1 em {
+.minibio-texto h1 em,
+.minibio-texto h2 em {
     color: var(--ciano);
 }
 

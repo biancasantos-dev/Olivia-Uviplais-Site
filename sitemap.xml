@@ -1,8 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://oliviauviplais.com.br/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/OLIVIA-FOTOS/OLIVIA_UVIPLAIS_1-hero.jpg</image:loc>
+      <image:title>Olivia Uviplais - Escritora e Autora Best-Seller</image:title>
+      <image:caption>Foto oficial da escritora de comédias românticas Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/OLIVIA-FOTOS/OLIVIA_UVIPLAIS_2.jpg</image:loc>
+      <image:title>Olivia Uviplais</image:title>
+      <image:caption>Retrato da autora de romances nacionais Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/21.%20Como%20Salvar%20Um%20Mafioso.jpg</image:loc>
+      <image:title>Capa do livro Como Salvar um Mafioso - Olivia Uviplais</image:title>
+      <image:caption>Romance de comédia romântica publicado pelo Selo AMORE (VR Editora)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/12.%20Alian%C3%A7a%20Perfeita.jpg</image:loc>
+      <image:title>Capa do livro Aliança Perfeita - Olivia Uviplais</image:title>
+      <image:caption>Romance de casamento por conveniência e fake dating de Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/1.%20Jogos%20de%20Poder%20-%20Livro%201%20da%20S%C3%A9rie%20Jogos%20da%20M%C3%A1fia.jpg</image:loc>
+      <image:title>Capa do livro Jogos de Poder - Olivia Uviplais</image:title>
+      <image:caption>Livro 1 da Série Jogos da Máfia por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/2.%20Jogos%20de%20Ru%C3%ADna%20-%20Livro%202%20da%20S%C3%A9rie%20Jogos%20da%20M%C3%A1fia.jpg</image:loc>
+      <image:title>Capa do livro Jogos de Ruína - Olivia Uviplais</image:title>
+      <image:caption>Livro 2 da Série Jogos da Máfia por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/3.%20Jogos%20de%20Vit%C3%B3ria%20%20-%20Livro%203%20da%20S%C3%A9rie%20Jogos%20da%20M%C3%A1fia.jpg</image:loc>
+      <image:title>Capa do livro Jogos de Vitória - Olivia Uviplais</image:title>
+      <image:caption>Livro 3 da Série Jogos da Máfia por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/8.%20Os%20Padrinhos.jpg</image:loc>
+      <image:title>Capa do livro Os Padrinhos - Olivia Uviplais</image:title>
+      <image:caption>Romance de comédia romântica Os Padrinhos de Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/13.%20Meu%20Detest%C3%A1vel%20Chefe.jpg</image:loc>
+      <image:title>Capa do livro Meu Detestável Chefe - Olivia Uviplais</image:title>
+      <image:caption>Romance enemies to lovers e romance de escritório</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/18.%20Temporada%20de%20Farsa%20%26%20Gelo.jpg</image:loc>
+      <image:title>Capa do livro Temporada de Farsa &amp; Gelo - Olivia Uviplais</image:title>
+      <image:caption>Romance de hóquei e fake dating por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/4.%20Fa%C3%A7a%20Um%20Pedido.jpg</image:loc>
+      <image:title>Capa do livro Faça Um Pedido - Olivia Uviplais</image:title>
+      <image:caption>Romance com viagem no tempo e segunda chance</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/6.%20Contrato%20em%20Las%20Vegas.jpg</image:loc>
+      <image:title>Capa do livro Contrato em Las Vegas - Olivia Uviplais</image:title>
+      <image:caption>Romance em Las Vegas por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/10.%20Lance%20Proibido.jpg</image:loc>
+      <image:title>Capa do livro Lance Proibido - Olivia Uviplais</image:title>
+      <image:caption>Romance esportivo de Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/22.%20Improvisado%20O%20Clube%20dos%20Pais%20Solteiros%20do%20H%C3%B3quei.jpg</image:loc>
+      <image:title>Capa do livro Improvisado - Olivia Uviplais</image:title>
+      <image:caption>Clube dos Pais Solteiros do Hóquei por Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/26.%20Doces%20Rivais.jpg</image:loc>
+      <image:title>Capa do livro Doces Rivais - Olivia Uviplais</image:title>
+      <image:caption>Romance Doces Rivais de Olivia Uviplais</image:caption>
+    </image:image>
   </url>
 </urlset>
