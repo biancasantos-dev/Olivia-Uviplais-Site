@@ -1326,7 +1326,9 @@ border-radius:10px;
     scrollbar-width: thin;
     scrollbar-color: rgba(174, 30, 60, 0.35) transparent;
     cursor: grab;
-    touch-action: pan-y;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
 }
 
 .suporte-fisico-prateleira.is-dragging {
@@ -1366,6 +1368,7 @@ border-radius:10px;
         linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 40%),
         linear-gradient(180deg, var(--rosa), var(--vermelho-dark));
     box-shadow: var(--shadow-md);
+    pointer-events: none;
 }
 
 .suporte-fisico-prateleira::before {
@@ -1378,6 +1381,7 @@ border-radius:10px;
     background: rgba(18, 8, 16, 0.18);
     filter: blur(6px);
     border-radius: 50%;
+    pointer-events: none;
 }
 
 .book-item {
@@ -1391,6 +1395,7 @@ border-radius:10px;
     transition: transform var(--ease);
     user-select: none;
     -webkit-user-select: none;
+    touch-action: pan-x pan-y;
 }
 
 .book-item:hover,
