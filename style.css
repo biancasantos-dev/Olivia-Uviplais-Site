@@ -2841,7 +2841,7 @@ border-radius:10px;
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1.5rem 1.6rem 1.4rem;
 }
 
@@ -2849,6 +2849,7 @@ border-radius:10px;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    margin-top: auto;
 }
 
 .midia-card-titulo {
@@ -2882,6 +2883,11 @@ border-radius:10px;
     font-size: 0.76rem;
     padding: 0.6rem 1.25rem;
     min-height: 40px;
+}
+
+.midia-btn-impresso {
+    background: transparent;
+    cursor: pointer;
 }
 
 .midia-press-banner {
@@ -3338,10 +3344,40 @@ border-radius:10px;
     .midia-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        align-items: start;
     }
 
-    .midia-frame {
-        height: 260px;
+    .midia-card {
+        height: auto;
+    }
+
+    .midia-frame,
+    .midia-frame-capa,
+    .midia-frame-citacao {
+        height: auto;
+        min-height: 0;
+    }
+
+    .midia-preview-img,
+    .midia-citacao-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .midia-card-corpo {
+        flex: none;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .midia-card-info {
+        margin-top: 0;
+    }
+
+    .midia-card-acoes-impresso {
+        display: none;
     }
 
     .midia-press-banner {

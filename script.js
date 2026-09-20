@@ -1462,7 +1462,11 @@ function createMidiaCard(item) {
            Ler matéria original ↗
          </a>
        </footer>`
-    : '';
+    : `<footer class="midia-card-acoes midia-card-acoes-impresso">
+         <button type="button" class="btn btn-outline-dark midia-btn-link midia-btn-impresso" title="Visualizar página impressa do jornal">
+           Ver página ↗
+         </button>
+       </footer>`;
 
   card.innerHTML = `
     <header class="midia-card-topo">
@@ -1520,6 +1524,14 @@ function createMidiaCard(item) {
         e.preventDefault();
         openCitacao();
       }
+    });
+  }
+
+  const btnImpresso = card.querySelector('.midia-btn-impresso');
+  if (btnImpresso && primeiraImg) {
+    btnImpresso.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(primeiraImg.src, `${item.veiculo} — ${item.titulo}`);
     });
   }
 
