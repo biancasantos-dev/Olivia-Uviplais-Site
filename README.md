@@ -20,7 +20,7 @@
 
 ## Sobre o Projeto
 
-Este projeto é a plataforma web oficial da escritora brasileira **Olivia Uviplais**, autora best-seller da Amazon, com publicações consagradas pelos selos **AMORE** (VR Editora) e **NEON** (Plataforma 21), acumulando milhões de leituras no Wattpad e Kindle Unlimited.
+Este projeto é a plataforma web oficial da escritora brasileira **Olivia Uviplais**, autora best-seller da Amazon, com publicações consagradas pelos selos **AMORE** (VR Editora) e **NEON** (Plataforma 21), acumulando milhões de leituras na Amazon.
 
 Desenvolvido sob o paradigma **Vanilla-First**, o projeto alia sofisticação visual, tipografia editorial refinada e animações tridimensionais fluidas a uma performance ultrarrápida, sem a necessidade de frameworks pesados.
 
@@ -29,34 +29,42 @@ Desenvolvido sob o paradigma **Vanilla-First**, o projeto alia sofisticação vi
 ## Funcionalidades e Destaques Técnicos
 
 ### Estante de Livros Interativa em 3D
-- **Abertura Tridimensional Realista**: Ao selecionar um livro na estante física, o livro ascende suavemente ao centro da tela fechado, revelando a arte da capa, antes de articular sua capa em 3D (`perspective: 1600px`, `transform-style: preserve-3d`), exibindo as páginas internas de corte, a guarda de luxo (*Ex-Líbris*) e uma fita marcadora de cetim.
+
+- **Abertura Tridimensional Realista**: Ao selecionar um livro na estante física, o livro ascende suavemente ao centro da tela fechado, revelando a arte da capa, antes de articular sua capa em 3D (`perspective: 1600px`, `transform-style: preserve-3d`), exibindo as páginas internas de corte, a guarda de luxo (_Ex-Líbris_) e uma fita marcadora de cetim.
 - **Transição Cenográfica para Modal**: O modal de detalhes do livro abre em sincronia perfeita no ápice da animação, com suporte a atalhos de acessibilidade (`ESC`), fechamento por clique fora e clique para pular instantâneo.
 
 ### Navegação Híbrida Touch e Drag
-- **Desktop (Mouse)**: Sistema nativo de arrasto horizontal (*Drag-to-Scroll*) com inércia para percorrer as prateleiras da estante e a linha do tempo biográfica.
+
+- **Desktop (Mouse)**: Sistema nativo de arrasto horizontal (_Drag-to-Scroll_) com inércia para percorrer as prateleiras da estante e a linha do tempo biográfica.
 - **Mobile e Tablet**: Rolagem tátil otimizada via hardware com `touch-action: pan-x pan-y`, `-webkit-overflow-scrolling: touch` e `overscroll-behavior-x: contain`, garantindo deslizamento suave sem travar o scroll vertical da página.
 
 ### Filtro Reativo por Tropes Literárias
-- Mecanismo em JavaScript para filtrar o catálogo em tempo real com base em tropos românticos (*Fake Dating*, *Haters to Lovers*, *Friends to Lovers*, *Found Family*, *Grumpy & Sunshine*, *Sports Romance*), atualizando dinamicamente as prateleiras sem recarregar a página.
+
+- Mecanismo em JavaScript para filtrar o catálogo em tempo real com base em tropos românticos (_Fake Dating_, _Haters to Lovers_, _Friends to Lovers_, _Found Family_, _Grumpy & Sunshine_, _Sports Romance_), atualizando dinamicamente as prateleiras sem recarregar a página.
 
 ### Seção "Na Mídia" com Lightbox Acessível
-- Galeria de recortes e matérias em veículos de imprensa de circulação nacional (*PublishNews*, *Gazeta do Estado*, *Radar Digital Brasília*, *Tribuna do Agreste*).
+
+- Galeria de recortes e matérias em veículos de imprensa de circulação nacional (_PublishNews_, _Gazeta do Estado_, _Radar Digital Brasília_, _Tribuna do Agreste_).
 - **Alinhamento Editorial no Desktop**: Títulos e autores alinhados na mesma linha de base horizontal nas colunas.
 - **Adaptação Natural no Mobile**: Cada notícia ajusta automaticamente sua altura (`height: auto`), eliminando vãos vazios.
 - **Visualizador Lightbox Integrado**: Ampliação em alta resolução com navegação por teclado (`Tab`, `Enter`, `Escape`) e foco gerenciado.
 
 ### Blog Dinâmico via Headless CMS (Contentful)
+
 - Consumo direto da **Contentful Delivery API (CDA)** em tempo real.
 - Renderização assíncrona de artigos com paginação nativa no client-side, formatação de datas em português e tratamento gracioso de falhas/fallback offline.
 
 ### Agenda de Eventos e Lançamentos com Integração de Calendário
+
 - Listagem de datas comemorativas, tardes de autógrafo e ativações na Bienal do Livro.
 - Botões para adição instantânea com 1 clique no **Google Calendar**, **Apple Calendar** e **Outlook**.
 
 ### Trilha Sonora Oficial
+
 - Player embutido do Spotify no rodapé da página com a playlist curada pela autora para acompanhar a leitura dos romances.
 
 ### Otimização para Motores de Busca (SEO Técnico) e Performance
+
 - **Zero Framework Bloatware**: Construído exclusivamente com tecnologias web padrão (HTML5 semântico, CSS puro com variáveis de design tokens e JavaScript ES6+ modular), garantindo tempo de carregamento instantâneo.
 - **Dados Estruturados (Schema.org / JSON-LD)**: Grafo de entidades estruturado com `Person` (perfil oficial da autora, prêmios e redes sociais), `WebSite`, `BreadcrumbList` e catálogo de livros (`Book` com editoras e gêneros literários), otimizado para Rich Snippets e Google Knowledge Graph.
 - **Sitemap XML com Extensão Google Imagens**: Mapeamento completo no padrão `sitemap-image/1.1` com títulos e legendas para capas de livros e fotos da autora, impulsionando a indexação no Google Imagens.
@@ -68,21 +76,21 @@ Desenvolvido sob o paradigma **Vanilla-First**, o projeto alia sofisticação vi
 
 ## Tecnologias Utilizadas
 
-| Tecnologia | Finalidade |
-| :--- | :--- |
-| **HTML5 Semântico** | Arquitetura de conteúdo, acessibilidade (ARIA) e hierarquia semântica |
-| **CSS3 Puro (Vanilla)** | Design tokens HSL, CSS Grid, Flexbox, transformações 3D e responsividade fluida |
-| **JavaScript (ES6+)** | Roteamento SPA por hash, manipulação de DOM, filtros e gerenciamento de estado |
-| **Schema.org / JSON-LD** | Marcação de dados estruturados para motores de busca e Google Knowledge Graph |
-| **Contentful CMS** | Gerenciamento de conteúdo headless e API pública de entrega (CDA) |
-| **Spotify Web Embed** | Player interativo da trilha sonora oficial |
+| Tecnologia               | Finalidade                                                                      |
+| :----------------------- | :------------------------------------------------------------------------------ |
+| **HTML5 Semântico**      | Arquitetura de conteúdo, acessibilidade (ARIA) e hierarquia semântica           |
+| **CSS3 Puro (Vanilla)**  | Design tokens HSL, CSS Grid, Flexbox, transformações 3D e responsividade fluida |
+| **JavaScript (ES6+)**    | Roteamento SPA por hash, manipulação de DOM, filtros e gerenciamento de estado  |
+| **Schema.org / JSON-LD** | Marcação de dados estruturados para motores de busca e Google Knowledge Graph   |
+| **Contentful CMS**       | Gerenciamento de conteúdo headless e API pública de entrega (CDA)               |
+| **Spotify Web Embed**    | Player interativo da trilha sonora oficial                                      |
 
 ---
 
 ## Estrutura do Repositório
 
 ```text
-oli-site/
+Olivia-Uviplais-Site/
 ├── .github/                 # Workflows e configurações do repositório
 ├── CAPAS/                   # Capas dos livros em alta resolução
 ├── ID/                      # Identidade visual, logos, selos e ilustrações da Olivinha
@@ -108,22 +116,24 @@ oli-site/
 Como o projeto é construído exclusivamente com tecnologias web nativas, você não precisa de `npm install` nem de ferramentas de build complexas.
 
 ### Pré-requisitos
+
 - Um navegador web moderno (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge ou Opera).
 
 ### Passo a Passo
 
 1. **Clone o repositório:**
+
    ```bash
-   git clone https://github.com/biancasantos-dev/oli-site.git
-   cd oli-site
+   git clone https://github.com/biancasantos-dev/Olivia-Uviplais-Site.git
+   cd Olivia-Uviplais-Site
    ```
 
 2. **Inicie um servidor local:**
-
    - **Opção A (Extensão VS Code):**
      Clique com o botão direito no arquivo `index.html` e selecione **"Open with Live Server"**.
 
    - **Opção B (Node.js):**
+
      ```bash
      npx serve .
      ```
@@ -141,7 +151,7 @@ Como o projeto é construído exclusivamente com tecnologias web nativas, você 
 ## Segurança e Boas Práticas
 
 - **Segurança de Credenciais**: O arquivo `.gitignore` foi rigorosamente configurado para impedir a inclusão de variáveis locais (`.env`), certificados (`.pem`, `.key`), caches e arquivos de configuração de IDEs.
-- **Contentful Content Delivery API (CDA)**: A chave utilizada no cliente (`CONTENTFUL_CONFIG.accessToken`) é um token de leitura estritamente pública (*Delivery Token*), desenhado para requisições em páginas estáticas que possuem permissão apenas para ler registros publicados, sem qualquer acesso a dados privados ou permissões de escrita/gerenciamento. O sistema também permite sobrecarga via `window.CONTENTFUL_CONFIG`.
+- **Contentful Content Delivery API (CDA)**: A chave utilizada no cliente (`CONTENTFUL_CONFIG.accessToken`) é um token de leitura estritamente pública (_Delivery Token_), desenhado para requisições em páginas estáticas que possuem permissão apenas para ler registros publicados, sem qualquer acesso a dados privados ou permissões de escrita/gerenciamento. O sistema também permite sobrecarga via `window.CONTENTFUL_CONFIG`.
 
 ---
 
