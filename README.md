@@ -101,7 +101,7 @@ Olivia-Uviplais-Site/
 ├── .gitignore               # Proteção de credenciais, logs e arquivos de sistema
 ├── .gitattributes           # Configuração de quebras de linha e atributos git
 ├── animations.js            # Módulo de transição 3D e drag-to-scroll
-├── DADOS/                   # Arquivos de dados JSON (livros.json, na-midia.json)
+├── DADOS/                   # Arquivos de dados JSON (livros.json, na-midia.json, timeline.json, agenda.json)
 ├── index.html               # Estrutura principal semântica da aplicação
 ├── robots.txt               # Diretrizes para rastreadores e indexação de busca
 ├── script.js                # Lógica de dados, Contentful, modais, filtros e rotas

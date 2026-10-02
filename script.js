@@ -8,25 +8,11 @@ let BOOKS = [];
 window.BOOKS = BOOKS;
 
 
-const TIMELINE = [
-  { ano: '1999', titulo: 'O início de tudo', desc: '05 de julho de 1999 é o início da minha história: eu nasci!' },
-  { ano: '2016', titulo: 'Wattpad e a estreia', desc: 'Publiquei Adorável Babá, minha primeira história no Wattpad. Posteriormente, lancei o e-book na Amazon.' },
-  { ano: '2020', titulo: 'Estreia na Amazon', desc: 'Estreei na Amazon com Jogos de Poder (série Jogos de Máfia).' },
-  { ano: '2021', titulo: 'Três lançamentos em um ano', desc: 'Lancei Jogos de Ruína, Os Padrinhos e Faça um Pedido.' },
-  { ano: '2022', titulo: 'Novos títulos e o primeiro conto', desc: 'Publiquei Jogos de Vitória, o conto O Pedido, Contrato em Las Vegas, Contos de Contrato em Las Vegas e o livro em parceria Lance Proibido.' },
-  { ano: '2023', titulo: 'Ano de expansão', desc: 'Lancei Os Sócios, Aliança Perfeita, Meu Detestável Chefe, Protegida pelo Guarda-Costas, Manual da Conquista Imperfeita e minha primeira versão em inglês: Maid For Each Other.' },
-  { ano: '2024', titulo: 'Mais lançamentos internacionais', desc: 'Publiquei Eu Pediria por Você, Um Começo Imperfeito, O Princípio do Amor e Temporada de Farsa e Gelo. Também saíram as edições internacionais The Seduction Effect (inglês) e Les Témoins de Mariage (francês).' },
-  { ano: '2025', titulo: 'Mercado tradicional e três TOP 1', desc: 'Cheguei ao mercado tradicional com o anúncio e pré-venda física de Doces Rivais pela Qualis Editora. Na Amazon, lancei Amor por Acidente, Um Chefe (Quase) Perfeito e Como Salvar um Mafioso. Os três títulos chegaram ao TOP 1 do ranking geral da plataforma.' },
-  { ano: '2026', titulo: 'Selo Neon e Selo Amore', desc: 'Relancei Doces Rivais em digital, ingressei para o Selo Neon da Editora Buzz, publiquei Improvisado em formato independente (mais um TOP 1 para a lista!) e fui anunciada como a primeira autora nacional do Selo Amore da Editora VR, com nota exclusiva no PublishNews.' }
-];
+let TIMELINE = [];
+window.TIMELINE = TIMELINE;
 
-
-const AGENDA = [
-  { dia: '03', mes: 'Ago', ano: '2026', tipo: 'Lançamento', titulo: 'Live de Lançamento do Site', local: 'Online · Instagram Oficial (@autoraoliviauviplais)', desc: 'Live de lançamento do site oficial, direto do Instagram da autora.', horaInicio: '19:30', horaFim: '20:00' },
-  { dia: '7', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Grupo Editorial Portal', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo - Rua F18.', horaInicio: '14:00', horaFim: '16:00' },
-  { dia: '11', mes: 'Set', ano: '2026', tipo: 'Evento', titulo: 'Encontro de Leitores NEON Editora ', local: 'Distrito Anhembi', desc: 'Encontro de fãs promovido pela Buzz Editora, com acesso exclusivo a spoilers do lançamento de 2027. | Bienal Internacional do Livro de São Paulo - Rua H70', horaInicio: '16:30', horaFim: '17:30' },
-  { dia: '12', mes: 'Set', ano: '2026', tipo: 'Feira', titulo: 'Sessão de Autógrafos Unicorn Books', local: 'Distrito Anhembi', desc: 'Sessão de autógrafos na Bienal Internacional do Livro de São Paulo, no estande da Unicorn Books - Rua J30.', horaInicio: '14:30', horaFim: '16:00' }
-];
+let AGENDA = [];
+window.AGENDA = AGENDA;
 
 const AGENDA_MES_INDEX = { Jan: 0, Fev: 1, Mar: 2, Abr: 3, Mai: 4, Jun: 5, Jul: 6, Ago: 7, Set: 8, Out: 9, Nov: 10, Dez: 11 };
 
@@ -867,36 +853,49 @@ function renderPost(post) {
   relacionadosEl.replaceChildren(...relacionados.map((item) => createBlogCard(item)));
 }
 
-function buildTimeline() {
+async function buildTimeline() {
   const row = document.getElementById('timeline-row');
   const track = document.getElementById('timeline-track');
   if (!row || !track) return;
 
-  const linha = document.createElement('div');
-  linha.className = 'tl-line';
-  linha.setAttribute('aria-hidden', 'true');
-  linha.style.gridColumn = `1 / span ${TIMELINE.length}`;
+  try {
+    const response = await fetch('DADOS/timeline.json');
+    if (!response.ok) {
+      throw new Error('Falha ao carregar timeline.json: ' + response.status + ' ' + response.statusText);
+    }
+    TIMELINE = await response.json();
+    window.TIMELINE = TIMELINE;
 
-  const itens = TIMELINE.map((item, index) => {
-    const coluna = index + 1;
-    const posicao = index % 2 === 0 ? 'top' : 'bottom';
+    const linha = document.createElement('div');
+    linha.className = 'tl-line';
+    linha.setAttribute('aria-hidden', 'true');
+    linha.style.gridColumn = `1 / span ${TIMELINE.length}`;
 
-    const element = document.createElement('li');
-    element.className = 'tl-item';
-    element.innerHTML = `
-      <article class="tl-card tl-card--${posicao}" style="grid-column:${coluna}; grid-row:${posicao === 'top' ? 1 : 3};">
-        <time>${escapeHTML(item.ano)}</time>
-        <h3>${escapeHTML(item.titulo)}</h3>
-        <p>${escapeHTML(item.desc)}</p>
-      </article>
-      <i class="tl-dot" style="grid-column:${coluna};" aria-hidden="true"></i>
-    `;
-    return element;
-  });
+    const itens = TIMELINE.map((item, index) => {
+      const coluna = index + 1;
+      const posicao = index % 2 === 0 ? 'top' : 'bottom';
 
-  row.replaceChildren(linha, ...itens);
-  initHorizontalDrag(track);
+      const element = document.createElement('li');
+      element.className = 'tl-item';
+      element.innerHTML = `
+        <article class="tl-card tl-card--${posicao}" style="grid-column:${coluna}; grid-row:${posicao === 'top' ? 1 : 3};">
+          <time>${escapeHTML(item.ano)}</time>
+          <h3>${escapeHTML(item.titulo)}</h3>
+          <p>${escapeHTML(item.desc)}</p>
+        </article>
+        <i class="tl-dot" style="grid-column:${coluna};" aria-hidden="true"></i>
+      `;
+      return element;
+    });
+
+    row.replaceChildren(linha, ...itens);
+    initHorizontalDrag(track);
+  } catch (error) {
+    console.error('Erro ao carregar timeline do JSON:', error);
+  }
 }
+
+window.buildTimeline = buildTimeline;
 
 function initHorizontalDrag(track) {
   let dragging = false;
@@ -925,75 +924,88 @@ function initHorizontalDrag(track) {
   }
 }
 
-function buildAgenda() {
+async function buildAgenda() {
   const list = document.getElementById('agenda-list');
   const empty = document.getElementById('agenda-empty');
   if (!list) return;
 
-  if (!AGENDA.length) {
-    list.hidden = true;
-    if (empty) empty.hidden = false;
-    return;
+  try {
+    const response = await fetch('DADOS/agenda.json');
+    if (!response.ok) {
+      throw new Error('Falha ao carregar agenda.json: ' + response.status + ' ' + response.statusText);
+    }
+    AGENDA = await response.json();
+    window.AGENDA = AGENDA;
+
+    if (!AGENDA.length) {
+      list.hidden = true;
+      if (empty) empty.hidden = false;
+      return;
+    }
+
+    list.hidden = false;
+    if (empty) empty.hidden = true;
+
+    const eventosComData = AGENDA
+      .map((eventItem) => ({ eventItem, eventDate: getAgendaEventDate(eventItem) }))
+      .sort((a, b) => {
+        const aPassado = getAgendaStatus(a.eventDate).classe === 'passado';
+        const bPassado = getAgendaStatus(b.eventDate).classe === 'passado';
+        if (aPassado !== bPassado) return aPassado ? 1 : -1;
+        return a.eventDate - b.eventDate;
+      });
+
+    const proximoIndex = eventosComData.findIndex(({ eventDate }) => getAgendaStatus(eventDate).classe !== 'passado');
+
+    list.replaceChildren(...eventosComData.map(({ eventItem, eventDate }, index) => {
+      const info = AGENDA_TIPO_INFO[eventItem.tipo] || { cor: 'azul', icon: '' };
+      const status = getAgendaStatus(eventDate);
+      const isOnline = /online/i.test(eventItem.local);
+      const isProximo = index === proximoIndex;
+
+      const item = document.createElement('li');
+      item.className = `agenda-item agenda-tipo-${info.cor}${status.classe ? ` is-${status.classe}` : ''}`;
+
+      const acaoLocal = isOnline
+        ? `<a class="agenda-acao agenda-acao-outline" href="https://www.instagram.com/autoraoliviauviplais/" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_INSTA} Ver no Instagram</a>`
+        : `<a class="agenda-acao agenda-acao-outline" href="${buildAgendaMapsLink(eventItem.local)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_PIN} Ver no mapa</a>`;
+
+      const horario = eventItem.horaInicio && eventItem.horaFim
+        ? `<p class="agenda-horario">${AGENDA_ICON_CLOCK}das ${escapeHTML(eventItem.horaInicio)} às ${escapeHTML(eventItem.horaFim)}</p>`
+        : '';
+
+      item.innerHTML = `
+        ${isProximo ? '<p class="agenda-destaque-tag">Próximo evento</p>' : ''}
+        <time class="agenda-date" datetime="${eventItem.ano}-${String(AGENDA_MES_INDEX[eventItem.mes] + 1).padStart(2, '0')}-${escapeHTML(eventItem.dia)}">
+          <strong>${escapeHTML(eventItem.dia)}</strong>
+          <small>${escapeHTML(eventItem.mes)} · ${escapeHTML(eventItem.ano)}</small>
+        </time>
+        <article class="agenda-info">
+          <div class="agenda-info-topo">
+            <p class="agenda-tipo">${info.icon}${escapeHTML(eventItem.tipo)}</p>
+            ${status.label ? `<p class="agenda-status">${escapeHTML(status.label)}</p>` : ''}
+          </div>
+          <h3>${escapeHTML(eventItem.titulo)}</h3>
+          <p class="agenda-desc">${escapeHTML(eventItem.desc)}</p>
+          <div class="agenda-info-meta">
+            ${horario}
+            <address>${AGENDA_ICON_PIN}${escapeHTML(eventItem.local)}</address>
+          </div>
+          ${status.classe !== 'passado' ? `
+          <div class="agenda-acoes">
+            <a class="agenda-acao agenda-acao-primaria" href="${buildAgendaCalendarLink(eventItem, eventDate)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_CALENDAR} Adicionar à agenda</a>
+            ${acaoLocal}
+          </div>` : ''}
+        </article>
+      `;
+      return item;
+    }));
+  } catch (error) {
+    console.error('Erro ao carregar agenda do JSON:', error);
   }
-
-  list.hidden = false;
-  if (empty) empty.hidden = true;
-
-  const eventosComData = AGENDA
-    .map((eventItem) => ({ eventItem, eventDate: getAgendaEventDate(eventItem) }))
-    .sort((a, b) => {
-      const aPassado = getAgendaStatus(a.eventDate).classe === 'passado';
-      const bPassado = getAgendaStatus(b.eventDate).classe === 'passado';
-      if (aPassado !== bPassado) return aPassado ? 1 : -1;
-      return a.eventDate - b.eventDate;
-    });
-
-  const proximoIndex = eventosComData.findIndex(({ eventDate }) => getAgendaStatus(eventDate).classe !== 'passado');
-
-  list.replaceChildren(...eventosComData.map(({ eventItem, eventDate }, index) => {
-    const info = AGENDA_TIPO_INFO[eventItem.tipo] || { cor: 'azul', icon: '' };
-    const status = getAgendaStatus(eventDate);
-    const isOnline = /online/i.test(eventItem.local);
-    const isProximo = index === proximoIndex;
-
-    const item = document.createElement('li');
-    item.className = `agenda-item agenda-tipo-${info.cor}${status.classe ? ` is-${status.classe}` : ''}`;
-
-    const acaoLocal = isOnline
-      ? `<a class="agenda-acao agenda-acao-outline" href="https://www.instagram.com/autoraoliviauviplais/" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_INSTA} Ver no Instagram</a>`
-      : `<a class="agenda-acao agenda-acao-outline" href="${buildAgendaMapsLink(eventItem.local)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_PIN} Ver no mapa</a>`;
-
-    const horario = eventItem.horaInicio && eventItem.horaFim
-      ? `<p class="agenda-horario">${AGENDA_ICON_CLOCK}das ${escapeHTML(eventItem.horaInicio)} às ${escapeHTML(eventItem.horaFim)}</p>`
-      : '';
-
-    item.innerHTML = `
-      ${isProximo ? '<p class="agenda-destaque-tag">Próximo evento</p>' : ''}
-      <time class="agenda-date" datetime="${eventItem.ano}-${String(AGENDA_MES_INDEX[eventItem.mes] + 1).padStart(2, '0')}-${escapeHTML(eventItem.dia)}">
-        <strong>${escapeHTML(eventItem.dia)}</strong>
-        <small>${escapeHTML(eventItem.mes)} · ${escapeHTML(eventItem.ano)}</small>
-      </time>
-      <article class="agenda-info">
-        <div class="agenda-info-topo">
-          <p class="agenda-tipo">${info.icon}${escapeHTML(eventItem.tipo)}</p>
-          ${status.label ? `<p class="agenda-status">${escapeHTML(status.label)}</p>` : ''}
-        </div>
-        <h3>${escapeHTML(eventItem.titulo)}</h3>
-        <p class="agenda-desc">${escapeHTML(eventItem.desc)}</p>
-        <div class="agenda-info-meta">
-          ${horario}
-          <address>${AGENDA_ICON_PIN}${escapeHTML(eventItem.local)}</address>
-        </div>
-        ${status.classe !== 'passado' ? `
-        <div class="agenda-acoes">
-          <a class="agenda-acao agenda-acao-primaria" href="${buildAgendaCalendarLink(eventItem, eventDate)}" target="_blank" rel="noopener noreferrer">${AGENDA_ICON_CALENDAR} Adicionar à agenda</a>
-          ${acaoLocal}
-        </div>` : ''}
-      </article>
-    `;
-    return item;
-  }));
 }
+
+window.buildAgenda = buildAgenda;
 
 /* ================================================================
    NA MÍDIA — RENDERIZAÇÃO, FILTROS & LIGHTBOX
