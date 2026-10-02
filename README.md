@@ -102,6 +102,7 @@ Olivia-Uviplais-Site/
 ├── .gitattributes           # Configuração de quebras de linha e atributos git
 ├── animations.js            # Módulo de transição 3D e drag-to-scroll
 ├── index.html               # Estrutura principal semântica da aplicação
+├── livros.json              # Catálogo de livros em formato JSON
 ├── robots.txt               # Diretrizes para rastreadores e indexação de busca
 ├── script.js                # Lógica de dados, Contentful, modais, filtros e rotas
 ├── sitemap.xml              # Mapa de URLs para indexação nos motores de busca
