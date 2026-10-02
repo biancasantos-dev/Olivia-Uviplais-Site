@@ -9,13 +9,19 @@
 window.isBookTransitioning = false;
 
 function escapeStr(value) {
-  return String(value || '')
+  if (typeof window.escapeHTML === 'function') {
+    return window.escapeHTML(value);
+  }
+  return String(value ?? '')
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 }
+
+window.escapeHTML = window.escapeHTML || escapeStr;
+
 
 /**
  * Animação 3D cinematográfica realista de abertura de livro da estante.

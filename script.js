@@ -77,14 +77,10 @@ function buildAgendaMapsLink(local) {
 }
 
 /* ================================================================
-   BLOG — CONTENTFUL INTEGRATION (UPDATED)
+   BLOG — CONTENTFUL INTEGRATION (CONFIG CARREGADA DE DADOS/config.json)
    ================================================================ */
-const CONTENTFUL_CONFIG = window.CONTENTFUL_CONFIG || {
-  spaceId: 'bikxsvvhd2dh',
-  accessToken: '3kCZ2e_GBDPxbpLqpXRmGaKgk_0AZCHSt7awwJrzGes',
-  environment: 'master',
-  contentType: 'blogPost'
-};
+let CONTENTFUL_CONFIG = window.CONTENTFUL_CONFIG || null;
+
 
 let BLOG_POSTS = [];
 
@@ -674,7 +670,26 @@ async function buildBlog() {
   const paginacao = document.getElementById('blog-paginacao');
   if (!grid) return;
 
-  const url = `https://cdn.contentful.com/spaces/${CONTENTFUL_CONFIG.spaceId}/environments/${CONTENTFUL_CONFIG.environment}/entries?content_type=${CONTENTFUL_CONFIG.contentType}&access_token=${CONTENTFUL_CONFIG.accessToken}`;
+  if (!CONTENTFUL_CONFIG) {
+    try {
+      const configRes = await fetch('DADOS/config.json');
+      if (configRes.ok) {
+        const configData = await configRes.json();
+        CONTENTFUL_CONFIG = configData.contentful;
+      }
+    } catch (err) {
+      console.warn('Não foi possível carregar DADOS/config.json, usando fallback.', err);
+    }
+  }
+
+  const activeConfig = CONTENTFUL_CONFIG || {
+    spaceId: 'bikxsvvhd2dh',
+    accessToken: '3kCZ2e_GBDPxbpLqpXRmGaKgk_0AZCHSt7awwJrzGes',
+    environment: 'master',
+    contentType: 'blogPost'
+  };
+
+  const url = `https://cdn.contentful.com/spaces/${activeConfig.spaceId}/environments/${activeConfig.environment}/entries?content_type=${activeConfig.contentType}&access_token=${activeConfig.accessToken}`;
 
   try {
     const response = await fetch(url);
@@ -1188,10 +1203,12 @@ function triggerVisibleReveals(container) {
 }
 
 function escapeHTML(value) {
-  return String(value)
+  return String(value ?? '')
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 }
+
+window.escapeHTML = window.escapeHTML || escapeHTML;
