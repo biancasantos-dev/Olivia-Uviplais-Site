@@ -58,7 +58,15 @@
     <meta name="twitter:image:alt" content="Foto oficial da escritora Olivia Uviplais">
 
     <link rel="shortcut icon" href="ID/ICONE.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <!-- Folhas de Estilo Modularizadas -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/livros.css">
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="css/na-midia.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/contato.css">
 
     <!-- Resource Hints & Otimização de Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -406,9 +414,6 @@
 
             </section>
         </article>
-                    </section>
-
-                </section>
             </article>
         </section>
 </section>
@@ -562,8 +567,6 @@
             <div class="agenda-tab-painel is-active" id="painel-agenda" role="tabpanel" aria-labelledby="tab-btn-agenda">
                 <!-- Subseção de Eventos -->
                 <section class="agenda-secao-eventos" id="agenda-secao-eventos" aria-label="Próximas datas e feiras">
-
-
                     <div class="agenda-body">
                         <ul class="agenda-list" id="agenda-list" role="list"></ul>
                         <p class="agenda-empty" id="agenda-empty" hidden>Nenhum evento marcado por enquanto — mas vem coisa nova aí. Me segue no Instagram pra não perder o anúncio. ✨</p>
@@ -868,7 +871,15 @@
         </p>
     </footer>
 
-    <script src="animations.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts Modularizados por Domínio -->
+    <script src="js/utils.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/home.js" defer></script>
+    <script src="js/sobre.js" defer></script>
+    <script src="js/livros.js" defer></script>
+    <script src="js/na-midia.js" defer></script>
+    <script src="js/blog.js" defer></script>
+    <script src="js/agenda.js" defer></script>
+    <script src="js/global.js" defer></script>
 </body>
 </html>

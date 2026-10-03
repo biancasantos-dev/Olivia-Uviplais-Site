@@ -1,0 +1,504 @@
+/* ================================================================
+   OLIVIA UVIPLAIS — SOBRE
+   Bio editorial, colagem, fanfics, marquee, editoriais e timeline.
+   ================================================================ */
+
+.sobre-hero {
+    position: relative;
+    display: grid;
+    min-height: 82vh;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 460px);
+    gap: 4rem;
+    align-items: center;
+    overflow: hidden;
+    background: var(--escuro);
+}
+
+.sobre-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 30%, rgba(174, 30, 60, 0.28), transparent 30%),
+        linear-gradient(135deg, rgba(93, 201, 225, 0.08), transparent 36%);
+}
+
+.sobre-text,
+.sobre-img {
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-text h2 {
+    font-size: 4.6rem;
+    margin-bottom: 1rem;
+    color: var(--branco);
+}
+
+.sobre-text h2 em {
+    color: var(--rosa);
+}
+
+.sobre-text p {
+    max-width: 560px;
+    color: var(--texto-claro);
+    font-size: 1.12rem;
+}
+
+.sobre-img figure {
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.sobre-img img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.bio-wrap {
+    padding: 4rem 0;
+}
+
+.bio-wrap h2 {
+    margin-bottom: 1.5rem;
+}
+
+.bio-text {
+    max-width: 1000px;
+    color: var(--texto-suave);
+    font-size: 1.08rem;
+}
+
+.bio-text p + p,
+.bio-expandable {
+    margin-top: 1rem;
+}
+
+.bio-expandable {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows var(--ease-slow), opacity var(--ease);
+}
+
+.bio-expandable > p {
+    overflow: hidden;
+}
+
+.bio-expandable.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.bio-toggle {
+    margin-top: 1.5rem;
+}
+#container-editorial-sobre{
+display:flex;
+flex-direction:column;
+gap:120px;
+}
+
+/*====================================*/
+
+
+#colagem-topo-autor{
+position:relative;
+padding:18px;
+background:#FFF;
+border-radius:34px;
+box-shadow:var(--shadow-md);
+overflow:hidden;
+margin:0;
+height:100%;
+}
+
+#colagem-topo-autor::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(135deg,#FDECEF 0%,transparent 60%);
+pointer-events:none;
+
+}
+
+#colagem-topo-autor img{
+border-radius:22px;
+transition:var(--transition);
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+#colagem-topo-autor:hover img{
+transform:scale(1.03);
+
+}
+
+#texto-introducao-sobre{
+display:grid;
+grid-template-columns:minmax(0, 1fr) minmax(280px, 380px);
+gap:0 48px;
+align-items:stretch;
+width:min(100%, 1120px);
+margin-inline:auto;
+padding-inline:0;
+}
+
+#texto-introducao-sobre h2,
+#texto-introducao-sobre p{
+grid-column:1;
+}
+
+#texto-introducao-sobre #colagem-topo-autor{
+grid-column:2;
+grid-row:1 / span 10;
+align-self:start;
+max-width:360px;
+justify-self:end;
+margin-top:0.2rem;
+}
+
+#texto-introducao-sobre h2{
+font-size:clamp(3.6rem,5.8vw,5.4rem);
+margin-bottom:24px;
+line-height:.95;
+}
+
+#texto-introducao-sobre p{
+font-size:1.08rem;
+max-width:680px;
+}
+
+
+
+/*====================================*/
+
+#grade-assimetrica-fanfics{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
+}
+
+#coluna-texto-fanfics h3{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+#coluna-texto-fanfics p{
+font-size:1.08rem;
+}
+
+#coluna-texto-fanfics p + p,
+#perfil-editorial-wattpad p + p,
+#perfil-editorial-amazon p + p,
+#perfil-editorial-os-padrinhos p + p{
+margin-top:1rem;
+}
+
+
+/*====================================*/
+
+#fita-texto-marquee {
+  overflow: hidden;
+  background: #AE1E3C;
+  border-radius: 22px;
+  padding: 18px 0;
+  display: flex;
+  white-space: nowrap;
+}
+
+#fita-texto-marquee p {
+  display: inline-block;
+  color: #FFF;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+  animation: marquee 15s linear infinite;
+  padding-right: 2rem; /* Espaço após a primeira frase */
+}
+
+/* Duplica o texto no CSS para emendar sem mexer no HTML */
+#fita-texto-marquee p::after {
+  content: " ✱ ROMANCES HOT ✱ DRAMAS APAIXONANTES ✱ DEUSA DAS COMÉDIAS ROMÂNTICAS ✱ UNIVERSOS PRÓPRIOS";
+
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Move exatamente metade para o loop ficar invisível */
+  }
+}
+
+
+/*====================================*/
+
+#perfil-editorial-wattpad,
+#perfil-editorial-amazon{
+display:grid;
+grid-template-columns:340px 1fr;
+gap:70px;
+align-items:center;
+padding:60px;
+background:#FFF;
+border-radius:36px;
+box-shadow:var(--shadow-sm);
+}
+
+#perfil-editorial-amazon{
+grid-template-columns:1fr 340px;
+margin-top:60px;
+}
+
+#perfil-editorial-os-padrinhos{
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:80px;
+align-items:center;
+margin-top:60px;
+}
+
+#perfil-editorial-os-padrinhos figure{
+transform:rotate(2.5deg);
+background:#FFF;
+padding:14px 14px 34px;
+border-radius:18px;
+box-shadow:var(--shadow-md);
+transition:var(--transition);
+}
+
+#perfil-editorial-os-padrinhos figure:hover{
+transform:rotate(0deg) scale(1.02);
+}
+
+.citacao-destaque{
+margin:28px 0;
+padding:4px 0 4px 28px;
+border-left:3px solid var(--vermelho);
+font-family:var(--ff-serif, Georgia, serif);
+font-size:1.5rem;
+font-style:italic;
+line-height:1.4;
+color:var(--vermelho);
+}
+
+#perfil-editorial-wattpad figure,
+#perfil-editorial-amazon figure{
+overflow:hidden;
+border-radius:22px;
+}
+
+#perfil-editorial-os-padrinhos figure img{
+border-radius:10px;
+}
+
+#perfil-editorial-wattpad img,
+#perfil-editorial-amazon img,
+#perfil-editorial-os-padrinhos img{
+transition:var(--transition);
+}
+
+#perfil-editorial-wattpad:hover img,
+#perfil-editorial-amazon:hover img{
+transform:scale(1.05);
+}
+
+#perfil-editorial-wattpad h3,
+#perfil-editorial-amazon h3,
+#perfil-editorial-os-padrinhos h3{
+font-size:2.8rem;
+margin-bottom:24px;
+}
+
+
+
+/*====================================*/
+
+.foto-polaroid{
+
+background:#FFF;
+padding:14px 14px 34px;
+border-radius:18px;
+box-shadow:var(--shadow-md);
+transform:rotate(-2deg);
+transition:var(--transition);
+
+}
+
+.foto-polaroid:hover{
+
+transform:rotate(0deg) scale(1.02);
+
+}
+
+.foto-polaroid img{
+
+border-radius:10px;
+
+}
+
+
+
+/* Responsividade Sobre */
+@media (max-width: 1100px) {
+    .sobre-hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #texto-introducao-sobre {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+        gap: 0 28px;
+        width: min(100%, 980px);
+    }
+
+    #grade-assimetrica-fanfics {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    #perfil-editorial-wattpad,
+    #perfil-editorial-amazon,
+    #perfil-editorial-os-padrinhos {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+
+    #perfil-editorial-amazon figure {
+        order: -1;
+    }
+}
+
+@media (max-width: 820px) {
+    .sobre-hero {
+        min-height: auto;
+        gap: 2.5rem;
+    }
+
+    .bio-wrap {
+        padding: 3rem 0;
+    }
+
+    .bio-text {
+        max-width: none;
+    }
+
+    #texto-introducao-sobre {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: min(100% - 2rem, 1120px);
+    }
+
+    #texto-introducao-sobre h2,
+    #texto-introducao-sobre p {
+        grid-column: 1;
+    }
+
+    #texto-introducao-sobre #colagem-topo-autor {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        margin-top: 0;
+    }
+
+    #texto-introducao-sobre h2 {
+        font-size: clamp(2.8rem, 8vw, 4rem);
+    }
+
+    #texto-introducao-sobre p {
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .sobre-img {
+        order: -1;
+    }
+
+    .sobre-img img {
+        height: 380px;
+    }
+
+    #grade-assimetrica-fanfics {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .foto-polaroid {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    #coluna-texto-fanfics h3 {
+        font-size: 2.4rem;
+    }
+
+    #coluna-texto-fanfics p {
+        font-size: 1rem;
+    }
+
+    #perfil-editorial-wattpad,
+    #perfil-editorial-amazon,
+    #perfil-editorial-os-padrinhos {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        padding: 2rem 1rem;
+        border-radius: 24px;
+    }
+
+    #perfil-editorial-wattpad figure,
+    #perfil-editorial-amazon figure,
+    #perfil-editorial-os-padrinhos figure {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    #perfil-editorial-wattpad h3,
+    #perfil-editorial-amazon h3,
+    #perfil-editorial-os-padrinhos h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .timeline-row {
+        grid-auto-columns: 210px;
+    }
+
+    .bio-wrap {
+        padding: 2.5rem 0;
+    }
+
+    #colagem-topo-autor {
+        padding: 10px;
+        border-radius: 22px;
+    }
+
+    #colagem-topo-autor img {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    #texto-introducao-sobre {
+        gap: 1.25rem;
+    }
+
+    #texto-introducao-sobre h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #texto-introducao-sobre p {
+        font-size: 0.98rem;
+    }
+}

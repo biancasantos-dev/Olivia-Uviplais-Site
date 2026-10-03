@@ -100,13 +100,28 @@ Olivia-Uviplais-Site/
 ├── SELOS/                   # Selos editoriais (AMORE e NEON)
 ├── .gitignore               # Proteção de credenciais, logs e arquivos de sistema
 ├── .gitattributes           # Configuração de quebras de linha e atributos git
-├── animations.js            # Módulo de transição 3D e drag-to-scroll
+├── css/                     # Estilos modularizados por página/aba e núcleo global
+│   ├── style.css            # Design system, tokens, reset, header, footer e base
+│   ├── home.css             # Banner hero e destaques principais
+│   ├── sobre.css            # Bio editorial, colagem, polaroids e timeline
+│   ├── livros.css           # Estantes, filtros por tropes, modal e ilustrações
+│   ├── agenda.css           # Agenda de eventos, galeria e lightbox
+│   ├── na-midia.css         # Notícias, clipping e imprensa
+│   ├── blog.css             # Feed de artigos, paginação e post único
+│   └── contato.css          # Informações de contato e assessoria
+├── js/                      # Scripts desacoplados por funcionalidade e aba
+│   ├── utils.js             # Funções utilitárias, helpers e formatação
+│   ├── animations.js        # Módulo de transição 3D e drag-to-scroll das estantes
+│   ├── home.js              # Lógica de destaques da home
+│   ├── sobre.js             # Timeline interativa de carreira
+│   ├── livros.js            # Catálogo de livros, tropes, modal e lightbox
+│   ├── na-midia.js          # Notícias e clippings da imprensa
+│   ├── blog.js              # Integração com Contentful e paginação
+│   ├── agenda.js            # Agenda, galeria editorial de fotos e lightbox
+│   └── global.js            # Roteador SPA (#hash), menu mobile e orquestração
 ├── index.html               # Estrutura principal semântica da aplicação
-├── livros.json              # Catálogo de livros em formato JSON
 ├── robots.txt               # Diretrizes para rastreadores e indexação de busca
-├── script.js                # Lógica de dados, Contentful, modais, filtros e rotas
 ├── sitemap.xml              # Mapa de URLs para indexação nos motores de busca
-├── style.css                # Sistema completo de design tokens, layouts e responsividade
 └── README.md                # Documentação técnica do projeto
 ```
 

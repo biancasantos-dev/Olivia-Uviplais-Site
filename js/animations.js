@@ -22,7 +22,6 @@ function escapeStr(value) {
 
 window.escapeHTML = window.escapeHTML || escapeStr;
 
-
 /**
  * Animação 3D cinematográfica realista de abertura de livro da estante.
  * O livro sobe suave e reto ao centro da tela, a capa articulada se abre em 3D
