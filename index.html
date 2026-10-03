@@ -534,18 +534,131 @@
         </section>
 
         <!-- ==========================================================
-          5. AGENDA
+          5. AGENDA & GALERIA DE EVENTOS
           ========================================================== -->
-        <section id="agenda" class="page" aria-label="Agenda de eventos" aria-hidden="true">
+        <section id="agenda" class="page" aria-label="Agenda de eventos e galeria" aria-hidden="true">
             <header class="agenda-header">
-                <p class="eyebrow eyebrow-claro">Próximos eventos</p>
+                <p class="eyebrow eyebrow-claro">Encontros & Memórias</p>
                 <h1>Agenda</h1>
-                <p>Feiras, lançamentos e encontros com leitores</p>
+                <p>Feiras, lançamentos e encontros com leitores.</p>
+                
+                <nav class="agenda-subnav" aria-label="Navegação da seção Agenda e Galeria" role="tablist">
+                    <button type="button" class="agenda-subnav-btn is-active" id="tab-btn-agenda" role="tab" aria-selected="true" aria-controls="painel-agenda">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        <span><span class="agenda-subnav-full">Agenda de Eventos</span><span class="agenda-subnav-short">Agenda</span></span>
+                        <span class="agenda-subnav-badge" id="agenda-subnav-eventos-count">0</span>
+                    </button>
+                    <button type="button" class="agenda-subnav-btn" id="tab-btn-galeria" role="tab" aria-selected="false" aria-controls="painel-galeria">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                        <span><span class="agenda-subnav-full">Galeria Completa</span><span class="agenda-subnav-short">Galeria</span></span>
+                        <span class="agenda-subnav-badge" id="agenda-subnav-galeria-count">0</span>
+                    </button>
+                </nav>
             </header>
-            <section class="agenda-body">
-                <ul class="agenda-list" id="agenda-list"></ul>
-                <p class="agenda-empty" id="agenda-empty" hidden>Nenhum evento marcado por enquanto — mas vem coisa nova aí. Me segue no Instagram pra não perder o anúncio. ✨</p>
-            </section>
+
+            <!-- ========================================================
+              ABA 1: AGENDA DE EVENTOS + PRÉVIA DE 6 FOTOS NO FINAL
+              ======================================================== -->
+            <div class="agenda-tab-painel is-active" id="painel-agenda" role="tabpanel" aria-labelledby="tab-btn-agenda">
+                <!-- Subseção de Eventos -->
+                <section class="agenda-secao-eventos" id="agenda-secao-eventos" aria-label="Próximas datas e feiras">
+
+
+                    <div class="agenda-body">
+                        <ul class="agenda-list" id="agenda-list" role="list"></ul>
+                        <p class="agenda-empty" id="agenda-empty" hidden>Nenhum evento marcado por enquanto — mas vem coisa nova aí. Me segue no Instagram pra não perder o anúncio. ✨</p>
+                    </div>
+                </section>
+
+                <!-- Prévia de fotos dos encontros -->
+                <section class="galeria-previa-secao" aria-label="Prévia dos momentos e encontros">
+                    <header class="galeria-previa-header">
+                        <div class="galeria-previa-header-texto">
+                            <span class="eyebrow eyebrow-vermelho">Momentos & Abraços</span>
+                            <h2>Galeria</h2>
+                            <p>Uma amostra dos sorrisos, filas e emoção nos encontros com leitores e editoras.</p>
+                        </div>
+                        <div class="galeria-previa-header-cta">
+                            <button type="button" class="btn btn-primary btn-ver-todas-fotos" id="btn-ver-todas-fotos">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                                Ver todas as imagens (<span class="galeria-total-count">0</span>)
+                            </button>
+                        </div>
+                    </header>
+
+                    <!-- Grade com fotos da prévia -->
+                    <div class="galeria-previa-grid" id="galeria-previa-grid" role="region" aria-label="Prévia dos encontros literários"></div>
+                </section>
+            </div>
+
+            <!-- ========================================================
+              ABA 2: APENAS A GALERIA COMPLETA (ESCALÁVEL ATÉ 100+ FOTOS)
+              ======================================================== -->
+            <div class="agenda-tab-painel" id="painel-galeria" role="tabpanel" aria-labelledby="tab-btn-galeria" hidden>
+                <section class="galeria-secao" id="agenda-secao-galeria" aria-label="Galeria completa com fotos e eventos">
+                    <header class="galeria-header">
+                        <div class="galeria-header-texto">
+                            <span class="eyebrow eyebrow-vermelho">Acervo Completo</span>
+                            <h2>Galeria</h2>
+                            <p>Explore todos os registros fotográficos para relembrar dos nossos encontros.</p>
+                        </div>
+
+                        <!-- Alternador de Modos: Ver todas as fotos vs Ver por eventos -->
+                        <nav class="galeria-modos-nav" id="galeria-modos-nav" aria-label="Modo de visualização da galeria" role="tablist">
+                            <button type="button" class="galeria-modo-btn is-active" id="modo-btn-todas" data-modo="todas" role="tab" aria-selected="true">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                                <span>Ver todas as fotos</span>
+                                <small class="galeria-filtro-count" id="galeria-count-todas">0</small>
+                            </button>
+                            <button type="button" class="galeria-modo-btn" id="modo-btn-eventos" data-modo="eventos" role="tab" aria-selected="false">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span>Ver por eventos</span>
+                                <small class="galeria-filtro-count" id="galeria-count-eventos">0</small>
+                            </button>
+                        </nav>
+
+                        <!-- Filtro por evento específico (aparece apenas no modo 'Ver por eventos') -->
+                        <nav class="galeria-eventos-filtro" id="galeria-eventos-filtro" aria-label="Filtrar por evento específico" hidden>
+                            <button type="button" class="galeria-evento-filtro-btn" data-evento-filtro="buzz">
+                                <span>Buzz Editora</span>
+                                <small class="galeria-filtro-count" id="galeria-subcount-buzz">0</small>
+                            </button>
+                            <button type="button" class="galeria-evento-filtro-btn" data-evento-filtro="portal">
+                                <span>Editorial Portal</span>
+                                <small class="galeria-filtro-count" id="galeria-subcount-portal">0</small>
+                            </button>
+                            <button type="button" class="galeria-evento-filtro-btn" data-evento-filtro="unicorn">
+                                <span>Unicorn Books</span>
+                                <small class="galeria-filtro-count" id="galeria-subcount-unicorn">0</small>
+                            </button>
+                            <button type="button" class="galeria-evento-filtro-btn" data-evento-filtro="amore">
+                                <span>Selo AMORE</span>
+                                <small class="galeria-filtro-count" id="galeria-subcount-amore">0</small>
+                            </button>
+                        </nav>
+                    </header>
+
+                    <!-- Grade Editorial Masonry Direta de Fotos (sem cartões brancos, sem tags e sem títulos) -->
+                    <div class="galeria-grid-wrap">
+                        <div class="galeria-masonry" id="galeria-grid" role="region" aria-live="polite"></div>
+                        <p class="galeria-empty" id="galeria-empty" hidden>Nenhuma foto encontrada.</p>
+                    </div>
+
+                    <!-- Banner Informativo de Direitos Autorais e Mídia Kit -->
+                    <aside class="galeria-copyright-banner" aria-label="Informações sobre direitos de imagem e uso editorial">
+                        <div class="galeria-copyright-icone" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path></svg>
+                        </div>
+                        <div class="galeria-copyright-texto">
+                            <h4>Direitos de Imagem & Créditos Fotográficos</h4>
+                            <p>As fotos desta galeria registram encontros públicos e acervos editoriais oficiais. Imagens com autoria profissional estão devidamente identificadas com os créditos do fotógrafo. Para uso editorial ou divulgação na imprensa, entre em contato com nossa assessoria.</p>
+                        </div>
+                        <div class="galeria-copyright-cta">
+                            <a href="#contato" data-page="contato" class="btn btn-sm btn-outline-dark">Falar com Assessoria</a>
+                        </div>
+                    </aside>
+                </section>
+            </div>
         </section>
 
         <!-- ==========================================================
@@ -606,7 +719,7 @@
     <!-- PALCO INVISÍVEL DA TRANSIÇÃO 3D (Onde o livro voa) -->
     <aside id="transicao-cenica-estante" aria-hidden="true"></aside>
 
-    <!-- POP-UP MODAL CINEMATOGRÁFICO DE LUXO -->
+    <!-- POP-UP MODAL CINEMATOGRÁFICO -->
     <aside class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
         <article class="modal-box" id="modal-box">
             <button class="modal-close" id="modal-close" type="button" aria-label="Fechar detalhes do livro">✕</button>
@@ -634,10 +747,40 @@
         </article>
     </aside>
 
-    <!-- LIGHTBOX DE ILUSTRAÇÕES -->
-    <aside class="lightbox-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-hidden="true">
-        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem ampliada">✕</button>
+    <!-- LIGHTBOX DE ILUSTRAÇÕES (LIMPO, SEM ÁREA DESCRITIVA) -->
+    <aside class="lightbox-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar visualização">✕</button>
+
+        <button class="lightbox-nav-btn lightbox-prev" id="lightbox-prev" type="button" aria-label="Ilustração anterior" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
         <img id="lightbox-img" src="" alt="">
+
+        <button class="lightbox-nav-btn lightbox-next" id="lightbox-next" type="button" aria-label="Próxima ilustração" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </aside>
+
+    <!-- LIGHTBOX DA GALERIA DE ENCONTROS -->
+    <aside class="galeria-lightbox-overlay" id="galeria-lightbox-overlay" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+        <button class="galeria-lightbox-close" id="galeria-lightbox-close" type="button" aria-label="Fechar foto">✕</button>
+
+        <button class="galeria-lightbox-nav-btn galeria-lightbox-prev" id="galeria-lightbox-prev" type="button" aria-label="Foto anterior">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <figure class="galeria-lightbox-figure" id="galeria-lightbox-figure">
+            <img id="galeria-lightbox-img" src="" alt="" loading="eager">
+            <figcaption class="galeria-lightbox-caption" id="galeria-lightbox-caption">
+                <span class="galeria-lightbox-title" id="galeria-lightbox-title"></span>
+                <span class="galeria-lightbox-credito" id="galeria-lightbox-credito" hidden></span>
+            </figcaption>
+        </figure>
+
+        <button class="galeria-lightbox-nav-btn galeria-lightbox-next" id="galeria-lightbox-next" type="button" aria-label="Próxima foto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
     </aside>
 
     <!-- ============================================================

@@ -19,18 +19,22 @@
     "local": "Distrito Anhembi",
     "desc": "Sessão de autógrafos na Bienal Internacional do Livro de São Paulo - Rua F18.",
     "horaInicio": "14:00",
-    "horaFim": "16:00"
+    "horaFim": "16:00",
+    "galeriaTag": "portal",
+    "galeriaLabel": "Ver fotos Portal"
   },
   {
     "dia": "11",
     "mes": "Set",
     "ano": "2026",
     "tipo": "Evento",
-    "titulo": "Encontro de Leitores NEON Editora ",
+    "titulo": "Encontro com Leitores NEON Editora (BUZZ) - Bienal do Livro SP 2026",
     "local": "Distrito Anhembi",
     "desc": "Encontro de fãs promovido pela Buzz Editora, com acesso exclusivo a spoilers do lançamento de 2027. | Bienal Internacional do Livro de São Paulo - Rua H70",
     "horaInicio": "16:30",
-    "horaFim": "17:30"
+    "horaFim": "17:30",
+    "galeriaTag": "buzz",
+    "galeriaLabel": "Ver fotos Buzz"
   },
   {
     "dia": "12",
@@ -41,6 +45,8 @@
     "local": "Distrito Anhembi",
     "desc": "Sessão de autógrafos na Bienal Internacional do Livro de São Paulo, no estande da Unicorn Books - Rua J30.",
     "horaInicio": "14:30",
-    "horaFim": "16:00"
+    "horaFim": "16:00",
+    "galeriaTag": "unicorn",
+    "galeriaLabel": "Ver fotos Unicorn"
   }
 ]
