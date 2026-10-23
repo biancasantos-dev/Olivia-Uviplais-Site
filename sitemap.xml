@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://oliviauviplais.com.br/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -80,6 +80,16 @@
       <image:loc>https://oliviauviplais.com.br/CAPAS/26.%20Doces%20Rivais.jpg</image:loc>
       <image:title>Capa do livro Doces Rivais - Olivia Uviplais</image:title>
       <image:caption>Romance Doces Rivais de Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/27.%20De%20Ferias%20com%20a%20Noiva.jpg</image:loc>
+      <image:title>Capa do livro De Férias com a Noiva - Olivia Uviplais</image:title>
+      <image:caption>Romance De Férias com a Noiva de Olivia Uviplais</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://oliviauviplais.com.br/CAPAS/28.%20Opostos%20no%20Gelo.jpg</image:loc>
+      <image:title>Capa do livro Opostos no Gelo - Olivia Uviplais</image:title>
+      <image:caption>Romance Opostos no Gelo de Olivia Uviplais</image:caption>
     </image:image>
   </url>
 </urlset>
