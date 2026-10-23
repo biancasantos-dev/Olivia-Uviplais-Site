@@ -19,7 +19,7 @@ function buildDestaque() {
 
   titulo.textContent = latest.titulo;
   serie.textContent = latest.serie || `${latest.paginas} páginas · ${latest.idioma}`;
-  sinopse.textContent = latest.sinopse.split(/\n\n/)[0].replace(/^[“"]|[”"]$/g, '');
+  sinopse.textContent = latest.sinopse.replace(/^[“"]|[”"]$/g, '');
   ctas.innerHTML = latest.ebook
     ? `<a href="${latest.ebook}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comprar agora</a>`
     : '';
