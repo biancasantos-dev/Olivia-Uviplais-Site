@@ -48,5 +48,27 @@
     "horaFim": "16:00",
     "galeriaTag": "unicorn",
     "galeriaLabel": "Ver fotos Unicorn"
+  },
+  {
+    "dia": "22",
+    "mes": "Nov",
+    "ano": "2026",
+    "tipo": "Evento",
+    "titulo": "Painel: Novas vozes do romance: das plataformas digitais às livrarias",
+    "local": "Museu de Arte do Rio (MAR) — Praça Mauá, Rio de Janeiro",
+    "desc": "RomCon | Convenção de Literatura Romântica. Com Olivia Uviplais (Mediação), Aimée Oliveira, Clara Savelli e Rina.",
+    "horaInicio": "13:30",
+    "horaFim": "14:20"
+  },
+  {
+    "dia": "22",
+    "mes": "Nov",
+    "ano": "2026",
+    "tipo": "Evento",
+    "titulo": "Sessão de Autógrafos RomCon",
+    "local": "Museu de Arte do Rio (MAR) — Praça Mauá, Rio de Janeiro",
+    "desc": "Sessão de autógrafos na RomCon | Convenção de Literatura Romântica.",
+    "horaInicio": "14:30",
+    "horaFim": "15:20"
   }
 ]
