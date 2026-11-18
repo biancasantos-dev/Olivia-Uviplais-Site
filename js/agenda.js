@@ -55,6 +55,7 @@ async function buildAgenda() {
         const aPassado = getStatus(a.eventDate).classe === 'passado';
         const bPassado = getStatus(b.eventDate).classe === 'passado';
         if (aPassado !== bPassado) return aPassado ? 1 : -1;
+        if (aPassado) return b.eventDate - a.eventDate;
         return a.eventDate - b.eventDate;
       });
 
